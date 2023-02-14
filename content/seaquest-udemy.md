@@ -3,7 +3,8 @@ title: SeaQuest Udemy Course
 url: seaquest-udemy/
 ---
 
-[OpenGameArt Link](https://opengameart.org/content/seadefender-assets)
+[Assets Download](/downloads/sea-defender-assets.zip) |
+[Alternative OpenGameArt Link](https://opengameart.org/content/seadefender-assets)
 
 - Project setup
     - Downloading & importing assets
