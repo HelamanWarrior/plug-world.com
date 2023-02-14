@@ -1,0 +1,11 @@
+{{ $files := readDir "/static/images/bereal" }}
+{{ $filesReversed := partial "reverse-slice.html" $files }}
+
+{{ range $filesReversed }}
+{{ $image_type_arr := split .Name "." }}
+{{ $image_ext := index $image_type_arr 1 }}
+{{ if eq $image_ext "jpg" }}
+<img src="/images/bereal/{{ .Name }}" />
+{{ end }}
+
+{{ end }}

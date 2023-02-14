@@ -1,0 +1,76 @@
+baseURL: "https://plug-world.com/"
+title: PlugWorld
+theme: PaperMod 
+
+enableRobotsTXT: true
+paginate: 20 
+
+params:
+  env: production
+  description: I make video games, tutorials, videos, and visual effects.  
+
+  defaultTheme: auto
+
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  ShowBreadCrumbs: false
+  ShowToc: false
+  ShowPostNavLinks: false
+  hideSummary: true
+  ShowReadingTime: false
+  Comments: false
+  disableSpecial1stPost: true
+  hideFooter: true
+
+  mainSections: "/posts /microblog /thoughts-and-quotes"
+
+  profileMode:
+    enabled: true
+    title: "PlugWorld"
+    subtitle: "Doin things on computers."
+    imageUrl: "/images/profile/profile-pic.webp"
+
+  socialIcons:
+    - name: rss
+      url: "index.xml"
+    - name: youtube
+      url: "https://www.youtube.com/c/plugworld"
+    - name: github
+      url: "https://github.com/HelamanWarrior/"
+    - name: instagram
+      url: "https://www.instagram.com/parkers_thinking/"
+  assets:
+    favicon: "/images/profile/favicon.png"
+    favicon16x16: "/images/profile/favicon-16x16.png"
+    favicon32x32: "/images/profile/favicon-32x32.png"
+    disableHLJS: true
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 1
+    - identifier: games
+      name: Games
+      url: /games/
+      weight: 2
+    - identifier: videos
+      name: Videos
+      url: /videos/
+      weight: 3
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 4
+
+privacy:
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+outputs:
+  home:
+    - HTML
+    - RSS

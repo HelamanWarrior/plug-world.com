@@ -1,0 +1,7 @@
+<h2>Recent Stuff 🆕</h2>
+<ul>
+{{ $pages := .Site.RegularPages | first 5 }}
+{{ range $pages }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>

@@ -1,0 +1,56 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0.5rem;
+
+    color: var(--nav-buttons);
+    background-color: var(--nav-bar);
+}
+
+.active {
+    color: #0d8beb;
+    border-bottom: 2px solid currentColor;
+}
+
+nav a {
+    color: inherit;
+    transition: transform .2s;
+}
+
+.nav a:hover {
+  color: #0d8beb;
+  transform: scale(1.1);
+}
+
+#theme-toggle {
+    color: var(--nav-buttons);
+    background: none;
+    border: none;
+    
+    position: absolute;
+    right: 0;
+    margin-right: 1.25rem;
+    margin-top: 0.25rem;
+    
+    transition: transform .2s;
+}
+
+#theme-toggle:hover {
+  color: var(--theme-toggle);
+  transform: scale(1.1);
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+@media (max-width : 450px) {
+    #theme-toggle { display: none; }
+}
