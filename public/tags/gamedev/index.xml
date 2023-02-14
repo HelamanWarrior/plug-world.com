@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>gamedev on PlugWorld</title><link>https://plug-world.com/tags/gamedev/</link><description>Recent content in gamedev on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 13 Aug 2022 17:27:51 -0600</lastBuildDate><atom:link href="https://plug-world.com/tags/gamedev/index.xml" rel="self" type="application/rss+xml"/><item><title>SeaDefender's Unexpected Development</title><link>https://plug-world.com/posts/seadefender/</link><pubDate>Sat, 13 Aug 2022 17:27:51 -0600</pubDate><guid>https://plug-world.com/posts/seadefender/</guid><description>Retro Remake SeaDefender was a game I made based on SeaQuest. My intention was to startup a series on YouTube called Retro Remake. The idea was to recreate these retro games in a limited amount of time.
+I worked on the game for a few weeks. Vacation and large gaps in development ultimately led to me putting the project on hold.
+Over vacation I had a lot of fun making some graphics for the series in Blender.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/seadefender/seadefender-1.gif" alt="seaDefender gameplay gif"  />
+</p>
+<h2 id="retro-remake">Retro Remake</h2>
+<p><a href="/seadefender">SeaDefender</a> was a game I made based on <a href="https://en.wikipedia.org/wiki/Seaquest_(video_game)">SeaQuest</a>.
+My intention was to startup a series on YouTube called <em>Retro Remake</em>.
+The idea was to recreate these retro games in a limited amount of time.</p>
+<p>I worked on the game for a few weeks.
+Vacation and large gaps in development ultimately led to me putting the project on hold.</p>
+<p>Over vacation I had a lot of fun making some graphics for the series in Blender.
+Too bad, I never made the video.</p>
+<hr>
+<p>
+
+
+
+
+<video autoplay loop muted playsinline controls>
+
+
+
+<source src=https://plug-world.com/videos/seadefender/sea-quest-remake-animation-vp9.webm type='video/webm;codecs="vp9,opus"'>
+
+Your browser does not support the video tag.
+</video>
+
+
+
+
+
+
+<video autoplay loop muted playsinline controls>
+
+
+
+<source src=https://plug-world.com/videos/seadefender/seaquest-history-lesson-vp9.webm type='video/webm;codecs="vp9,opus"'>
+
+Your browser does not support the video tag.
+</video>
+</p>
+<hr>
+<p>It&rsquo;s weird how your perception of your project changes while you are working on it.
+When I was working on the game, all I saw was problems.
+A flawed game, that didn&rsquo;t work.
+And I was burnt out.
+You would think that if I based my game off of another that&rsquo;s proven to be successfully, I wouldn&rsquo;t have issues.
+Yet, I ran into a lot of design problems.
+This was the result of me changing my game so much from the original.
+Sure they may look very similar, but mechanically they are very different.</p>
+<p>After a lot of burnout, and doubt in the project, I ended the SeaQuest remake.
+The project sat for a year.
+I came back to it a few times, sad that the project never gotten finished.
+While I came back to it, I realized the potential that it had.</p>
+<h2 id="tsa-remake">TSA Remake</h2>
+<p>It sat until the <a href="https://tsaweb.org/tsa">TSA (Technology Student Association)</a> high school video game design competition.
+The theme was &ldquo;Arcade in a Museum.&rdquo;
+This was perfect, I could finally finish what I started.
+So I decided to recreate the game for the competition.</p>
+<p>Technically they gave us a few months to develop the games.
+I was very busy, and I didn&rsquo;t know till much later.
+So that gave me only a few weeks of development.</p>
+<p>Many schools assigned their classes to make a game, and they would recieve a grade at the end.
+I wasn&rsquo;t in one of those classes, which was too bad, but I&rsquo;ll still have enough time to finish.</p>
+<p>TSA required that you must work in teams.
+So I teamed up with my friend Luke.
+He has little experience with game dev, but all of his efforts were appriecated.</p>
+<p>TSA did have a few requirements for the game&hellip;</p>
+<ul>
+<li>A full game portfolio</li>
+<li>Copyright checklist</li>
+<li>Storyboard</li>
+<li><a href="https://tsaweb.org/docs/default-source/themes-and-problems-2018-2019/2021-2022/plan-of-work-log.pdf?sfvrsn=eb5864c9_2">Plan of Work Log</a></li>
+<li>3 levels that can be played fully through</li>
+</ul>
+<p>Here&rsquo;s a picture of my &ldquo;storyboard.&rdquo;
+<img loading="lazy" src="/images/posts/seadefender/game-mechanics.webp" alt="storyboard picture"  />
+</p>
+<p>So apparently the game is supposed to have a story.
+I was so worried on finishing the game on time, I didn&rsquo;t have the time to complete a story.
+Not gonna lie, having the requirement for &ldquo;story&rdquo; is kinda dumb.
+Some games don&rsquo;t have a story, especially arcade games.
+Yeah what&rsquo;s the story in space invaders?
+Get rid of them!
+That&rsquo;s what it is.</p>
+<p>I also didn&rsquo;t like the whole level requirement.
+Some games don&rsquo;t have your typical &ldquo;levels.&rdquo;
+Especially if it&rsquo;s an arcade game, you kinda just keep playing an ever increasing difficulty until you lose.
+Think of Asteroids.
+Classic, arcade game.
+Does that have levels?
+Nope!
+So uh, I don&rsquo;t see why levels are a requirement.</p>
+<p>You can tell the people that created the whole video game design competition system at TSA don&rsquo;t play video games.</p>
+<p>So as I was stressing out trying to get the game finished on time, I was also stressed about the portfolio.
+There&rsquo;s so many documents you have to sign and make sure you get correct.
+The website at the time was a mess, trying to figure out what I needed and making sure everything&rsquo;s correct.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/seadefender-2.gif" alt="seaDefender gameplay gif"  />
+</p>
+<p>For the game, I just added some new enemies, and refined the game mechanics.</p>
+<p>Anyways, after crunching like crazy, I finished the game, and the portfolio.
+The story had to be absent from the game.
+I didn&rsquo;t have the time to work it out.
+So I went to submit the game, and spent an hour navigating the site trying to figure out where to submit.
+You don&rsquo;t submit to the official TSA site till you go to nationals.
+So I needed to figure out how to submit to the <a href="https://utahtsa.org/wp/">Utah TSA site</a>.
+Anyways, I figured out I had to hit the &ldquo;register my chapter button,&rdquo; only then to login.
+Which then I had to figure out the password from my teacher, who is the chapter adviser.
+After he gave me the password, it still failed.
+With many variations of failed login attempts I had to try something else.
+I had to email the Utah State TSA Advisor to get it submitted.</p>
+<p>After that painfull process, the game was submitted and ready.
+Here&rsquo;s the <a href="/pdf/seadefender/seadefender-tsa-portfolio.pdf">game&rsquo;s portfolio</a> if anyone wants to see.</p>
+<p>The game placed 2nd in the state.
+I believe there was around 11 teams that participated in the state competition.
+Does this mean I get to go to nationals?
+No, but I thought so.
+I thought I read something on the website saying that the first 3 teams will go to nationals.
+And robotics had 3 teams go to nationals as well, so I assumed we were too.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/tutorial-shark-killing.gif" alt="tutorial-shark-killing.gif"  />
+</p>
+<p>So I kept working on the game.
+I noticed that most players have no idea how to play the game.
+So I added a tutorial, which was very much needed.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/lazer-shark.gif" alt="lazer-shark.gif"  />
+</p>
+<p>I added <strong>lazer sharks!!</strong>
+Just for the memes, idk thought they could be fun.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/high-score-screen.gif" alt="high-score-screen.gif"  />
+</p>
+<p>And I added a high score screen.
+I was hoping this would really push the arcade theme of the game.</p>
+<p>Anyways, it came time to submit for nationals, and that&rsquo;s when I realized that we weren&rsquo;t going to nationals.
+Yeah it was disappointing.
+I could blame it on everything else.
+But ultimately it was my fault.
+I&rsquo;ve accepted it and moved on.
+We all fail, we aren&rsquo;t perfect, and we just gotta keep moving forward.
+Failure is part of the process, and that&rsquo;s how we learn and grow.
+Those that are most successful are those who have failed the most.
+It didn&rsquo;t turn out the way I wanted, but that&rsquo;s okay.
+Later I realized that wasn&rsquo;t the end for this project.</p>
+<h2 id="udemy-remake">Udemy Remake</h2>
+<p>So now it&rsquo;s summer and I need to get a job.
+My dad suggested that I should do a Udemy course.
+I did some research and found that these game development courses can potentially make quite a bit of money.
+I already had some experience doing <a href="https://www.youtube.com/plugworld">YouTube tutorials</a> and teaching game development with the <a href="https://godotengine.org/">Godot game engine</a>.
+So I think it could potentially work out pretty well.</p>
+<p>So I decided to make a Udemy course based on this game.
+I guess I haven&rsquo;t done enough remakes yet.
+As you might imagine, the code for this game doesn&rsquo;t look too good.
+Time to get to work, going through every line of code simplifying and cleaning everything up.
+<a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/index.html">Godot&rsquo;s best practices</a> was a very helpful resource for this.</p>
+<p>The hard part about making this course is making it as simple as possible.
+This is a complex game, and I&rsquo;m trying to make a course for beginners.
+So I&rsquo;ll do my best, we&rsquo;ll see how this goes.
+Trying to achieve the balance between clean and simple code.
+More often than not the cleanest approach usually is the most complex to understand.</p>
+<p>Anyways, after remaking the game for the third time, it&rsquo;s now time to record the course.
+That&rsquo;s where I&rsquo;m at right now.
+In the next part, I&rsquo;m gonna talk about the process of recording and making the course.
+Anyways, that&rsquo;s where I&rsquo;m at right now, thanks!</p>
+]]></content:encoded></item><item><title>The Steam Deck Is Huge for Indie Gamedevs</title><link>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</link><pubDate>Wed, 08 Jun 2022 15:40:00 -0600</pubDate><guid>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</guid><description>The Steam Deck is gonna lead to the biggest shift in the pc gaming industry.
+A hitch hikers guide to the Steam Deck 🕹️ The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs Arch Linux as it&amp;rsquo;s kernel in it&amp;rsquo;s custom operating system called Steam OS 3.0.
+Steam OS Beginnings Steam OS has been around ever since the end of 2013.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-deck-closeup.webp" alt="Steam Deck"  />
+</p>
+<p>The <a href="https://www.steamdeck.com/en/">Steam Deck</a> is gonna lead to the biggest shift in the pc gaming industry.</p>
+<h2 id="a-hitch-hikers-guide-to-the-steam-deck-">A hitch hikers guide to the Steam Deck 🕹️</h2>
+<p>The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs <a href="https://archlinux.org/">Arch Linux</a> as it&rsquo;s kernel in it&rsquo;s custom operating system called Steam OS 3.0.</p>
+<h3 id="steam-os-beginnings">Steam OS Beginnings</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/big-picture.webp" alt="Steam OS"  />
+</p>
+<p><a href="https://en.wikipedia.org/wiki/SteamOS">Steam OS has been around ever since the end of 2013</a>. Gabe Newell had a very clear vision for Steam OS. At LinuxCon he stated <a href="https://arstechnica.com/gaming/2013/09/gabe-newell-linux-is-the-future-of-gaming-new-hardware-coming-soon/">&ldquo;Linux and open source are the future of gaming.&quot;</a> The idea of running Windows games on Linux is not a new idea to Valve. They have been working on their compatibility layer called <a href="https://github.com/ValveSoftware/Proton">Proton</a> for a long time. Proton is a fork of <a href="https://www.winehq.org/">Wine</a>, which is a tool to run Windows executables on Linux. Valve first used Steam OS on their <a href="https://en.wikipedia.org/wiki/Steam_Machine_(computer)">Steam Machines</a> in 2015. Basically Steam Machines were just to bring a console like experience to a personal computer. This led to the <a href="https://store.steampowered.com/app/353370/Steam_Controller/">Steam Controllers</a> and <a href="https://store.steampowered.com/bigpicture">Steam Big Picture</a>.</p>
+<h3 id="steam-machines-failed">Steam Machines Failed</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-machine.webp" alt="Steam Machine"  />
+</p>
+<p>At the time, Steam OS was a very cool concept, but lacked in terms of hardware and game support. Which led to the <a href="https://steamcommunity.com/app/221410/discussions/0/1696043806550421224/">Steam Machines being discontinued in 2018</a>. Valve stated that they still have a vision for Steam OS and will continue to improve it, even after discontinuing the Steam Machines.</p>
+<h3 id="steam-deck-announcement">Steam Deck Announcement</h3>
+<p>Towards the end of 2021 the <a href="https://www.youtube.com/watch?v=AlWgZhMtlWo">Steam Deck was announced</a>. The Steam Deck was made possible by the software that Valve has continued to improve over the course of about 9 years. It was also only possible by the contributions and the dedication of the free and open source community. The Steam Deck introduced a new way to play PC games. Often it&rsquo;s compared to the Nintendo Switch in terms of form factor, but the two systems are dramatically different and created for very different audiences.</p>
+<h2 id="other-handheld-pcs">Other handheld PCs</h2>
+<p>The idea of a handheld computer has been around for a very long time. But the hardware never caught up to the current generation. Until now. If you have been paying any attention to the handheld computer space in the past 2 years, you would know that the market is beginning to become mainstream.</p>
+<p>I owned a <a href="https://www.gpd.hk/gdpwin2">GPD Win 2</a> before my Steam Deck. It doesn&rsquo;t really have a lot of processing power, but basically every 2D indie game would run perfectly on it. It was interesting to tinker with it, often you could boost performance and battery life by playing with the TDP and under volting the machine. This opens up the possibilities of playing a few AAA pc games.</p>
+<p>This year alone, two handhelds are gonna be competing with the Steam Deck at it&rsquo;s price point.</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://liliputing.com/2022/05/aya-neo-air-with-an-oled-display-is-a-thinner-lighter-handheld-gaming-pc.html">Aya Neo Air</a> starts at $549</th>
+<th><a href="https://www.theverge.com/2022/5/28/23145658/ayn-loki-handheld-runs-windows-starts-299">Ayn Loki</a> starts at $299</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/aya-neo-air-handheld.webp" alt="Aya Neo Air"  />
+</td>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/ayn-loki-handheld.webp" alt="Ayn Loki"  />
+</td>
+</tr>
+</tbody>
+</table>
+<p>There&rsquo;s definitely an expanding market here. One that I believe game developers should design games with this usecase in mind.</p>
+<h2 id="indie-games-benefit-most-from-handheld-systems">Indie games benefit most from handheld systems</h2>
+<p>Whenever you have portable hardware, the games that are played the most are usually casual. I mean some people play Call of Duty Mobile on their phones, but most people play simple and addictive time killer games.</p>
+<p>Take the Nintendo Switch as an example. Basically all of the Nintendo Switch library is backed by indie games. Aside from the Nintendo AAA games, people mostly play indie games on the system. Nintendo knows this, they have been promoting indies for a while now using <a href="https://twitter.com/indieworldna">indie world</a>.</p>
+<p>In my experience playing on the Steam Deck, I would often lean towards the more casual indie games.</p>
+<ul>
+<li>They are much easier to jump straight into, especially if I just have a few minutes to spare.</li>
+<li>They use up very little battery. Some games can go up to 7 hours before the unit dies.</li>
+</ul>
+<p>Most of the time, I just found them more enjoyable. Now that&rsquo;s obviously just my opinion. Plenty of people are enjoying modern AAA games on their Steam Decks right now. But by the stats of the previous systems in a similar form factor, I can confidently say that the Steam Deck is gonna sell more indie game developers games that support the platform.</p>
+<h2 id="great-on-deck">Great on Deck</h2>
+<p>Since the Steam Deck is running Steam OS and is Linux based. Not all games work flawlessly on it. Proton does an amazing job getting most games running on the system. But there are a few that will continue to have issues until devs support it.</p>
+<p><a href="https://store.steampowered.com/greatondeck">Great on Deck</a> was created to help customers make sure they are buying games that run well on the system. As an indie game dev, the goal should be to get your game supported. Games that are supported overall get a lot more game sales compared to games that aren&rsquo;t supported on Steam Deck. I would start by integrating the <a href="https://partner.steamgames.com/doc/sdk/api">SteamWorks api</a> into your game. Adding achievements, cloud saves, and steam input can go a long way for your game.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Just some of my quick thoughts on the current handheld gaming market and how indie game developers can benefit from it. I would totally recommend if you are a current game developer to look into the Steam Deck and other gaming handhelds. It&rsquo;s an interesting market right now, and it&rsquo;s just starting to become more mainstream.</p>
+]]></content:encoded></item></channel></rss>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>linux on PlugWorld</title><link>https://plug-world.com/tags/linux/</link><description>Recent content in linux on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 05 Jul 2022 21:45:46 -0600</lastBuildDate><atom:link href="https://plug-world.com/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Grub and OS Prober in Arch Linux</title><link>https://plug-world.com/posts/grub-and-os-prober-in-arch-linux/</link><pubDate>Tue, 05 Jul 2022 21:45:46 -0600</pubDate><guid>https://plug-world.com/posts/grub-and-os-prober-in-arch-linux/</guid><description>This guide is tailored to people that are dualbooting Linux and Windows. The exact same steps can accomplish adding another Linux OS to the bootloader.
+Prerequisites sudo pacman -S grub efibootmgr os-prober ntfs-3g Mounting Windows Drive sudo mount -t ntfs-3g /dev/sda2 /mnt Don&amp;rsquo;t just copy this command. Make sure you use the correct drive. You can find each drive by name when using lsblk. Usually you want to mount the smallest partition.</description><content:encoded><![CDATA[<p>This guide is tailored to people that are dualbooting Linux and Windows.
+The exact same steps can accomplish adding another Linux OS to the bootloader.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S grub efibootmgr os-prober ntfs-3g
+</code></pre></div><h2 id="mounting-windows-drive">Mounting Windows Drive</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mount -t ntfs-3g /dev/sda2 /mnt
+</code></pre></div><p><strong>Don&rsquo;t just copy this command.</strong>
+<em>Make sure you use the correct drive.</em>
+You can find each drive by name when using <code>lsblk</code>.
+Usually you want to mount the smallest partition.
+That will contain the boot manager for that specific operating system.
+For Windows mine was the second partition, but that may change, so just check yours just in case.</p>
+<h2 id="enable-os-prober">Enable OS Prober</h2>
+<p>Edit <code>/etc/default/grub</code> and uncomment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GRUB_DISABLE_OS_PROBER<span style="color:#f92672">=</span>false
+</code></pre></div><p>This allows OS Prober to scan for other operating systems and add them to the bootloader.</p>
+<h2 id="making-grub-the-bootloader">Making Grub the bootloader</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><p>Generate grubs config, OS Prober should do it&rsquo;s thing and add all detected operating systems to Grub.
+If it misses one, make sure you have it mounted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo grub-install --target<span style="color:#f92672">=</span>x86_64-efi --efi-directory<span style="color:#f92672">=</span>/boot/efi --bootloader-id<span style="color:#f92672">=</span>grub --recheck
+</code></pre></div><p>This makes Grub the bootloader.</p>
+]]></content:encoded></item><item><title>Fixing Bluetooth Xbox Controllers in Arch Linux</title><link>https://plug-world.com/posts/fixing-xbox-bluetooth-controllers-in-arch-linux/</link><pubDate>Sun, 03 Jul 2022 11:43:17 -0600</pubDate><guid>https://plug-world.com/posts/fixing-xbox-bluetooth-controllers-in-arch-linux/</guid><description>Just like many others, I had issues with my Xbox One X/S controllers in Arch Linux. Here&amp;rsquo;s my quick guide to get everything working.
+Setting up Bluetooth Since you are on Arch Linux there&amp;rsquo;s a good chance you may not have Bluetooth installed.
+sudo pacman -S bluez bluez-utils Bluez provides the Bluetooth protocol stack. Bluz-utils provides a command line utility to connect bluetooth devices.
+sudo systemctl enable bluetooth.service Automatically autostart bluetooth as a service when the system boots.</description><content:encoded><![CDATA[<p>Just like many others, I had issues with my Xbox One X/S controllers in Arch Linux.
+Here&rsquo;s my quick guide to get everything working.</p>
+<h2 id="setting-up-bluetooth">Setting up Bluetooth</h2>
+<p>Since you are on Arch Linux there&rsquo;s a good chance you may not have Bluetooth installed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S bluez bluez-utils
+</code></pre></div><p>Bluez provides the Bluetooth protocol stack.
+Bluz-utils provides a command line utility to connect bluetooth devices.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable bluetooth.service
+</code></pre></div><p>Automatically autostart bluetooth as a service when the system boots.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start bluetooth.service
+</code></pre></div><p>Startup the bluetooth service.</p>
+<h2 id="connecting-the-controller-via-bluetooth">Connecting the controller via Bluetooth</h2>
+<p>Run <code>bluetoothctl</code> in the command line to startup the bluetooth utility.</p>
+<p>Run <code>power on</code> to turn on the bluetooth controller.</p>
+<p>Run <code>scan on</code> to get a list of each of the devices and their mac addresses.
+Your Xbox controller should show up as &ldquo;Xbox Wireless Controller&rdquo; then copy the mac address.</p>
+<p>Run <code>pair yourControllerMacAddress</code>, this will connect your Bluetooth controller.
+If you run into pairing issues, proceed to the next section.</p>
+<h2 id="controller-bluetooth-fix">Controller Bluetooth fix</h2>
+<p>Is your controller having Bluetooth connection issues?
+The solution is to update the firmware in the controller.</p>
+<ol>
+<li>Jump over to Windows, don&rsquo;t worry this is temporary (you can use a VM too).</li>
+<li>Download the Xbox Accessories app from the Microsoft Store.</li>
+<li>Plug in the controller to the pc.</li>
+<li>Get them updates.</li>
+</ol>
+<p>Now that the controller is updated, you can switch back to your Arch Linux install.
+You can see that the controller can connect over Bluetooth.</p>
+<h2 id="fixing-controller-mappings">Fixing controller mappings</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S linux-headers
+</code></pre></div><p>Make sure you have linux-headers installed.
+They are required for the next step.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yay -S xpadneo-dkms-git
+</code></pre></div><p>Make sure you have the <a href="https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/">yay aur helper</a> installed.
+Then proceed to install xpadneo.
+It contains the drivers for the Xbox One wireless controllers.
+This fixes the strange behavior of the operating system misinterpreting some of the controls on the controller.
+For example, my controller had issues with the right joystick and a few face buttons were mixed up.
+After installing the drivers those issues were resolved.</p>
+]]></content:encoded></item><item><title>Arch Linux Just Works</title><link>https://plug-world.com/posts/arch-linux-just-works/</link><pubDate>Mon, 20 Jun 2022 09:19:12 -0600</pubDate><guid>https://plug-world.com/posts/arch-linux-just-works/</guid><description>Please note this guide is outdated, I no longer recommend Arch Linux.
+Arch Linux works great on my main desktop, but with it on everything else I&amp;rsquo;m unhappy with it. This is because I use my main desktop enough that I can keep my computer up to date and maintained.
+Intro Arch is often not recommended to new Linux users. This is caused by the fact that you have to run a lot of commands to install and configure your system.</description><content:encoded><![CDATA[<p>Please note this guide is outdated, I no longer recommend Arch Linux.</p>
+<p>Arch Linux works great on my main desktop, but with it on everything else I&rsquo;m unhappy with it.
+This is because I use my main desktop enough that I can keep my computer up to date and maintained.</p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>Arch is often not recommended to new Linux users.
+This is caused by the fact that you have to run a lot of commands to install and configure your system.
+The terminal is scary.
+The terminal is made for hackers.
+That pushes new users away from it.</p>
+<p>Despite all of that, I would recommend Arch Linux to beginners.</p>
+<p>Arch has just recently made a <a href="https://linuxreviews.org/The_Latest_Arch_Linux_ISO_Has_A_Fresh_New_Guided_Installer">guided installer</a>.
+The installer makes this process extremely easy and less tedious.</p>
+<p>First and foremost, connect your device to the internet.</p>
+<p>Then you may need to initalize your pacman keys.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman-key --init
+</code></pre></div><p>Afterward, you can run through the guided installer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m archinstall guided
+</code></pre></div><p>Recently I tried to install Fedora on my laptop.
+I heard a lot of good things about it.
+Packages are up to date and stable.
+But it sucked.
+The package manager was sooo slow.
+Updates took forever.
+I had constant issues with the wifi on my laptop.
+It led to me manually having to request ip addresses from my router using <code>sudo dhclient -v</code>
+One problem would lead to the next.
+Constant issues and configuration.
+Then I gave up.
+I wasted a whole week.
+I spent many hours trying to get things to &ldquo;just work.&rdquo;</p>
+<h2 id="my-mistakes">My Mistakes</h2>
+<p>I didn&rsquo;t use the normal <a href="https://getfedora.org/">Fedora workstation</a> install.
+Instead, I used <a href="https://alt.fedoraproject.org/en/">Fedora Everything</a>.</p>
+<p>I tried the Fedora workstation install initially.
+But I hated it.
+I didn&rsquo;t like <a href="https://www.gnome.org/">Gnome</a>.
+The system ran slow, and wasn&rsquo;t as snappy as I was hoping.
+It had over 2000 packages installed by default.
+In comparison my Arch install on my desktop has 1805 packages.
+I have many packages I don&rsquo;t use, tons of apps installed, and steam games.
+And yet it is less bloated than a vanilla Fedora install.</p>
+<p>This led to me using Fedora Everything.
+It&rsquo;s just the essentials.
+It boots to the terminal just like Arch.
+Nothing additional installed.
+<a href="https://github.com/HelamanWarrior/Fedora-Installer">I created a script</a> to automatically install everything I needed.
+It had my window manager (<a href="https://github.com/baskerville/bspwm">BSPWM</a>), terminal (<a href="https://st.suckless.org/">st</a>), <a href="https://polybar.github.io/">polybar</a>, <a href="https://github.com/HelamanWarrior/dotfiles">dot files</a> and all of that fun stuff.</p>
+<p>According to my virtual machine the script worked great.
+It should be great to install quickly on multiple machines.
+Nope, it wasn&rsquo;t.
+It sucked.
+Constant issues with Fedora working with my laptop hardware.
+It was an endless rabbithole of maintainance and fixing things.
+I had an <a href="https://wiki.archlinux.org/title/NVIDIA_Optimus">Nvidia Optimus</a> based laptop.
+That was the biggest problem for my custom Fedora install.
+It led to many workarounds and dumb hacks.
+This sucked, because I wanted to run this install on many laptops.
+These workarounds wouldn&rsquo;t work on other devices with different hardware.
+This would lead to me constantly maintaining all of the devices using Fedora Everything.
+I then stopped using Fedora.</p>
+<h2 id="the-switch-to-arch">The Switch to Arch</h2>
+<p>Initially I didn&rsquo;t want to use Arch on the laptop.
+Mostly because most people on the internet says &ldquo;it&rsquo;s unstable.&rdquo;
+If I&rsquo;m doing a laptop install, it needs to &ldquo;just work.&rdquo;
+I&rsquo;m not gonna have the time to mess around trying to get things working.</p>
+<p>But I thought about it more.
+I reconsidered.
+I have ran my Arch install for almost a year on my desktop.
+Guess what?
+No problems!
+I probably had one or two things that broke.
+But at the end of the day it was my fault that they broke in the first place.</p>
+<h2 id="the-archening-begins">The Archening begins</h2>
+<p>Installing Arch was very straightforward.
+I downloaded the latest <a href="https://archlinux.org/download/">Arch ISO</a>.
+And I had it livebooted in no time.
+Running the Arch guided installer was very straightforward and I had all the customization I needed.
+It allowed you to install most desktop environments and some window managers.
+As well as installing your own packages if you so choose.
+It even gave me the option to install my Nvidia drivers.</p>
+<p>Instead of going my typical window manager route, I went with <a href="https://kde.org/plasma-desktop/">KDE Plasma</a>.
+I&rsquo;m so glad I did.
+Everything seems to work right out of the box.
+Which is exactly what I needed.
+When it booted into Plasma there was very few apps installed.
+Last time I installed Plasma I had a ton of KDE apps I didn&rsquo;t use.
+It bloated up the system, and trying to delete them was a pain in the butt.
+I&rsquo;m really glad to see that it&rsquo;s very minimal and I still have a lot of room to customize my install.
+It also seems to use up way less resources than Gnome.
+Plasma was super snappy and I&rsquo;m really impressed how well it ran.
+Can we talk about the number of packages.
+I know packages aren&rsquo;t everything, but holy cow!
+When I was done with installing all of my apps and Plasma I had 700 packages!
+By comparison, my Fedora Everything install had that many before I even started installing stuff.</p>
+<p>My fresh Plasma install had almost no problems.
+As always you get display issues on Nvidia Optimus laptops.
+But it was an extremely simple fix.
+<a href="https://wiki.archlinux.org/title/NVIDIA_Optimus#No_screens_found_on_a_laptop/NVIDIA_Optimus">You can fix it</a> with changing your display manager configuration or your xorg conf.
+You are also gonna have to switch from Wayland to Xorg in order for this to work.
+You gotta love Nvidia, making things harder for everyone.
+But after that fix, everything has been great!
+I&rsquo;ve been running it for over a week now.
+No problems!</p>
+<h2 id="arch-is-for-beginners">Arch is for Beginners</h2>
+<p>In my opinion I believe Arch is one of the best distros for beginners.
+Now let me clear this up.
+By beginners I mean anyone with some good computer experience that&rsquo;s new to Linux.
+The average Joe is always gonna have a harder time on Linux.
+Especially if they are running into problems just using Windows.</p>
+<p>You could say the terminal pushes away the beginners, your gonna have to touch the terminal in the installation.
+But if you&rsquo;re gonna use Linux you&rsquo;re eventually gonna have to use the terminal.
+The guided Arch installer opens the door to more people.
+If you haven&rsquo;t used Arch yet, I recommend you try it in a Virtual Machine and see how you like it.
+Just go through the guided installer and see what you like.</p>
+<p>Fedora could have been just fine.
+My main issue came from not using the official workstation release.
+Fedora workstation really wasn&rsquo;t my thing.
+Finding packages is quite a bit of work with Fedora.
+It&rsquo;s a smaller distro so many guides simply wouldn&rsquo;t tell you what the Fedora equivalent packages are.
+This leads to it taking more time hunting down packages.</p>
+<p>With Arch, even if the application I want isn&rsquo;t in the repo, I can just go to the <a href="https://aur.archlinux.org/">AUR (Arch User Repository)</a>.
+Almost any app that runs on linux will probably be in there.
+Rarely are you ever gonna have to install dependencies or compile things yourself.
+Which is even easier for beginners.</p>
+]]></content:encoded></item><item><title>The Steam Deck Is Huge for Indie Gamedevs</title><link>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</link><pubDate>Wed, 08 Jun 2022 15:40:00 -0600</pubDate><guid>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</guid><description>The Steam Deck is gonna lead to the biggest shift in the pc gaming industry.
+A hitch hikers guide to the Steam Deck 🕹️ The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs Arch Linux as it&amp;rsquo;s kernel in it&amp;rsquo;s custom operating system called Steam OS 3.0.
+Steam OS Beginnings Steam OS has been around ever since the end of 2013.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-deck-closeup.webp" alt="Steam Deck"  />
+</p>
+<p>The <a href="https://www.steamdeck.com/en/">Steam Deck</a> is gonna lead to the biggest shift in the pc gaming industry.</p>
+<h2 id="a-hitch-hikers-guide-to-the-steam-deck-">A hitch hikers guide to the Steam Deck 🕹️</h2>
+<p>The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs <a href="https://archlinux.org/">Arch Linux</a> as it&rsquo;s kernel in it&rsquo;s custom operating system called Steam OS 3.0.</p>
+<h3 id="steam-os-beginnings">Steam OS Beginnings</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/big-picture.webp" alt="Steam OS"  />
+</p>
+<p><a href="https://en.wikipedia.org/wiki/SteamOS">Steam OS has been around ever since the end of 2013</a>. Gabe Newell had a very clear vision for Steam OS. At LinuxCon he stated <a href="https://arstechnica.com/gaming/2013/09/gabe-newell-linux-is-the-future-of-gaming-new-hardware-coming-soon/">&ldquo;Linux and open source are the future of gaming.&quot;</a> The idea of running Windows games on Linux is not a new idea to Valve. They have been working on their compatibility layer called <a href="https://github.com/ValveSoftware/Proton">Proton</a> for a long time. Proton is a fork of <a href="https://www.winehq.org/">Wine</a>, which is a tool to run Windows executables on Linux. Valve first used Steam OS on their <a href="https://en.wikipedia.org/wiki/Steam_Machine_(computer)">Steam Machines</a> in 2015. Basically Steam Machines were just to bring a console like experience to a personal computer. This led to the <a href="https://store.steampowered.com/app/353370/Steam_Controller/">Steam Controllers</a> and <a href="https://store.steampowered.com/bigpicture">Steam Big Picture</a>.</p>
+<h3 id="steam-machines-failed">Steam Machines Failed</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-machine.webp" alt="Steam Machine"  />
+</p>
+<p>At the time, Steam OS was a very cool concept, but lacked in terms of hardware and game support. Which led to the <a href="https://steamcommunity.com/app/221410/discussions/0/1696043806550421224/">Steam Machines being discontinued in 2018</a>. Valve stated that they still have a vision for Steam OS and will continue to improve it, even after discontinuing the Steam Machines.</p>
+<h3 id="steam-deck-announcement">Steam Deck Announcement</h3>
+<p>Towards the end of 2021 the <a href="https://www.youtube.com/watch?v=AlWgZhMtlWo">Steam Deck was announced</a>. The Steam Deck was made possible by the software that Valve has continued to improve over the course of about 9 years. It was also only possible by the contributions and the dedication of the free and open source community. The Steam Deck introduced a new way to play PC games. Often it&rsquo;s compared to the Nintendo Switch in terms of form factor, but the two systems are dramatically different and created for very different audiences.</p>
+<h2 id="other-handheld-pcs">Other handheld PCs</h2>
+<p>The idea of a handheld computer has been around for a very long time. But the hardware never caught up to the current generation. Until now. If you have been paying any attention to the handheld computer space in the past 2 years, you would know that the market is beginning to become mainstream.</p>
+<p>I owned a <a href="https://www.gpd.hk/gdpwin2">GPD Win 2</a> before my Steam Deck. It doesn&rsquo;t really have a lot of processing power, but basically every 2D indie game would run perfectly on it. It was interesting to tinker with it, often you could boost performance and battery life by playing with the TDP and under volting the machine. This opens up the possibilities of playing a few AAA pc games.</p>
+<p>This year alone, two handhelds are gonna be competing with the Steam Deck at it&rsquo;s price point.</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://liliputing.com/2022/05/aya-neo-air-with-an-oled-display-is-a-thinner-lighter-handheld-gaming-pc.html">Aya Neo Air</a> starts at $549</th>
+<th><a href="https://www.theverge.com/2022/5/28/23145658/ayn-loki-handheld-runs-windows-starts-299">Ayn Loki</a> starts at $299</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/aya-neo-air-handheld.webp" alt="Aya Neo Air"  />
+</td>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/ayn-loki-handheld.webp" alt="Ayn Loki"  />
+</td>
+</tr>
+</tbody>
+</table>
+<p>There&rsquo;s definitely an expanding market here. One that I believe game developers should design games with this usecase in mind.</p>
+<h2 id="indie-games-benefit-most-from-handheld-systems">Indie games benefit most from handheld systems</h2>
+<p>Whenever you have portable hardware, the games that are played the most are usually casual. I mean some people play Call of Duty Mobile on their phones, but most people play simple and addictive time killer games.</p>
+<p>Take the Nintendo Switch as an example. Basically all of the Nintendo Switch library is backed by indie games. Aside from the Nintendo AAA games, people mostly play indie games on the system. Nintendo knows this, they have been promoting indies for a while now using <a href="https://twitter.com/indieworldna">indie world</a>.</p>
+<p>In my experience playing on the Steam Deck, I would often lean towards the more casual indie games.</p>
+<ul>
+<li>They are much easier to jump straight into, especially if I just have a few minutes to spare.</li>
+<li>They use up very little battery. Some games can go up to 7 hours before the unit dies.</li>
+</ul>
+<p>Most of the time, I just found them more enjoyable. Now that&rsquo;s obviously just my opinion. Plenty of people are enjoying modern AAA games on their Steam Decks right now. But by the stats of the previous systems in a similar form factor, I can confidently say that the Steam Deck is gonna sell more indie game developers games that support the platform.</p>
+<h2 id="great-on-deck">Great on Deck</h2>
+<p>Since the Steam Deck is running Steam OS and is Linux based. Not all games work flawlessly on it. Proton does an amazing job getting most games running on the system. But there are a few that will continue to have issues until devs support it.</p>
+<p><a href="https://store.steampowered.com/greatondeck">Great on Deck</a> was created to help customers make sure they are buying games that run well on the system. As an indie game dev, the goal should be to get your game supported. Games that are supported overall get a lot more game sales compared to games that aren&rsquo;t supported on Steam Deck. I would start by integrating the <a href="https://partner.steamgames.com/doc/sdk/api">SteamWorks api</a> into your game. Adding achievements, cloud saves, and steam input can go a long way for your game.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Just some of my quick thoughts on the current handheld gaming market and how indie game developers can benefit from it. I would totally recommend if you are a current game developer to look into the Steam Deck and other gaming handhelds. It&rsquo;s an interesting market right now, and it&rsquo;s just starting to become more mainstream.</p>
+]]></content:encoded></item><item><title>Building a NAS</title><link>https://plug-world.com/posts/building-a-nas/</link><pubDate>Wed, 08 Jun 2022 11:11:01 -0600</pubDate><guid>https://plug-world.com/posts/building-a-nas/</guid><description>Computer 🖥️ Ryzen 2200G, 16gb of RAM, bronze PSU, 4 - 8TB Barracuda Compute Seagate HDD.
+The file system is configured for ZFS RAIDZ-1. RAIDZ-1 is a lot like RAID-5.
+Setting up ZFS 💾 This guide is geared towards ZFS RAIDZ-1. This requires at least 3 drives.
+For your ZFS installation you have two choices.
+Guide for installing OpenZFS This is an open source alternative to Oracle&amp;rsquo;s ZFS project.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/diy-nas/diy-nas-full-setup.webp" alt="Diy Nas"  />
+</p>
+<h2 id="computer-">Computer 🖥️</h2>
+<p><strong>Ryzen 2200G</strong>, <strong>16gb</strong> of RAM, bronze PSU, <strong>4 - 8TB</strong> <a href="https://www.amazon.com/Seagate-BarraCuda-Internal-Drive-3-5-Inch/dp/B07H289S7C">Barracuda Compute Seagate HDD</a>.</p>
+<p>The file system is configured for <strong>ZFS RAIDZ-1</strong>. RAIDZ-1 is a lot like RAID-5.</p>
+<h2 id="setting-up-zfs-">Setting up ZFS 💾</h2>
+<p>This guide is geared towards ZFS RAIDZ-1. This requires <strong>at least 3 drives.</strong></p>
+<p>For your ZFS installation you have two choices.</p>
+<ul>
+<li><a href="https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html">Guide for installing OpenZFS</a>
+<ul>
+<li>This is an open source alternative to Oracle&rsquo;s ZFS project. Very similar to Oracle&rsquo;s ZFS.</li>
+</ul>
+</li>
+<li><a href="https://wiki.debian.org/ZFS">Guide for installing ZFS</a>
+<ul>
+<li>This is Oracle&rsquo;s proprietary ZFS. Extremely similar to OpenZFS.</li>
+</ul>
+</li>
+</ul>
+<p>According to <a href="https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi">Jeff Geerling</a> to prepare the drives to be formated for ZFS you have to do this&hellip; <strong>This will erase everything on the drives.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo umount /dev/sda?; sudo wipefs --all --force /dev/sda?; sudo wipefs --all --force /dev/sda
+sudo umount /dev/sdb?; sudo wipefs --all --force /dev/sdb?; sudo wipefs --all --force /dev/sdb
+sudo umount /dev/sdc?; sudo wipefs --all --force /dev/sdc?; sudo wipefs --all --force /dev/sdc
+</code></pre></div><p>Run the above commands for each drive that you want in the pool. You can find these drives by using the command lsblk.</p>
+<p>Run the command below to create a pool. Make sure to include every drive you want in the pool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zpool create zfspool raidz1 sda sdb sdc -f
+</code></pre></div><p>After some research I found that you should almost always turn on ZFS compression.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zfs set compression<span style="color:#f92672">=</span>on zfspool
+</code></pre></div><p>Now your pool should be configured. You can review the status of the pool by using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zpool status
+</code></pre></div><p>If I would setup it up again, I would probably use OpenZFS which is an open source implementation of Oracle&rsquo;s propritary ZFS system. But at the time, I didn&rsquo;t know I was using Oracle&rsquo;s propritary ZFS system, so I ended up with that.</p>
+<h2 id="apps">Apps</h2>
+<h3 id="docker">Docker</h3>
+<p>After using docker for a while I quickly realized the limitations of the tool. Every time you want to make a change or update the container you have to recreate the application from the ground up. All of the configuration you do inside the application all gets removed and you start fresh every time. Oh, and if you want to actually update it, you have to manually remove the container and rerun your docker command.</p>
+<p>The solution to all of these is quite simple. <strong>Don&rsquo;t use DOCKER.</strong> <em>Instead use docker-compose.</em></p>
+<p><a href="https://docs.docker.com/compose/">Docker compose</a> essentially automates the whole process for the user. All you have to do is save a docker-compose.yml file which configures the application. At any time you can pull the latest updates and have your docker back up and running. <em>But wait, what about the application&rsquo;s config?</em> Yeah, by default it will be wiped every time. The solution is to mount the configuration of the file in a <strong>volume</strong>.</p>
+<p><strong>Volumes</strong> <em>are way of passing files from your local file system back into your application</em>. The app has no access to any files outside the container by default. The solution is to now mount the configuration of the application back into your file system outside your container. Then the application will write to that mounted directory it&rsquo;s configuration files and the files will no longer be dependent on the application. You can modify them outside of the application, you can remove the application and recreate it and if you still have the config files mounted then the application will continue to maintain persistence when you make changes to it.</p>
+<p><a href="https://www.linuxserver.io/">Linux Server</a> <strong>I can&rsquo;t recommend using their dockers enough</strong>. They essentially take a lot of self hosted applications that people use and make them easier. Configuration is often done with one config folder, just mount it once and boom you are done. Using and configuring their apps are a lot more intuitive than others. <em>But what about the updates?</em> Yeah I mean you can only assume if you use someone else&rsquo;s packages you are at the mercy of them maintaining it. But you don&rsquo;t have to worry about it with <strong>Linux Server</strong>. They have some sort of bot/script that seems to generate these packages whenever updates go through on the apps. Which means you get the latest applications, and don&rsquo;t have to worry about missing features or vulnerabilities.</p>
+<h3 id="apps-i-currently-use">Apps I currently use:</h3>
+<table>
+<thead>
+<tr>
+<th>Apps</th>
+<th>Docker-Compose examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-swag#linuxserver-swag">Swag / Nginx (Web Server / Reverse Proxy)</a></td>
+<td><a href="/docker-compose-files/swag">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-jellyfin">Jellyfin (Open Source Media Server)</a></td>
+<td><a href="/docker-compose-files/jellyfin">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-plex">Plex (Propietary Media Server)</a></td>
+<td><a href="/docker-compose-files/plex">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-nextcloud">Nextcloud (Like Google Drive)</a></td>
+<td><a href="/docker-compose-files/nextcloud">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/syncthing/syncthing">Syncthing (File sync across devices)</a></td>
+<td><a href="/docker-compose-files/syncthing">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/searxng/searxng">SearXNG (Metadata search engine)</a></td>
+<td><a href="/docker-compose-files/searxng">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/matrix-org/synapse">Matrix Synapse (Encrypted Chat Server)</a></td>
+<td><a href="/docker-compose-files/synapse">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://photoview.github.io/">Photoview</a></td>
+<td><a href="/docker-compose-files/photoview">Docker-compose</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="swag">SWAG</h3>
+<p>This application is built ontop of <a href="https://nginx.org/en/">nginx</a>.
+Nginx is a <strong>web server</strong> and a <strong>reverse proxy</strong>. <a href="https://github.com/linuxserver/docker-swag">Swag</a> is just amazing. It just makes your life easier. It has <a href="https://github.com/linuxserver/reverse-proxy-confs">reverse proxy templates</a> for most applications that you would want to run. You simply just have to change the file name to enable them. Anyways, it&rsquo;s really nice so you can have you domain point to multiple apps easily. It also containers certbot which essentially is able to give your website HTTPS encryption all you have to do is configure your domain, add your email to the environment variable, and boom you got an HTTPS website. It comes with other stuff to like cloudflare integration, and many other useful things that just save you so much time.</p>
+<p>In order to enable reverse proxy on your apps, locate your swag config folder then go to nginx/proxy-confs. You will see a huge list of all the apps, locate the app you want to reverse proxy.</p>
+<p>When you reverse proxy, you will usually have two options&hellip;</p>
+<ul>
+<li><strong>subfolder</strong>
+<ul>
+<li>example.com/myapp</li>
+<li>requires no extra ssl certificates to sign</li>
+<li>no dns configuration required</li>
+</ul>
+</li>
+<li><strong>subdomain</strong>
+<ul>
+<li>myapp.example.com</li>
+<li>every subdomain needs a signed ssl certificate</li>
+<li>requires subdomain to be added to the &ldquo;SUBDOMAINS&rdquo; environment variable in docker compose</li>
+<li>requires cname record to to be added to dns</li>
+</ul>
+</li>
+</ul>
+<p>I perfer to reverse proxy subfolders, they are a lot less work than subdomains, <em>but certain apps will require a subdomain reverse proxy.</em></p>
+<p>To enable the reverse proxy for your app, just copy the myapp.subdomain/subfolder.conf.sample to myapp.subdomain/subfolder.conf. Essentially just remove the .sample portion of the file name, that will activate it to be used by the reverse proxy. <strong>Please note that if you don&rsquo;t rename your containers correctly this will not work.</strong> In the proxy configs it uses the container name to get the ip address of the container through the docker network. If you use the ip address of the container in the reverse proxy instead of the name you will have problems because the ip addresses get changed everytime you initialize your containers. So it&rsquo;s best to use the name in the reverse proxy.</p>
+<p>After configuring the reverse proxy you need to restart the swag service using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose restart swag
+</code></pre></div><h3 id="docker-tips">Docker Tips</h3>
+<p>Once you have created your docker compose file with all your apps, make sure you keep it updated. Outdated apps can potentially have vulnerabilities that would allow attackers to exploit your server.</p>
+<p>To update your containers use this&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose pull
+</code></pre></div><p>Followed by&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose up -d
+</code></pre></div><p>The above command recreates the updated containers. Whenever you change the docker-compose file you want to run the above command to recreate the new containers.</p>
+<p>Docker images never get deleted when you update your containers. Previous images stay on the disk, which can build up over time and consume a lot of storage space. In order to delete the old unused images use this command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker image prune
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Just getting started with self hosting applications is a difficult task. Especially if you don&rsquo;t have any prior Linux experience.</p>
+<p>It&rsquo;s dangerous to go alone, take this <a href="https://docs.linuxserver.io/">Linux Server docs</a>. Everything over there is very beginner friendly and extremely useful when getting started on your self hosting journey.</p>
+]]></content:encoded></item></channel></rss>

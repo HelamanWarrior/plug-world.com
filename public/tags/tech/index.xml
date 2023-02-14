@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>tech on PlugWorld</title><link>https://plug-world.com/tags/tech/</link><description>Recent content in tech on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 08 Jun 2022 15:40:00 -0600</lastBuildDate><atom:link href="https://plug-world.com/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>The Steam Deck Is Huge for Indie Gamedevs</title><link>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</link><pubDate>Wed, 08 Jun 2022 15:40:00 -0600</pubDate><guid>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</guid><description>The Steam Deck is gonna lead to the biggest shift in the pc gaming industry.
+A hitch hikers guide to the Steam Deck 🕹️ The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs Arch Linux as it&amp;rsquo;s kernel in it&amp;rsquo;s custom operating system called Steam OS 3.0.
+Steam OS Beginnings Steam OS has been around ever since the end of 2013.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-deck-closeup.webp" alt="Steam Deck"  />
+</p>
+<p>The <a href="https://www.steamdeck.com/en/">Steam Deck</a> is gonna lead to the biggest shift in the pc gaming industry.</p>
+<h2 id="a-hitch-hikers-guide-to-the-steam-deck-">A hitch hikers guide to the Steam Deck 🕹️</h2>
+<p>The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs <a href="https://archlinux.org/">Arch Linux</a> as it&rsquo;s kernel in it&rsquo;s custom operating system called Steam OS 3.0.</p>
+<h3 id="steam-os-beginnings">Steam OS Beginnings</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/big-picture.webp" alt="Steam OS"  />
+</p>
+<p><a href="https://en.wikipedia.org/wiki/SteamOS">Steam OS has been around ever since the end of 2013</a>. Gabe Newell had a very clear vision for Steam OS. At LinuxCon he stated <a href="https://arstechnica.com/gaming/2013/09/gabe-newell-linux-is-the-future-of-gaming-new-hardware-coming-soon/">&ldquo;Linux and open source are the future of gaming.&quot;</a> The idea of running Windows games on Linux is not a new idea to Valve. They have been working on their compatibility layer called <a href="https://github.com/ValveSoftware/Proton">Proton</a> for a long time. Proton is a fork of <a href="https://www.winehq.org/">Wine</a>, which is a tool to run Windows executables on Linux. Valve first used Steam OS on their <a href="https://en.wikipedia.org/wiki/Steam_Machine_(computer)">Steam Machines</a> in 2015. Basically Steam Machines were just to bring a console like experience to a personal computer. This led to the <a href="https://store.steampowered.com/app/353370/Steam_Controller/">Steam Controllers</a> and <a href="https://store.steampowered.com/bigpicture">Steam Big Picture</a>.</p>
+<h3 id="steam-machines-failed">Steam Machines Failed</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-machine.webp" alt="Steam Machine"  />
+</p>
+<p>At the time, Steam OS was a very cool concept, but lacked in terms of hardware and game support. Which led to the <a href="https://steamcommunity.com/app/221410/discussions/0/1696043806550421224/">Steam Machines being discontinued in 2018</a>. Valve stated that they still have a vision for Steam OS and will continue to improve it, even after discontinuing the Steam Machines.</p>
+<h3 id="steam-deck-announcement">Steam Deck Announcement</h3>
+<p>Towards the end of 2021 the <a href="https://www.youtube.com/watch?v=AlWgZhMtlWo">Steam Deck was announced</a>. The Steam Deck was made possible by the software that Valve has continued to improve over the course of about 9 years. It was also only possible by the contributions and the dedication of the free and open source community. The Steam Deck introduced a new way to play PC games. Often it&rsquo;s compared to the Nintendo Switch in terms of form factor, but the two systems are dramatically different and created for very different audiences.</p>
+<h2 id="other-handheld-pcs">Other handheld PCs</h2>
+<p>The idea of a handheld computer has been around for a very long time. But the hardware never caught up to the current generation. Until now. If you have been paying any attention to the handheld computer space in the past 2 years, you would know that the market is beginning to become mainstream.</p>
+<p>I owned a <a href="https://www.gpd.hk/gdpwin2">GPD Win 2</a> before my Steam Deck. It doesn&rsquo;t really have a lot of processing power, but basically every 2D indie game would run perfectly on it. It was interesting to tinker with it, often you could boost performance and battery life by playing with the TDP and under volting the machine. This opens up the possibilities of playing a few AAA pc games.</p>
+<p>This year alone, two handhelds are gonna be competing with the Steam Deck at it&rsquo;s price point.</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://liliputing.com/2022/05/aya-neo-air-with-an-oled-display-is-a-thinner-lighter-handheld-gaming-pc.html">Aya Neo Air</a> starts at $549</th>
+<th><a href="https://www.theverge.com/2022/5/28/23145658/ayn-loki-handheld-runs-windows-starts-299">Ayn Loki</a> starts at $299</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/aya-neo-air-handheld.webp" alt="Aya Neo Air"  />
+</td>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/ayn-loki-handheld.webp" alt="Ayn Loki"  />
+</td>
+</tr>
+</tbody>
+</table>
+<p>There&rsquo;s definitely an expanding market here. One that I believe game developers should design games with this usecase in mind.</p>
+<h2 id="indie-games-benefit-most-from-handheld-systems">Indie games benefit most from handheld systems</h2>
+<p>Whenever you have portable hardware, the games that are played the most are usually casual. I mean some people play Call of Duty Mobile on their phones, but most people play simple and addictive time killer games.</p>
+<p>Take the Nintendo Switch as an example. Basically all of the Nintendo Switch library is backed by indie games. Aside from the Nintendo AAA games, people mostly play indie games on the system. Nintendo knows this, they have been promoting indies for a while now using <a href="https://twitter.com/indieworldna">indie world</a>.</p>
+<p>In my experience playing on the Steam Deck, I would often lean towards the more casual indie games.</p>
+<ul>
+<li>They are much easier to jump straight into, especially if I just have a few minutes to spare.</li>
+<li>They use up very little battery. Some games can go up to 7 hours before the unit dies.</li>
+</ul>
+<p>Most of the time, I just found them more enjoyable. Now that&rsquo;s obviously just my opinion. Plenty of people are enjoying modern AAA games on their Steam Decks right now. But by the stats of the previous systems in a similar form factor, I can confidently say that the Steam Deck is gonna sell more indie game developers games that support the platform.</p>
+<h2 id="great-on-deck">Great on Deck</h2>
+<p>Since the Steam Deck is running Steam OS and is Linux based. Not all games work flawlessly on it. Proton does an amazing job getting most games running on the system. But there are a few that will continue to have issues until devs support it.</p>
+<p><a href="https://store.steampowered.com/greatondeck">Great on Deck</a> was created to help customers make sure they are buying games that run well on the system. As an indie game dev, the goal should be to get your game supported. Games that are supported overall get a lot more game sales compared to games that aren&rsquo;t supported on Steam Deck. I would start by integrating the <a href="https://partner.steamgames.com/doc/sdk/api">SteamWorks api</a> into your game. Adding achievements, cloud saves, and steam input can go a long way for your game.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Just some of my quick thoughts on the current handheld gaming market and how indie game developers can benefit from it. I would totally recommend if you are a current game developer to look into the Steam Deck and other gaming handhelds. It&rsquo;s an interesting market right now, and it&rsquo;s just starting to become more mainstream.</p>
+]]></content:encoded></item><item><title>Building a NAS</title><link>https://plug-world.com/posts/building-a-nas/</link><pubDate>Wed, 08 Jun 2022 11:11:01 -0600</pubDate><guid>https://plug-world.com/posts/building-a-nas/</guid><description>Computer 🖥️ Ryzen 2200G, 16gb of RAM, bronze PSU, 4 - 8TB Barracuda Compute Seagate HDD.
+The file system is configured for ZFS RAIDZ-1. RAIDZ-1 is a lot like RAID-5.
+Setting up ZFS 💾 This guide is geared towards ZFS RAIDZ-1. This requires at least 3 drives.
+For your ZFS installation you have two choices.
+Guide for installing OpenZFS This is an open source alternative to Oracle&amp;rsquo;s ZFS project.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/diy-nas/diy-nas-full-setup.webp" alt="Diy Nas"  />
+</p>
+<h2 id="computer-">Computer 🖥️</h2>
+<p><strong>Ryzen 2200G</strong>, <strong>16gb</strong> of RAM, bronze PSU, <strong>4 - 8TB</strong> <a href="https://www.amazon.com/Seagate-BarraCuda-Internal-Drive-3-5-Inch/dp/B07H289S7C">Barracuda Compute Seagate HDD</a>.</p>
+<p>The file system is configured for <strong>ZFS RAIDZ-1</strong>. RAIDZ-1 is a lot like RAID-5.</p>
+<h2 id="setting-up-zfs-">Setting up ZFS 💾</h2>
+<p>This guide is geared towards ZFS RAIDZ-1. This requires <strong>at least 3 drives.</strong></p>
+<p>For your ZFS installation you have two choices.</p>
+<ul>
+<li><a href="https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html">Guide for installing OpenZFS</a>
+<ul>
+<li>This is an open source alternative to Oracle&rsquo;s ZFS project. Very similar to Oracle&rsquo;s ZFS.</li>
+</ul>
+</li>
+<li><a href="https://wiki.debian.org/ZFS">Guide for installing ZFS</a>
+<ul>
+<li>This is Oracle&rsquo;s proprietary ZFS. Extremely similar to OpenZFS.</li>
+</ul>
+</li>
+</ul>
+<p>According to <a href="https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi">Jeff Geerling</a> to prepare the drives to be formated for ZFS you have to do this&hellip; <strong>This will erase everything on the drives.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo umount /dev/sda?; sudo wipefs --all --force /dev/sda?; sudo wipefs --all --force /dev/sda
+sudo umount /dev/sdb?; sudo wipefs --all --force /dev/sdb?; sudo wipefs --all --force /dev/sdb
+sudo umount /dev/sdc?; sudo wipefs --all --force /dev/sdc?; sudo wipefs --all --force /dev/sdc
+</code></pre></div><p>Run the above commands for each drive that you want in the pool. You can find these drives by using the command lsblk.</p>
+<p>Run the command below to create a pool. Make sure to include every drive you want in the pool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zpool create zfspool raidz1 sda sdb sdc -f
+</code></pre></div><p>After some research I found that you should almost always turn on ZFS compression.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zfs set compression<span style="color:#f92672">=</span>on zfspool
+</code></pre></div><p>Now your pool should be configured. You can review the status of the pool by using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zpool status
+</code></pre></div><p>If I would setup it up again, I would probably use OpenZFS which is an open source implementation of Oracle&rsquo;s propritary ZFS system. But at the time, I didn&rsquo;t know I was using Oracle&rsquo;s propritary ZFS system, so I ended up with that.</p>
+<h2 id="apps">Apps</h2>
+<h3 id="docker">Docker</h3>
+<p>After using docker for a while I quickly realized the limitations of the tool. Every time you want to make a change or update the container you have to recreate the application from the ground up. All of the configuration you do inside the application all gets removed and you start fresh every time. Oh, and if you want to actually update it, you have to manually remove the container and rerun your docker command.</p>
+<p>The solution to all of these is quite simple. <strong>Don&rsquo;t use DOCKER.</strong> <em>Instead use docker-compose.</em></p>
+<p><a href="https://docs.docker.com/compose/">Docker compose</a> essentially automates the whole process for the user. All you have to do is save a docker-compose.yml file which configures the application. At any time you can pull the latest updates and have your docker back up and running. <em>But wait, what about the application&rsquo;s config?</em> Yeah, by default it will be wiped every time. The solution is to mount the configuration of the file in a <strong>volume</strong>.</p>
+<p><strong>Volumes</strong> <em>are way of passing files from your local file system back into your application</em>. The app has no access to any files outside the container by default. The solution is to now mount the configuration of the application back into your file system outside your container. Then the application will write to that mounted directory it&rsquo;s configuration files and the files will no longer be dependent on the application. You can modify them outside of the application, you can remove the application and recreate it and if you still have the config files mounted then the application will continue to maintain persistence when you make changes to it.</p>
+<p><a href="https://www.linuxserver.io/">Linux Server</a> <strong>I can&rsquo;t recommend using their dockers enough</strong>. They essentially take a lot of self hosted applications that people use and make them easier. Configuration is often done with one config folder, just mount it once and boom you are done. Using and configuring their apps are a lot more intuitive than others. <em>But what about the updates?</em> Yeah I mean you can only assume if you use someone else&rsquo;s packages you are at the mercy of them maintaining it. But you don&rsquo;t have to worry about it with <strong>Linux Server</strong>. They have some sort of bot/script that seems to generate these packages whenever updates go through on the apps. Which means you get the latest applications, and don&rsquo;t have to worry about missing features or vulnerabilities.</p>
+<h3 id="apps-i-currently-use">Apps I currently use:</h3>
+<table>
+<thead>
+<tr>
+<th>Apps</th>
+<th>Docker-Compose examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-swag#linuxserver-swag">Swag / Nginx (Web Server / Reverse Proxy)</a></td>
+<td><a href="/docker-compose-files/swag">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-jellyfin">Jellyfin (Open Source Media Server)</a></td>
+<td><a href="/docker-compose-files/jellyfin">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-plex">Plex (Propietary Media Server)</a></td>
+<td><a href="/docker-compose-files/plex">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-nextcloud">Nextcloud (Like Google Drive)</a></td>
+<td><a href="/docker-compose-files/nextcloud">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/syncthing/syncthing">Syncthing (File sync across devices)</a></td>
+<td><a href="/docker-compose-files/syncthing">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/searxng/searxng">SearXNG (Metadata search engine)</a></td>
+<td><a href="/docker-compose-files/searxng">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/matrix-org/synapse">Matrix Synapse (Encrypted Chat Server)</a></td>
+<td><a href="/docker-compose-files/synapse">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://photoview.github.io/">Photoview</a></td>
+<td><a href="/docker-compose-files/photoview">Docker-compose</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="swag">SWAG</h3>
+<p>This application is built ontop of <a href="https://nginx.org/en/">nginx</a>.
+Nginx is a <strong>web server</strong> and a <strong>reverse proxy</strong>. <a href="https://github.com/linuxserver/docker-swag">Swag</a> is just amazing. It just makes your life easier. It has <a href="https://github.com/linuxserver/reverse-proxy-confs">reverse proxy templates</a> for most applications that you would want to run. You simply just have to change the file name to enable them. Anyways, it&rsquo;s really nice so you can have you domain point to multiple apps easily. It also containers certbot which essentially is able to give your website HTTPS encryption all you have to do is configure your domain, add your email to the environment variable, and boom you got an HTTPS website. It comes with other stuff to like cloudflare integration, and many other useful things that just save you so much time.</p>
+<p>In order to enable reverse proxy on your apps, locate your swag config folder then go to nginx/proxy-confs. You will see a huge list of all the apps, locate the app you want to reverse proxy.</p>
+<p>When you reverse proxy, you will usually have two options&hellip;</p>
+<ul>
+<li><strong>subfolder</strong>
+<ul>
+<li>example.com/myapp</li>
+<li>requires no extra ssl certificates to sign</li>
+<li>no dns configuration required</li>
+</ul>
+</li>
+<li><strong>subdomain</strong>
+<ul>
+<li>myapp.example.com</li>
+<li>every subdomain needs a signed ssl certificate</li>
+<li>requires subdomain to be added to the &ldquo;SUBDOMAINS&rdquo; environment variable in docker compose</li>
+<li>requires cname record to to be added to dns</li>
+</ul>
+</li>
+</ul>
+<p>I perfer to reverse proxy subfolders, they are a lot less work than subdomains, <em>but certain apps will require a subdomain reverse proxy.</em></p>
+<p>To enable the reverse proxy for your app, just copy the myapp.subdomain/subfolder.conf.sample to myapp.subdomain/subfolder.conf. Essentially just remove the .sample portion of the file name, that will activate it to be used by the reverse proxy. <strong>Please note that if you don&rsquo;t rename your containers correctly this will not work.</strong> In the proxy configs it uses the container name to get the ip address of the container through the docker network. If you use the ip address of the container in the reverse proxy instead of the name you will have problems because the ip addresses get changed everytime you initialize your containers. So it&rsquo;s best to use the name in the reverse proxy.</p>
+<p>After configuring the reverse proxy you need to restart the swag service using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose restart swag
+</code></pre></div><h3 id="docker-tips">Docker Tips</h3>
+<p>Once you have created your docker compose file with all your apps, make sure you keep it updated. Outdated apps can potentially have vulnerabilities that would allow attackers to exploit your server.</p>
+<p>To update your containers use this&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose pull
+</code></pre></div><p>Followed by&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose up -d
+</code></pre></div><p>The above command recreates the updated containers. Whenever you change the docker-compose file you want to run the above command to recreate the new containers.</p>
+<p>Docker images never get deleted when you update your containers. Previous images stay on the disk, which can build up over time and consume a lot of storage space. In order to delete the old unused images use this command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker image prune
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Just getting started with self hosting applications is a difficult task. Especially if you don&rsquo;t have any prior Linux experience.</p>
+<p>It&rsquo;s dangerous to go alone, take this <a href="https://docs.linuxserver.io/">Linux Server docs</a>. Everything over there is very beginner friendly and extremely useful when getting started on your self hosting journey.</p>
+]]></content:encoded></item><item><title>Setting Up a Bluray Plex Server - From Start to Finish</title><link>https://plug-world.com/posts/setting-up-a-bluray-plex-server/</link><pubDate>Wed, 27 Apr 2022 16:49:45 -0600</pubDate><guid>https://plug-world.com/posts/setting-up-a-bluray-plex-server/</guid><description>The Plexining 🎬 Ever since we got our NAS we had Plex on it. But we didn&amp;rsquo;t have much on it. Plex is just a media server that hosts all your files and media in one easy to access streamable way. Anyways, I figured it&amp;rsquo;s about time to start utilizing this NAS a lot more. I needed to migrate our entire library of movies from Vudu, Amazon, and Google Play Movies to the NAS.</description><content:encoded><![CDATA[<h2 id="the-plexining-">The Plexining 🎬</h2>
+<p>Ever since we got our NAS we had Plex on it. But we didn&rsquo;t have much on it. <a href="https://www.plex.tv/">Plex</a> is just a media server that hosts all your files and media in one easy to access streamable way. Anyways, I figured it&rsquo;s about time to start utilizing this NAS a lot more. I needed to migrate our entire library of movies from Vudu, Amazon, and Google Play Movies to the NAS. Since I don&rsquo;t wanna be a pirate I&rsquo;m gonna do things the hard way.</p>
+<p>I also use Jellyfin on my media server as a backup if my NAS can&rsquo;t reach Plex&rsquo;s servers. Which is kinda dumb to selfhost Plex and than still be dependent on their own servers to be online. But whatever, still own my own media so if Plex doesn&rsquo;t work I can easily move to the next platform.</p>
+<p>I decided to mainly use Plex because&hellip;</p>
+<ul>
+<li>My dad already owned Plex Pass. (Basically allows for transcoding and DVR functionality)</li>
+<li>The app works natively on our smart tv. But it&rsquo;s extremely slow and terrible, but better than nothing.</li>
+<li>It supports automatically deleting commericials on live tv.</li>
+<li>HDR to SDR tonemapping support actually works. (Jellyfin doesn&rsquo;t natively support it but you can use an external media player that does)</li>
+</ul>
+<h2 id="the-rippining-">The Rippining 📀</h2>
+<p>We owned like 3 movies on BluRay, and already had a drive that I can rip from. So it was time to get to work. The process suprisingly wasn&rsquo;t too difficult. MakeMKV does most of the heavylifting for you. All MakeMKV does is bypass the DRM on the disc and decrypt it leading you with an h.264 video that gets containerized into a mkv file. Most of the movies on BluRays range from 20gb to 100gb. If that&rsquo;s too much for you, you can always compress them down in smaller sizes using handbrake.</p>
+<p>My recommended <a href="https://handbrake.fr/">HandBrake</a> settings for compressing BluRays&hellip;</p>
+<ul>
+<li>Format: Matroska</li>
+<li>Encoder: H.265 10 bit</li>
+<li>FrameRate: Same as Video</li>
+<li>FrameRate: Constant</li>
+<li>Quality: 20</li>
+<li>Audio make sure to include 5.7 surround sound or 7.1 based on your setup.</li>
+<li>You can also compress the audio down to 640kbps if you so choose.</li>
+</ul>
+<p>The reason I use h265 is for the high amount of detail that remains once you compress. But it has a few major drawbacks.</p>
+<p>These drawbacks include&hellip;</p>
+<ul>
+<li>A lot of resources to compress video footage.</li>
+<li>The codec has tons of licensing issues, so playback may not be native on your device.</li>
+<li>Due to the licensing issues not all devices support h265</li>
+</ul>
+<p>If you are reading this article in the future, you may want to consider compressing videos in AV1. I hear that&rsquo;s gonna be the next big thing. AV1 at its core is essentially just like h265 whereas it perserves a lot of details at a highly compressed size. But the codec is open source and doesn&rsquo;t have any licensing issues. It&rsquo;s also quite a bit more efficent than h265, so you will be expirencing better quality at the same file size. The only issue is at the time of writing this article, nobody really supports it much. So as that changes it may be a good thing to look into if you are concerned about storage space.</p>
+<h2 id="makemkv-on-linux-small-guide">MakeMKV on Linux: Small Guide</h2>
+<p>I installed MakeMKV on Arch Linux, so this won&rsquo;t apply to Debian users (sorry).</p>
+<p>If you are on debian you can look <a href="https://forum.makemkv.com/forum/viewtopic.php?f=3&amp;t=224">here</a>. I had issues doing the official downloads and compilation on my end. But I&rsquo;m sure that was my fault in the first place.</p>
+<p>But I was able to get my own build of MakeMKV on the <a href="https://aur.archlinux.org/packages/makemkv/">AUR (Arch User Repository)</a> and that seemed to be working just fine for me. Also auto updates are way cool. You also want to make sure you get the <a href="https://aur.archlinux.org/packages/makemkv-libaacs/">aacs libraries</a> for Linux.</p>
+<p>Optical drives on Arch Linux is kind of a pain to get working. If you get the error that MakeMKV can&rsquo;t find any Optical Drives in Arch Linux, it&rsquo;s not MakeMKV&rsquo;s fault. I found the solution to this problem in this <a href="https://www.reddit.com/r/makemkv/comments/r3jijh/arch_linux_this_program_cant_find_any_usable/">Reddit post</a>. According to the post the solution is to: &ldquo;Create a file on /etc/modules-load.d/ with the content sg then reboot. Mine is named sg.conf but the name is totally arbitrary.&rdquo;</p>
+<p>And that should be everything, that&rsquo;s everything I needed to do to get this to work.</p>
+<h2 id="issues-ripping-new-movies-">Issues Ripping New Movies? ❌</h2>
+<p>MakeMKV is able to decrypt movies by using of Volume Unique Keys (VUKS) from a database. If you have a recent movie that won&rsquo;t rip, then on MakeMKV go download the latest keys from <a href="http://fvonline-db.bplaced.net/">FindVUK Online Database.</a> Then place the keydb.cfg file in the folder that MakeMKV is installed in. It should automatically recognize it and use the local database in combination with their own online database. If you are still having issues, there are tools to manually get the VUK key but it will require <a href="https://www.dvdfab.cn/">DVDfab</a> and another tool called <a href="https://forum.doom9.org/showthread.php?t=172472">FindVUK</a> to extract the VUK from memory on DVDfab.</p>
+<h2 id="drives-matter">Drives Matter</h2>
+<p>The Blu-Ray drive you use for ripping can make all of the difference. When ripping movies you need to get a perfect copy off of the drive, if there&rsquo;s any piece of data or information that can&rsquo;t be read on the drive it will be unable to rip. Certain Blu-Ray drives are much more affective when reading scratched disks. With my old Blu-Ray player I would have what seems to be a perfect copy of the movie, no scratches noticable, and yet it would run into read errors. They can also have faster read speeds which will speed up the process of ripping each disk.</p>
+<h2 id="libredrive-">Libredrive 🪛</h2>
+<p>Libedrive is very cool because, many blu-ray players &ldquo;don&rsquo;t support 4k (UHD).&rdquo; Yet they are fully capable of playing them back. There&rsquo;s just this little police in the firmware that tells it to not play back the 4k disk. With Libredrive we are effectively overwriting the firmware on the disk to force it to play back any sort of disk in the system.</p>
+<p>If you are planning on getting a Blu-Ray player I definitely recommend getting one that Libredrive supports. It only supports very specific drives, but you can find what drive to get on the <a href="https://forum.makemkv.com/forum/viewtopic.php?t=19634">MakeMKV forums</a></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Owning my media is important to me. Unfortunately with movies you can&rsquo;t really own your movies &ldquo;legally.&rdquo; The simple act of breaking the encryption on the disk is illegal. Yet creating personal backups of media is totally legal. So kind of in the gray area, but since I am buying copies of physical media from the official retailers I feel like it&rsquo;s ethical to do this. If you typically stream your media and don&rsquo;t watch very many Blu-Rays you are gonna see a huge jump in quality. The bitrate makes all of the difference, resolutions are overrated, you can be watching a highly compressed 4k stream on Netflix and a 1080p Blu-Ray will almost always look better than that compressed stream. To a typical person this isn&rsquo;t easy and they would opt for just watching all their movies on streaming services. And I can agree, it&rsquo;s not user friendly and your going to have to maintain your own server. But I enjoy it, so that&rsquo;s how I&rsquo;m gonna watch my media.</p>
+]]></content:encoded></item></channel></rss>

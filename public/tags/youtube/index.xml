@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>youtube on PlugWorld</title><link>https://plug-world.com/tags/youtube/</link><description>Recent content in youtube on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 25 Jun 2022 11:59:47 -0600</lastBuildDate><atom:link href="https://plug-world.com/tags/youtube/index.xml" rel="self" type="application/rss+xml"/><item><title>Brave Goggles Changes How I Search</title><link>https://plug-world.com/posts/brave-goggles-changes-how-i-search/</link><pubDate>Sat, 25 Jun 2022 11:59:47 -0600</pubDate><guid>https://plug-world.com/posts/brave-goggles-changes-how-i-search/</guid><description>Watch the video on YouTube
+So if you didn&amp;rsquo;t know Brave, the company behind the Brave Browser, created a search engine not too long ago. Brave Search is actually a really interesting project. Brave advertises itself as a private search engine. Now I&amp;rsquo;m not here to talk about privacy. Just talking about the features of the project. But it&amp;rsquo;s up to you to trust them. Their source code is public, but their servers aren&amp;rsquo;t.</description><content:encoded><![CDATA[<p><a href="https://youtu.be/HZvrgZK43qg">Watch the video on YouTube</a></p>
+<p>So if you didn&rsquo;t know Brave, the company behind the <a href="https://brave.com/">Brave Browser</a>, created a <a href="https://search.brave.com/">search engine</a> not too long ago.
+Brave Search is actually a really interesting project.
+Brave advertises itself as a private search engine.
+Now I&rsquo;m not here to talk about privacy.
+Just talking about the features of the project.
+But it&rsquo;s up to you to trust them.
+Their <a href="https://github.com/orgs/brave/repositories">source code</a> is public, but their servers aren&rsquo;t.</p>
+<p>Brave created their own indexer for the results in Brave Search.
+This is not the case with other search engines like <a href="https://duckduckgo.com/">DuckDuckGo</a> and <a href="https://www.qwant.com/">Qwant</a>.
+Both of which use Bing results.
+This alone ranks Brave Search above other search engines for me.
+Just because it&rsquo;s actually different from the others.</p>
+<p>So what are <a href="https://search.brave.com/help/goggles">Brave Goggles</a>?
+They are essentially a way of filtering search results.
+Or as Brave puts it, &ldquo;Goggles act as a custom re-ranking on top of the Brave search index.&rdquo;
+The internet is full of garbage.
+So many websites copying each other, all fighting to be at the top.
+Gotta make that ad revenue.
+But with this new tool allows you to sift through all the garbage on the internet with ease.</p>
+<p><img loading="lazy" src="/images/posts/brave-goggles-changes-how-i-search/following-goggles.webp" alt="Following Goggles"  />
+</p>
+<p>Now you have full control to manually rank your search results.
+No more relying on an algorithm to do it for you.
+Brave says it best, &ldquo;Goggles allows users to counter any intrinsic biases in the algorithm.&rdquo;
+You can try out <a href="https://search.brave.com/goggles">Brave Goggles here</a>.
+Take a look at the Brave Goggles <a href="https://github.com/brave/goggles-quickstart/">source code</a>.
+If you look at <a href="https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/tech_blogs.goggle">&ldquo;Tech Blogs&rdquo;</a> as an example, it shows every domain it is boosting and downranking.
+Really simple and easy syntax.
+All to make it easy for you to tailor your own results.</p>
+<p><img loading="lazy" src="/images/posts/brave-goggles-changes-how-i-search/goggles-syntax.webp" alt="Tech blogs Syntax"  />
+</p>
+<p>You can even find goggles that the community has made through the <a href="https://search.brave.com/goggles/discover">discovery page</a>.
+Whenever you make your custom goggles you will have the choice to make it public.</p>
+<p>I started following a few goggles.
+They have proven to be very helpful when searching for specific results.
+For example I would often look for programming solutions and have to filter with site:stackoverflow.com or site:github.com.
+Not anymore.
+Now I just use the <a href="https://search.brave.com/goggles/discover?goggles_id=https%3A%2F%2Fraw.githubusercontent.com%2FAdventistforever%2Fbrave-programming-goggle%2Fmain%2Fprogramming.goggle">&ldquo;Programming solutions&rdquo;</a> goggle and I get the results I need from Brave Search.</p>
+]]></content:encoded></item><item><title>Arch Linux Just Works</title><link>https://plug-world.com/posts/arch-linux-just-works/</link><pubDate>Mon, 20 Jun 2022 09:19:12 -0600</pubDate><guid>https://plug-world.com/posts/arch-linux-just-works/</guid><description>Please note this guide is outdated, I no longer recommend Arch Linux.
+Arch Linux works great on my main desktop, but with it on everything else I&amp;rsquo;m unhappy with it. This is because I use my main desktop enough that I can keep my computer up to date and maintained.
+Intro Arch is often not recommended to new Linux users. This is caused by the fact that you have to run a lot of commands to install and configure your system.</description><content:encoded><![CDATA[<p>Please note this guide is outdated, I no longer recommend Arch Linux.</p>
+<p>Arch Linux works great on my main desktop, but with it on everything else I&rsquo;m unhappy with it.
+This is because I use my main desktop enough that I can keep my computer up to date and maintained.</p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>Arch is often not recommended to new Linux users.
+This is caused by the fact that you have to run a lot of commands to install and configure your system.
+The terminal is scary.
+The terminal is made for hackers.
+That pushes new users away from it.</p>
+<p>Despite all of that, I would recommend Arch Linux to beginners.</p>
+<p>Arch has just recently made a <a href="https://linuxreviews.org/The_Latest_Arch_Linux_ISO_Has_A_Fresh_New_Guided_Installer">guided installer</a>.
+The installer makes this process extremely easy and less tedious.</p>
+<p>First and foremost, connect your device to the internet.</p>
+<p>Then you may need to initalize your pacman keys.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman-key --init
+</code></pre></div><p>Afterward, you can run through the guided installer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m archinstall guided
+</code></pre></div><p>Recently I tried to install Fedora on my laptop.
+I heard a lot of good things about it.
+Packages are up to date and stable.
+But it sucked.
+The package manager was sooo slow.
+Updates took forever.
+I had constant issues with the wifi on my laptop.
+It led to me manually having to request ip addresses from my router using <code>sudo dhclient -v</code>
+One problem would lead to the next.
+Constant issues and configuration.
+Then I gave up.
+I wasted a whole week.
+I spent many hours trying to get things to &ldquo;just work.&rdquo;</p>
+<h2 id="my-mistakes">My Mistakes</h2>
+<p>I didn&rsquo;t use the normal <a href="https://getfedora.org/">Fedora workstation</a> install.
+Instead, I used <a href="https://alt.fedoraproject.org/en/">Fedora Everything</a>.</p>
+<p>I tried the Fedora workstation install initially.
+But I hated it.
+I didn&rsquo;t like <a href="https://www.gnome.org/">Gnome</a>.
+The system ran slow, and wasn&rsquo;t as snappy as I was hoping.
+It had over 2000 packages installed by default.
+In comparison my Arch install on my desktop has 1805 packages.
+I have many packages I don&rsquo;t use, tons of apps installed, and steam games.
+And yet it is less bloated than a vanilla Fedora install.</p>
+<p>This led to me using Fedora Everything.
+It&rsquo;s just the essentials.
+It boots to the terminal just like Arch.
+Nothing additional installed.
+<a href="https://github.com/HelamanWarrior/Fedora-Installer">I created a script</a> to automatically install everything I needed.
+It had my window manager (<a href="https://github.com/baskerville/bspwm">BSPWM</a>), terminal (<a href="https://st.suckless.org/">st</a>), <a href="https://polybar.github.io/">polybar</a>, <a href="https://github.com/HelamanWarrior/dotfiles">dot files</a> and all of that fun stuff.</p>
+<p>According to my virtual machine the script worked great.
+It should be great to install quickly on multiple machines.
+Nope, it wasn&rsquo;t.
+It sucked.
+Constant issues with Fedora working with my laptop hardware.
+It was an endless rabbithole of maintainance and fixing things.
+I had an <a href="https://wiki.archlinux.org/title/NVIDIA_Optimus">Nvidia Optimus</a> based laptop.
+That was the biggest problem for my custom Fedora install.
+It led to many workarounds and dumb hacks.
+This sucked, because I wanted to run this install on many laptops.
+These workarounds wouldn&rsquo;t work on other devices with different hardware.
+This would lead to me constantly maintaining all of the devices using Fedora Everything.
+I then stopped using Fedora.</p>
+<h2 id="the-switch-to-arch">The Switch to Arch</h2>
+<p>Initially I didn&rsquo;t want to use Arch on the laptop.
+Mostly because most people on the internet says &ldquo;it&rsquo;s unstable.&rdquo;
+If I&rsquo;m doing a laptop install, it needs to &ldquo;just work.&rdquo;
+I&rsquo;m not gonna have the time to mess around trying to get things working.</p>
+<p>But I thought about it more.
+I reconsidered.
+I have ran my Arch install for almost a year on my desktop.
+Guess what?
+No problems!
+I probably had one or two things that broke.
+But at the end of the day it was my fault that they broke in the first place.</p>
+<h2 id="the-archening-begins">The Archening begins</h2>
+<p>Installing Arch was very straightforward.
+I downloaded the latest <a href="https://archlinux.org/download/">Arch ISO</a>.
+And I had it livebooted in no time.
+Running the Arch guided installer was very straightforward and I had all the customization I needed.
+It allowed you to install most desktop environments and some window managers.
+As well as installing your own packages if you so choose.
+It even gave me the option to install my Nvidia drivers.</p>
+<p>Instead of going my typical window manager route, I went with <a href="https://kde.org/plasma-desktop/">KDE Plasma</a>.
+I&rsquo;m so glad I did.
+Everything seems to work right out of the box.
+Which is exactly what I needed.
+When it booted into Plasma there was very few apps installed.
+Last time I installed Plasma I had a ton of KDE apps I didn&rsquo;t use.
+It bloated up the system, and trying to delete them was a pain in the butt.
+I&rsquo;m really glad to see that it&rsquo;s very minimal and I still have a lot of room to customize my install.
+It also seems to use up way less resources than Gnome.
+Plasma was super snappy and I&rsquo;m really impressed how well it ran.
+Can we talk about the number of packages.
+I know packages aren&rsquo;t everything, but holy cow!
+When I was done with installing all of my apps and Plasma I had 700 packages!
+By comparison, my Fedora Everything install had that many before I even started installing stuff.</p>
+<p>My fresh Plasma install had almost no problems.
+As always you get display issues on Nvidia Optimus laptops.
+But it was an extremely simple fix.
+<a href="https://wiki.archlinux.org/title/NVIDIA_Optimus#No_screens_found_on_a_laptop/NVIDIA_Optimus">You can fix it</a> with changing your display manager configuration or your xorg conf.
+You are also gonna have to switch from Wayland to Xorg in order for this to work.
+You gotta love Nvidia, making things harder for everyone.
+But after that fix, everything has been great!
+I&rsquo;ve been running it for over a week now.
+No problems!</p>
+<h2 id="arch-is-for-beginners">Arch is for Beginners</h2>
+<p>In my opinion I believe Arch is one of the best distros for beginners.
+Now let me clear this up.
+By beginners I mean anyone with some good computer experience that&rsquo;s new to Linux.
+The average Joe is always gonna have a harder time on Linux.
+Especially if they are running into problems just using Windows.</p>
+<p>You could say the terminal pushes away the beginners, your gonna have to touch the terminal in the installation.
+But if you&rsquo;re gonna use Linux you&rsquo;re eventually gonna have to use the terminal.
+The guided Arch installer opens the door to more people.
+If you haven&rsquo;t used Arch yet, I recommend you try it in a Virtual Machine and see how you like it.
+Just go through the guided installer and see what you like.</p>
+<p>Fedora could have been just fine.
+My main issue came from not using the official workstation release.
+Fedora workstation really wasn&rsquo;t my thing.
+Finding packages is quite a bit of work with Fedora.
+It&rsquo;s a smaller distro so many guides simply wouldn&rsquo;t tell you what the Fedora equivalent packages are.
+This leads to it taking more time hunting down packages.</p>
+<p>With Arch, even if the application I want isn&rsquo;t in the repo, I can just go to the <a href="https://aur.archlinux.org/">AUR (Arch User Repository)</a>.
+Almost any app that runs on linux will probably be in there.
+Rarely are you ever gonna have to install dependencies or compile things yourself.
+Which is even easier for beginners.</p>
+]]></content:encoded></item><item><title>Generating Slideshows Easily with Shotcut</title><link>https://plug-world.com/posts/generating-slideshows-easily-with-shotcut/</link><pubDate>Wed, 15 Jun 2022 14:24:37 -0600</pubDate><guid>https://plug-world.com/posts/generating-slideshows-easily-with-shotcut/</guid><description>Context Shotcut is an open source video editor.
+From their forum I found out you can create slide shows with it. In the past I tried to create an ffmpeg script to do this for me, but I was unsuccessful. This does exactly what I was hoping to achieve with those scripts.
+Tutorial Import all of your pictures into the playlist panel on the left hand side. Select all of the pictures that you want in the slideshow.</description><content:encoded><![CDATA[<h2 id="context">Context</h2>
+<p><a href="https://shotcut.org/">Shotcut</a> is an open source video editor.</p>
+<p>From their <a href="https://forum.shotcut.org/t/slideshow-generator/19162">forum</a> I found out you can create slide shows with it. In the past I tried to create an <a href="https://ffmpeg.org/">ffmpeg</a> script to do this for me, but I was unsuccessful. This does exactly what I was hoping to achieve with those scripts.</p>
+<h2 id="tutorial">Tutorial</h2>
+<ol>
+<li><strong>Import all</strong> of your pictures into the playlist panel on the left hand side.</li>
+<li><strong>Select all</strong> of the pictures that you want in the slideshow.</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/highlight-photos-playlist.webp" alt="Shotcut Picture Selection"  />
+</p>
+<ol start="3">
+<li>Open the <strong>playlist menu</strong></li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/slideshow-playlist.webp" alt="Playlist menu"  />
+</p>
+<ol start="4">
+<li>Click <strong>Add selected to Slideshow</strong></li>
+<li>Find what settings works best for your needs</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/slideshow-properties.webp" alt="Slideshow properties"  />
+</p>
+<h2 id="fixing-the-lag">Fixing the Lag</h2>
+<p>You may have noticed the editor lagging as you watch the slideshow in the timeline. This seems like a very common issue with these open source video editors, but I have found a few settings that may speed it up for you.</p>
+<p>Go to settings then&hellip;</p>
+<ol>
+<li>Disable Scrub Audio</li>
+<li>Disable Realtime (frame dropping)</li>
+<li>Set preview scaling to 360p</li>
+<li>Go to proxy
+<ul>
+<li>Enable Use Proxy</li>
+<li>Enable Use Hardware Encoder</li>
+<li>Click Configure Hardware Encoder and double check that your using the correct GPU or APU.</li>
+</ul>
+</li>
+<li>Change Interpolation to Nearest Neighbor</li>
+</ol>
+<p>You probably don&rsquo;t need to go as extreme as I have for the example above. Feel free to play around with each of those settings.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>And boom, you got a slideshow!</p>
+<p>It may not be perfect, but it gets the job done quickly with quite a bit of customization.</p>
+]]></content:encoded></item></channel></rss>

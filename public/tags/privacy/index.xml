@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>privacy on PlugWorld</title><link>https://plug-world.com/tags/privacy/</link><description>Recent content in privacy on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Mon, 01 Aug 2022 11:04:08 -0600</lastBuildDate><atom:link href="https://plug-world.com/tags/privacy/index.xml" rel="self" type="application/rss+xml"/><item><title>Recommended Browser Extensions</title><link>https://plug-world.com/posts/recommended-browser-extensions/</link><pubDate>Mon, 01 Aug 2022 11:04:08 -0600</pubDate><guid>https://plug-world.com/posts/recommended-browser-extensions/</guid><description>uBlock Origin An efficient blocker add-on, blocks ads and trackers. Enable some of the annoyances filters to get rid of cookie popups. Cookie Auto Delete Automatically deletes cookies from websites, whitelist websites you use to keep their cookies. Redirector Automatically redirects to user-defined urls on certain pages I use this for privacy frontends Reddit -&amp;gt; Libreddit Twitter -&amp;gt; Nitter Skip Redirect All together with Firefox and custom profile from ffprofilemaker.</description><content:encoded><![CDATA[<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>
+<ul>
+<li>An efficient blocker add-on, blocks ads and trackers.</li>
+<li>Enable some of the annoyances filters to get rid of cookie popups.</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/">Cookie Auto Delete</a>
+<ul>
+<li>Automatically deletes cookies from websites, whitelist websites you use to keep their cookies.</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/redirector/">Redirector</a>
+<ul>
+<li>Automatically redirects to user-defined urls on certain pages</li>
+<li>I use this for <strong>privacy frontends</strong>
+<ul>
+<li>Reddit -&gt; Libreddit</li>
+<li>Twitter -&gt; Nitter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/">Skip Redirect</a></li>
+</ul>
+<p>All together with <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> and custom profile from <a href="https://ffprofile.com/">ffprofilemaker</a>.</p>
+<p>On Android I use the <a href="https://github.com/GrapheneOS/Vanadium">Vanadium</a> with DNS adblocking.</p>
+<p><a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions">Arkenfox&rsquo;s guide to extentions in Firefox</a></p>
+]]></content:encoded></item></channel></rss>

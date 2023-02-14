@@ -1,0 +1,2004 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PlugWorld</title><link>https://plug-world.com/</link><description>Recent content on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 12 Feb 2023 11:29:06 -0700</lastBuildDate><atom:link href="https://plug-world.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Insta360 Studio on Linux</title><link>https://plug-world.com/posts/insta360-studio-on-linux/</link><pubDate>Sun, 12 Feb 2023 11:29:06 -0700</pubDate><guid>https://plug-world.com/posts/insta360-studio-on-linux/</guid><description>Download Insta360 Studio :P Run through the Insta360 Studio installer in Wine. Install Proton GE you can either do this through Lutris or a manual install. Proton GE is required for the videos to properly load inside the app. In Lutris if you press the package button next to Wine you can select &amp;ldquo;lutris-GE-Proton&amp;rdquo; to be installed. In Lutris click the + button to add a new game.</description><content:encoded><![CDATA[<ol>
+<li>Download <a href="https://www.insta360.com/download">Insta360 Studio</a> :P</li>
+<li>Run through the Insta360 Studio installer in <a href="https://www.winehq.org/">Wine</a>.</li>
+<li>Install <a href="https://github.com/GloriousEggroll/proton-ge-custom">Proton GE</a> you can either do this through <a href="https://lutris.net/">Lutris</a> or a <a href="https://github.com/GloriousEggroll/proton-ge-custom#installation">manual install</a>.
+<ul>
+<li>Proton GE is required for the videos to properly load inside the app.</li>
+<li>In Lutris if you press the package button next to Wine you can select &ldquo;lutris-GE-Proton&rdquo; to be installed.</li>
+</ul>
+</li>
+<li>In Lutris click the <strong>+</strong> button to add a new game.</li>
+<li>You can name it &ldquo;Insta360 Studio&rdquo; and set the runner to Wine.</li>
+<li>In Game options, set the executable to <code>~/.wine/drive_c/Program Files/Insta360 Studio 20XX/Insta360 Studio 20XX.exe</code>
+<ul>
+<li>Replace &ldquo;XX&rdquo; with the current year.</li>
+</ul>
+</li>
+<li>In Runner options, set &ldquo;Wine version&rdquo; to Proton.</li>
+</ol>
+<p>Now you can run Insta360 Studio through Lutris and it should work.
+If the app freezes at startup, simply kill it and run it again.</p>
+]]></content:encoded></item><item><title>Minecraft Splitscreen Co-op on Steam Deck</title><link>https://plug-world.com/posts/minecraft-splitscreen-co-op-on-steam-deck/</link><pubDate>Sun, 08 Jan 2023 18:13:19 -0700</pubDate><guid>https://plug-world.com/posts/minecraft-splitscreen-co-op-on-steam-deck/</guid><description>This is the PS3 version of Minecraft running on the Steam Deck. Currently I get around 40-60 fps while playing with 2 players without any tweaks.
+Why emulate? Because the native Linux version of Minecraft doesn&amp;rsquo;t support splitscreen co-op. I opted for the PS3 version because the Nintendo Switch version kept crashing.
+Setup Guide Install EmuDeck, if you haven&amp;rsquo;t already. This will setup all the emulators and their configurations automatically.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/minecraft-splitscreen-steam-deck/minecraft-split-screen-steam-deck.webp" alt="splitscreen-screenshot"  />
+</p>
+<p>This is the PS3 version of Minecraft running on the Steam Deck.
+Currently I get around 40-60 fps while playing with 2 players without any tweaks.</p>
+<p>Why emulate?
+Because the native Linux version of Minecraft doesn&rsquo;t support splitscreen co-op.
+I opted for the PS3 version because the Nintendo Switch version kept crashing.</p>
+<h2 id="setup-guide">Setup Guide</h2>
+<p>Install <a href="https://www.emudeck.com">EmuDeck</a>, if you haven&rsquo;t already.
+This will setup all the emulators and their configurations automatically.</p>
+<p>In order to emulate the PS3 we will be using <a href="https://rpcs3.net">RPCS3</a>.
+Put your Minecraft Playstation 3 ROM in <code>~/Emulation/roms/ps3</code></p>
+<p><img loading="lazy" src="/images/posts/minecraft-splitscreen-steam-deck/game-rom-location.webp" alt="game-rom-location"  />
+</p>
+<p>If your rom is a directory with multiple files, then place the directory in the ps3 folder and add <code>.ps3dir</code> to the folder name.</p>
+<p>Once you added your rom, launch the <code>RPCS3</code> emulator.
+Then in the emulator, in the top left corner press the open button with the folder icon.
+Navigate to your game directory <code>~/Emulation/roms/ps3</code>
+Select your minecraft folder and then press ok.</p>
+<p>You should see Minecraft in the emulator.
+Launch the game.
+You may see a popup asking to locate the <code>PS3UPDAT.PUP</code> file.
+Search for this PS3 firmware file on the internet and download it.
+Then select that firmware in the emulator and install it.</p>
+<p>Now you should be able to launch and load the game.
+You&rsquo;ll notice your controllers aren&rsquo;t working, this is normal, because the Steam Deck is in <code>desktop mode</code>, steam input doesn&rsquo;t work the same.</p>
+<p>The solution is to launch the game in <code>game mode</code>.</p>
+<h3 id="adding-minecraft-to-steam">Adding Minecraft to Steam</h3>
+<p>We need to add a shortcut to the game on Steam that way you can launch it in game mode.
+Luckly, with Emudeck installed you can use <a href="https://steamgriddb.github.io/steam-rom-manager/">Steam ROM Manager</a> to automatically grab the metadata and add the game to Steam.</p>
+<ol>
+<li>Click on the Emudeck launcher on the desktop.</li>
+<li>Once EmuDeck launches, click on &ldquo;Tools &amp; stuff&rdquo; in the bottom right.</li>
+<li>Then select &ldquo;SteamRomManager.&rdquo;</li>
+<li>Click Yes, when it asks to exit steam and launch.</li>
+<li>Click Preview in the top left.</li>
+<li>Press &ldquo;Generate app list&rdquo; in the bottom left.</li>
+<li>Press &ldquo;Save app list&rdquo;</li>
+</ol>
+<p>After it&rsquo;s saved you can close Steam ROM Manager and Emudeck.
+You can then Return to Gaming Mode.
+Then you can find the game under Non-Steam games.</p>
+<p><img loading="lazy" src="/images/posts/minecraft-splitscreen-steam-deck/game-on-homescreen.jpg" alt="minecraft-on-home-screen"  />
+</p>
+<p>And boom, you can launch the game and play split-screen co-op with multiple controllers.
+It will ask if you want to use a profile when a player joins, just hit B and they will join as guests.
+Don&rsquo;t worry even as a guest your save data persists.</p>
+<h3 id="minor-tweaks-and-fixes">Minor Tweaks and Fixes</h3>
+<p>To fix the audio lag and stuttering, in RPCS3 goto <strong>configuration -&gt; Audio and enable Time Stretching</strong>.</p>
+]]></content:encoded></item><item><title>Glacier Trip</title><link>https://plug-world.com/microblog/glacier-trip/</link><pubDate>Fri, 30 Dec 2022 10:29:12 -0700</pubDate><guid>https://plug-world.com/microblog/glacier-trip/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/RANZHL8IyU4" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/RANZHL8IyU4?autoplay=1'>
+      <img src='https://img.youtube.com/vi/RANZHL8IyU4/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/RANZHL8IyU4" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Linux Distros that are Actually for Beginners</title><link>https://plug-world.com/posts/linux-mint-the-dependable-and-user-friendly-distro/</link><pubDate>Wed, 28 Dec 2022 16:15:32 -0700</pubDate><guid>https://plug-world.com/posts/linux-mint-the-dependable-and-user-friendly-distro/</guid><description>If you want a just works distro it&amp;rsquo;s going to be based on Ubuntu. Ubuntu has superior driver, application, and online support. Ubuntu is the best supported distribution and will lead to the least amount of technical issues.
+1. Linux Mint or Pop_!OS 2. Kubuntu or Ubuntu or Xubuntu I recommend these distros for beginners.
+All distros except for Linux Mint require additional configuration.
+On those distros run the script snap-to-flatpak.</description><content:encoded><![CDATA[<p>If you want a just works distro it&rsquo;s going to be based on <strong>Ubuntu</strong>.
+Ubuntu has superior driver, application, and online support.
+Ubuntu is the best supported distribution and will lead to the least amount of technical issues.</p>
+<h2 id="1-linux-minthttpslinuxmintcom-or-pop_oshttpspopsystem76com">1. <a href="https://linuxmint.com/">Linux Mint</a> or <a href="https://pop.system76.com/">Pop_!OS</a></h2>
+<h3 id="2-kubuntuhttpskubuntuorg-or-ubuntuhttpsubuntucom-or-xubuntuhttpsxubuntuorg">2. <a href="https://kubuntu.org/"><em>Kubuntu</em></a> or <a href="https://ubuntu.com/"><em>Ubuntu</em></a> or <a href="https://xubuntu.org/"><em>Xubuntu</em></a></h3>
+<p>I recommend these distros for beginners.</p>
+<p>All distros except for <em>Linux Mint</em> require <strong>additional configuration.</strong></p>
+<p>On those distros run the script <a href="https://github.com/MasterGeekMX/snap-to-flatpak">snap-to-flatpak</a>.</p>
+<h2 id="my-journey-to-linux-mint">My Journey to Linux Mint</h2>
+<p><a href="/posts/arch-linux-just-works">I used to recommend Arch</a>, because I was extremely happy with the base install.
+But after daily driving it on my laptops I&rsquo;ve grown very unhappy with it.
+I have daily driven Arch on my desktop and it has worked great.
+But it heavily depends on your usage.</p>
+<ul>
+<li>Arch keys break if you don&rsquo;t update packages for a while.</li>
+<li>Older Nvidia GPUs are unsupported and require switching the kernel.</li>
+<li>Arch inherently takes much more time to setup and configure.</li>
+</ul>
+<p>I gotta say I do love my Arch desktop with my window manager and all my desktop configuration.
+But all of this requires so much time and energy.</p>
+<p>I simply want things to just work on my laptop.
+Usually when I&rsquo;m working off of a laptop I need to get something done, and I don&rsquo;t have time to mess around trying to get my drivers and desktop configured and working.</p>
+<p>I didn&rsquo;t consider <a href="https://ubuntu.com/">Ubuntu</a> as a viable option for a long time.
+This is because of the whole <a href="https://snapcraft.io/">Snap package system</a> that was forced on Ubuntu distributions.
+Snaps are so much slower than native packages and are completely proprietary.
+Whenever you go to install a package, if a Snap version is available it will force you to download it.
+Ubuntu is essentially shooting themselves in the foot forcing their cloud packaging system on everyone.</p>
+<p>This is why I avoided Ubuntu like the plague.
+But I realized almost every distro is based on Ubuntu.
+I had two options, <a href="https://archlinux.org/">Arch</a> or <a href="https://www.debian.org/">Debian</a>.
+Yes, there are more options, but I&rsquo;m trying to keep it simple.</p>
+<p>I didn&rsquo;t experiment with Debian too much, but I believe I could&rsquo;ve made it work.</p>
+<p>After I realized the power of <a href="https://flatpak.org/">Flatpak package system</a> and how Ubuntu is better at power management than Debian, I decided to give Ubuntu another chance.
+Flatpaks are an open source universal packaging system.
+They are very fast and are up to date.</p>
+<h2 id="what-makes-linux-mint-great">What Makes Linux Mint Great</h2>
+<h3 id="packages">Packages</h3>
+<p>Snaps are disabled by default, and Flatpaks are enabled.</p>
+<p><a href="https://linuxmint.com/">Linux Mint</a> is based on LTS releases of Ubuntu which makes it very stable.
+It also means that you&rsquo;ll get five years of support out of your system.
+The only downside is that your packages tend to be out of date.
+You won&rsquo;t have new versions of your applications and they can be pretty far behind.</p>
+<p>To fix this, we have Flatpaks!
+Install your application as a Flatpak and you will have the recent version.
+Gone are the days of having outdated apps.
+Flatpaks run isolated from the system, so you can continue to have a stable experience even with updated untested applications.</p>
+<h3 id="apps">Apps</h3>
+<p>Everything has an app.
+Driver manager, software sources, firewall, software manager, printer manager, software updater, snapshot backups, etc.
+I get it.
+Most desktop environments already have GUI apps for a lot of the same things.
+But Linux Mint goes above and beyond.
+Basically everything that a normal user would want to do can be performed through these apps.
+No need for a terminal.</p>
+<p>I personally love the terminal.
+It gives me so much freedom, power, and automation that you don&rsquo;t get with these GUI tools.
+But sometimes, I honestly can care less.
+Sometimes I need things to just work.
+I don&rsquo;t want to have to look up a ton of commands to configure install drivers and get my printers to work.
+I would much rather use a GUI app that does that for me.
+Work needs to get done, I don&rsquo;t have an hour to spare debugging commands in my terminal.</p>
+<p>This is why apps are great, not just for the beginners, but even for people that know their way around the terminal.</p>
+<h3 id="defaults">Defaults</h3>
+<p>Defaults matter.
+Most people won&rsquo;t change their settings or configure their system.
+I certainly don&rsquo;t, but most of the time I&rsquo;m not happy with the defaults.
+So I inevitably waste time configuring the same settings on every system.</p>
+]]></content:encoded></item><item><title>English Documentary</title><link>https://plug-world.com/microblog/english-documentary/</link><pubDate>Mon, 19 Dec 2022 20:27:15 -0700</pubDate><guid>https://plug-world.com/microblog/english-documentary/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/QXFNIH6Ws6g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/QXFNIH6Ws6g?autoplay=1'>
+      <img src='https://img.youtube.com/vi/QXFNIH6Ws6g/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/QXFNIH6Ws6g" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Ubuntu ACPI Errors Prevent Boot Fix</title><link>https://plug-world.com/posts/acpi-errors-prevent-boot/</link><pubDate>Tue, 06 Dec 2022 15:26:18 -0700</pubDate><guid>https://plug-world.com/posts/acpi-errors-prevent-boot/</guid><description>After installing Kubuntu on my laptop I ran into a ton of ACPI errors upon boot. Kubuntu managed to install most of the Nvidia packages related to xorg and optimus. But it failed to install the main nvidia-driver component. This leads to ACPI errors and a unbootable OS.
+Solution: TLDR: Launch into recovery mode, install Nvidia gpu drivers.
+Launching in recovery mode: In grub select Advanced Ubuntu options. Launch the latest Ubuntu recovery image.</description><content:encoded><![CDATA[<p>After installing Kubuntu on my laptop I ran into a ton of ACPI errors upon boot.
+Kubuntu managed to install most of the Nvidia packages related to xorg and optimus.
+But it failed to install the main nvidia-driver component.
+This leads to ACPI errors and a unbootable OS.</p>
+<h2 id="solution">Solution:</h2>
+<p>TLDR: Launch into recovery mode, install Nvidia gpu drivers.</p>
+<h3 id="launching-in-recovery-mode">Launching in recovery mode:</h3>
+<ol>
+<li>In grub select Advanced Ubuntu options.</li>
+<li>Launch the latest Ubuntu recovery image.</li>
+<li>Then proceed to launch the OS.</li>
+</ol>
+<p>You will find that Ubuntu launches like normal without ACPI errors.
+This is only temporary, you will find that screen brightness and many other hardware related functions won&rsquo;t work.</p>
+<h3 id="installing-nvidia-drivers">Installing Nvidia drivers</h3>
+<p>Launch the terminal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ubuntu-drivers devices
+</code></pre></div><p>Then install the recommended nonfree Nvidia driver.</p>
+<p><code>sudo apt-get install nvidia-driver-XXX</code></p>
+]]></content:encoded></item><item><title>Bone Brawl Art</title><link>https://plug-world.com/bone-brawl/art/</link><pubDate>Sun, 27 Nov 2022 14:01:10 -0600</pubDate><guid>https://plug-world.com/bone-brawl/art/</guid><description/><content:encoded><![CDATA[<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img loading="lazy" src="/images/bone-brawl/tate-skeleton-ground.webp" alt="tate-skeleton-ground"  />
+</td>
+<td><img loading="lazy" src="/images/bone-brawl/tate-skeleton-hover.webp" alt="tate-skeleton-hover"  />
+</td>
+</tr>
+<tr>
+<td><img loading="lazy" src="/images/bone-brawl/parker-skeleton.webp" alt="parker-skeleton"  />
+</td>
+<td><img loading="lazy" src="/images/bone-brawl/parker-skeleton-dead.webp" alt="parker-skeleton-dead"  />
+</td>
+</tr>
+</tbody>
+</table>
+<p><img loading="lazy" src="/images/bone-brawl/wes-skeleton.webp#center" alt="wes-skeleton"  />
+</p>
+<p><img loading="lazy" src="/images/bone-brawl/angry-bones-class.webp" alt="angry-bones-class"  />
+
+<img loading="lazy" src="/images/bone-brawl/skinny-bones-class.webp" alt="skinny-bones-class"  />
+
+<img loading="lazy" src="/images/bone-brawl/big-bones-class.webp" alt="big-bones-class"  />
+
+<img loading="lazy" src="/images/bone-brawl/base-class.webp" alt="base-class"  />
+
+<img loading="lazy" src="/images/bone-brawl/skeleton-machine-gunning.webp" alt="skeleton-machine-gunning"  />
+</p>
+]]></content:encoded></item><item><title>Uncle Bob's Cabin</title><link>https://plug-world.com/microblog/uncle-bobs-cabin/</link><pubDate>Sat, 19 Nov 2022 13:51:46 -0700</pubDate><guid>https://plug-world.com/microblog/uncle-bobs-cabin/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/HjU11kgaP5Y" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/HjU11kgaP5Y?autoplay=1'>
+      <img src='https://img.youtube.com/vi/HjU11kgaP5Y/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/HjU11kgaP5Y" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Sadies</title><link>https://plug-world.com/microblog/sadies/</link><pubDate>Mon, 14 Nov 2022 15:01:29 -0700</pubDate><guid>https://plug-world.com/microblog/sadies/</guid><description>Your browser does not support the video tag. Sadies was a blast with you Hailee!! 😁</description><content:encoded><![CDATA[
+
+
+
+
+<video autoplay loop  playsinline controls>
+
+<source src=https://plug-world.com/videos/sadies-video/sadies-video-av1.mp4 type='video/mp4;codecs="av01.0.05M.08,opus"'>
+
+
+<source src=https://plug-world.com/videos/sadies-video/sadies-video-h264.mp4 type="video/mp4">
+
+
+<source src=https://plug-world.com/videos/sadies-video/sadies-video-vp9.webm type='video/webm;codecs="vp9,opus"'>
+
+Your browser does not support the video tag.
+</video>
+
+<p>Sadies was a blast with you Hailee!! 😁</p>
+]]></content:encoded></item><item><title>Happiness</title><link>https://plug-world.com/thoughts-and-quotes/happiness/</link><pubDate>Sun, 30 Oct 2022 09:12:35 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/happiness/</guid><description>Don&amp;rsquo;t wait for tomorrow to be happy. Often we think if only I had a new car, or a new phone, or got a new house, than I&amp;rsquo;ll be happy. Maybe you recieve a short burst of temporary happiness. But in the end you will still find yourself unhappy. Happiness is a choice. You can find happiness in the most unlikely places. You can be the richest person in the world and still be unhappy.</description><content:encoded><![CDATA[<p>Don&rsquo;t wait for tomorrow to be happy.
+Often we think if only I had a new car, or a new phone, or got a new house, than I&rsquo;ll be happy.
+Maybe you recieve a short burst of temporary happiness.
+But in the end you will still find yourself unhappy.
+Happiness is a choice.
+You can find happiness in the most unlikely places.
+You can be the richest person in the world and still be unhappy.
+People with almost nothing may still be more rich with happiness than you.
+Your circumstances have little impact on happiness.
+Don&rsquo;t look to tomorrow to be happy&hellip; be happy today.</p>
+]]></content:encoded></item><item><title>Values</title><link>https://plug-world.com/thoughts-and-quotes/values/</link><pubDate>Tue, 25 Oct 2022 17:58:35 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/values/</guid><description>&amp;ldquo;Stop wielding your values as a weapon and start offering them as a gift.&amp;rdquo;
+-Arthur Brooks</description><content:encoded><![CDATA[<p>&ldquo;Stop wielding your values as a weapon and start offering them as a gift.&rdquo;</p>
+<p><a href="https://www.theatlantic.com/family/archive/2022/04/arguing-with-someone-different-values/629495/">-Arthur Brooks</a></p>
+]]></content:encoded></item><item><title>Don't Replace with Technology</title><link>https://plug-world.com/thoughts-and-quotes/tech-used-to-assist-not-to-replace/</link><pubDate>Tue, 25 Oct 2022 17:55:39 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/tech-used-to-assist-not-to-replace/</guid><description>Technology should be used to assist daily life, never to replace it.</description><content:encoded>&lt;p>Technology should be used to assist daily life, never to replace it.&lt;/p></content:encoded></item><item><title>Love Is Greater Than Advice</title><link>https://plug-world.com/thoughts-and-quotes/love-is-greater-than-advice/</link><pubDate>Mon, 17 Oct 2022 19:51:33 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/love-is-greater-than-advice/</guid><description>&amp;ldquo;People need love more than they need advice. Most people know the right thing to do, they just need someone to believe in them.&amp;rdquo;
+-Lex Fridman</description><content:encoded><![CDATA[<p>&ldquo;People need love more than they need advice. Most people know the right thing to do, they just need someone to believe in them.&rdquo;</p>
+<p>-Lex Fridman</p>
+]]></content:encoded></item><item><title>Tech Risk</title><link>https://plug-world.com/thoughts-and-quotes/tech-risk/</link><pubDate>Mon, 17 Oct 2022 19:31:51 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/tech-risk/</guid><description>&amp;ldquo;Technology is always this source, of danger, of risk. All of the biggest things that threaten our civilization at the small and large scale, all are connected to misuse of technology we develop. At the same time, it&amp;rsquo;s that very technology that will impower us and save us.&amp;rdquo;
+-Lex Fridman</description><content:encoded><![CDATA[<p>&ldquo;Technology is always this source, of danger, of risk. All of the biggest things that threaten our civilization at the small and large scale, all are connected to misuse of technology we develop. At the same time, it&rsquo;s that very technology that will impower us and save us.&rdquo;</p>
+<p>-Lex Fridman</p>
+]]></content:encoded></item><item><title>Improving My Directory Workflow</title><link>https://plug-world.com/posts/improving-my-directory-workflow/</link><pubDate>Fri, 07 Oct 2022 17:58:45 -0600</pubDate><guid>https://plug-world.com/posts/improving-my-directory-workflow/</guid><description>This is my most used custom shell script.
+#!/bin/sh directory=$(find ~/projects ~/assignments ~/personal -mindepth 0 -maxdepth 1 -type d | fzf) if [ -z &amp;#34;$1&amp;#34; ]; then cd &amp;#34;$directory&amp;#34; exec fish else exec ranger &amp;#34;$directory&amp;#34; fi Please note this is configured for the fish shell.
+If you don&amp;rsquo;t use the fish shell change the exec command to your shell of choice.
+Speed 🏃🏻💨 rct was a little script I made to quickly find directories that I use a lot.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/improving-my-directory-workflow/rct-in-action.gif" alt="rct in action"  />
+</p>
+<p>This is my most used custom shell script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+directory<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>find ~/projects ~/assignments ~/personal -mindepth <span style="color:#ae81ff">0</span> -maxdepth <span style="color:#ae81ff">1</span> -type d | fzf<span style="color:#66d9ef">)</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -z <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    cd <span style="color:#e6db74">&#34;</span>$directory<span style="color:#e6db74">&#34;</span>
+    exec fish
+<span style="color:#66d9ef">else</span>
+    exec ranger <span style="color:#e6db74">&#34;</span>$directory<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p><em>Please note this is configured for the fish shell.</em></p>
+<p>If you don&rsquo;t use the fish shell change the exec command to your shell of choice.</p>
+<h2 id="speed-">Speed 🏃🏻💨</h2>
+<p><code>rct</code> was a little script I made to quickly find directories that I use a lot.</p>
+<p>Gone are the days of <code>cd ~; cd important-directory/; ls; cd subdirectory; ls; vim important-document.md</code></p>
+<p>Now I just run <code>rct</code> and use <code>fzf</code> to search for the directory I need.</p>
+<h2 id="keybinds-">Keybinds ⌨️</h2>
+<p><code>alt+r</code> launches my terminal with <code>rct</code> running and ready to go.</p>
+<p><code>alt+shift+r</code> launches <code>ranger</code> in the directory that I select with <code>rct</code>.</p>
+<h2 id="dwm-setup-">DWM Setup 🪟</h2>
+<p>Keybinds are added in <code>config.h</code> under the keys variable.</p>
+<p><code>{ MODKEY, XK_r, spawn, SHCMD(&quot;st -e rct&quot;) },</code></p>
+<p><code>{ MODKEY|ShiftMask, XK_r, spawn, SHCMD(&quot;st -e rct 0&quot;) },</code></p>
+]]></content:encoded></item><item><title>Risks</title><link>https://plug-world.com/thoughts-and-quotes/risks/</link><pubDate>Tue, 20 Sep 2022 16:26:18 -0600</pubDate><guid>https://plug-world.com/thoughts-and-quotes/risks/</guid><description>&amp;ldquo;It liberates you intellectually and physically to take big, bold risks. I can live a thousand lives; there&amp;rsquo;s so many trajectories. And imagine the greatest possible trajectory, that reveals the most beautiful thing I could possibly create. What is that? I feel like that&amp;rsquo;s a good exercise to think about, because it&amp;rsquo;s also liberating to think that you can do anything.&amp;rdquo;
+-Lex Fridman</description><content:encoded><![CDATA[<p>&ldquo;It liberates you intellectually and physically to take big, bold risks. I can live a thousand lives; there&rsquo;s so many trajectories. And imagine the greatest possible trajectory, that reveals the most beautiful thing I could possibly create. What is that? I feel like that&rsquo;s a good exercise to think about, because it&rsquo;s also liberating to think that you can do anything.&rdquo;</p>
+<p>-Lex Fridman</p>
+]]></content:encoded></item><item><title>Hoco Week</title><link>https://plug-world.com/microblog/hoco-week/</link><pubDate>Wed, 14 Sep 2022 14:01:10 -0600</pubDate><guid>https://plug-world.com/microblog/hoco-week/</guid><description> Your browser does not support the video tag.</description><content:encoded>
+&lt;video autoplay loop playsinline controls>
+&lt;source src=https://plug-world.com/videos/hoco-week-video/hoco-week-video-h264.mp4 type="video/mp4">
+&lt;source src=https://plug-world.com/videos/hoco-week-video/hoco-week-video-vp9.webm type='video/webm;codecs="vp9,opus"'>
+Your browser does not support the video tag.
+&lt;/video></content:encoded></item><item><title>Dad's Birthday Video</title><link>https://plug-world.com/microblog/dads-birthday-video/</link><pubDate>Sat, 10 Sep 2022 10:37:03 -0600</pubDate><guid>https://plug-world.com/microblog/dads-birthday-video/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/oWQ5EWaqE8c" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/oWQ5EWaqE8c?autoplay=1'>
+      <img src='https://img.youtube.com/vi/oWQ5EWaqE8c/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/oWQ5EWaqE8c" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Seminary Field Day</title><link>https://plug-world.com/microblog/seminary-field-day/</link><pubDate>Mon, 29 Aug 2022 16:22:26 -0600</pubDate><guid>https://plug-world.com/microblog/seminary-field-day/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/wkorU9NwsvE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/wkorU9NwsvE?autoplay=1'>
+      <img src='https://img.youtube.com/vi/wkorU9NwsvE/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/wkorU9NwsvE" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>SeaDefender's Unexpected Development</title><link>https://plug-world.com/posts/seadefender/</link><pubDate>Sat, 13 Aug 2022 17:27:51 -0600</pubDate><guid>https://plug-world.com/posts/seadefender/</guid><description>Retro Remake SeaDefender was a game I made based on SeaQuest. My intention was to startup a series on YouTube called Retro Remake. The idea was to recreate these retro games in a limited amount of time.
+I worked on the game for a few weeks. Vacation and large gaps in development ultimately led to me putting the project on hold.
+Over vacation I had a lot of fun making some graphics for the series in Blender.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/seadefender/seadefender-1.gif" alt="seaDefender gameplay gif"  />
+</p>
+<h2 id="retro-remake">Retro Remake</h2>
+<p><a href="/seadefender">SeaDefender</a> was a game I made based on <a href="https://en.wikipedia.org/wiki/Seaquest_(video_game)">SeaQuest</a>.
+My intention was to startup a series on YouTube called <em>Retro Remake</em>.
+The idea was to recreate these retro games in a limited amount of time.</p>
+<p>I worked on the game for a few weeks.
+Vacation and large gaps in development ultimately led to me putting the project on hold.</p>
+<p>Over vacation I had a lot of fun making some graphics for the series in Blender.
+Too bad, I never made the video.</p>
+<hr>
+<p>
+
+
+
+
+<video autoplay loop muted playsinline controls>
+
+
+
+<source src=https://plug-world.com/videos/seadefender/sea-quest-remake-animation-vp9.webm type='video/webm;codecs="vp9,opus"'>
+
+Your browser does not support the video tag.
+</video>
+
+
+
+
+
+
+<video autoplay loop muted playsinline controls>
+
+
+
+<source src=https://plug-world.com/videos/seadefender/seaquest-history-lesson-vp9.webm type='video/webm;codecs="vp9,opus"'>
+
+Your browser does not support the video tag.
+</video>
+</p>
+<hr>
+<p>It&rsquo;s weird how your perception of your project changes while you are working on it.
+When I was working on the game, all I saw was problems.
+A flawed game, that didn&rsquo;t work.
+And I was burnt out.
+You would think that if I based my game off of another that&rsquo;s proven to be successfully, I wouldn&rsquo;t have issues.
+Yet, I ran into a lot of design problems.
+This was the result of me changing my game so much from the original.
+Sure they may look very similar, but mechanically they are very different.</p>
+<p>After a lot of burnout, and doubt in the project, I ended the SeaQuest remake.
+The project sat for a year.
+I came back to it a few times, sad that the project never gotten finished.
+While I came back to it, I realized the potential that it had.</p>
+<h2 id="tsa-remake">TSA Remake</h2>
+<p>It sat until the <a href="https://tsaweb.org/tsa">TSA (Technology Student Association)</a> high school video game design competition.
+The theme was &ldquo;Arcade in a Museum.&rdquo;
+This was perfect, I could finally finish what I started.
+So I decided to recreate the game for the competition.</p>
+<p>Technically they gave us a few months to develop the games.
+I was very busy, and I didn&rsquo;t know till much later.
+So that gave me only a few weeks of development.</p>
+<p>Many schools assigned their classes to make a game, and they would recieve a grade at the end.
+I wasn&rsquo;t in one of those classes, which was too bad, but I&rsquo;ll still have enough time to finish.</p>
+<p>TSA required that you must work in teams.
+So I teamed up with my friend Luke.
+He has little experience with game dev, but all of his efforts were appriecated.</p>
+<p>TSA did have a few requirements for the game&hellip;</p>
+<ul>
+<li>A full game portfolio</li>
+<li>Copyright checklist</li>
+<li>Storyboard</li>
+<li><a href="https://tsaweb.org/docs/default-source/themes-and-problems-2018-2019/2021-2022/plan-of-work-log.pdf?sfvrsn=eb5864c9_2">Plan of Work Log</a></li>
+<li>3 levels that can be played fully through</li>
+</ul>
+<p>Here&rsquo;s a picture of my &ldquo;storyboard.&rdquo;
+<img loading="lazy" src="/images/posts/seadefender/game-mechanics.webp" alt="storyboard picture"  />
+</p>
+<p>So apparently the game is supposed to have a story.
+I was so worried on finishing the game on time, I didn&rsquo;t have the time to complete a story.
+Not gonna lie, having the requirement for &ldquo;story&rdquo; is kinda dumb.
+Some games don&rsquo;t have a story, especially arcade games.
+Yeah what&rsquo;s the story in space invaders?
+Get rid of them!
+That&rsquo;s what it is.</p>
+<p>I also didn&rsquo;t like the whole level requirement.
+Some games don&rsquo;t have your typical &ldquo;levels.&rdquo;
+Especially if it&rsquo;s an arcade game, you kinda just keep playing an ever increasing difficulty until you lose.
+Think of Asteroids.
+Classic, arcade game.
+Does that have levels?
+Nope!
+So uh, I don&rsquo;t see why levels are a requirement.</p>
+<p>You can tell the people that created the whole video game design competition system at TSA don&rsquo;t play video games.</p>
+<p>So as I was stressing out trying to get the game finished on time, I was also stressed about the portfolio.
+There&rsquo;s so many documents you have to sign and make sure you get correct.
+The website at the time was a mess, trying to figure out what I needed and making sure everything&rsquo;s correct.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/seadefender-2.gif" alt="seaDefender gameplay gif"  />
+</p>
+<p>For the game, I just added some new enemies, and refined the game mechanics.</p>
+<p>Anyways, after crunching like crazy, I finished the game, and the portfolio.
+The story had to be absent from the game.
+I didn&rsquo;t have the time to work it out.
+So I went to submit the game, and spent an hour navigating the site trying to figure out where to submit.
+You don&rsquo;t submit to the official TSA site till you go to nationals.
+So I needed to figure out how to submit to the <a href="https://utahtsa.org/wp/">Utah TSA site</a>.
+Anyways, I figured out I had to hit the &ldquo;register my chapter button,&rdquo; only then to login.
+Which then I had to figure out the password from my teacher, who is the chapter adviser.
+After he gave me the password, it still failed.
+With many variations of failed login attempts I had to try something else.
+I had to email the Utah State TSA Advisor to get it submitted.</p>
+<p>After that painfull process, the game was submitted and ready.
+Here&rsquo;s the <a href="/pdf/seadefender/seadefender-tsa-portfolio.pdf">game&rsquo;s portfolio</a> if anyone wants to see.</p>
+<p>The game placed 2nd in the state.
+I believe there was around 11 teams that participated in the state competition.
+Does this mean I get to go to nationals?
+No, but I thought so.
+I thought I read something on the website saying that the first 3 teams will go to nationals.
+And robotics had 3 teams go to nationals as well, so I assumed we were too.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/tutorial-shark-killing.gif" alt="tutorial-shark-killing.gif"  />
+</p>
+<p>So I kept working on the game.
+I noticed that most players have no idea how to play the game.
+So I added a tutorial, which was very much needed.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/lazer-shark.gif" alt="lazer-shark.gif"  />
+</p>
+<p>I added <strong>lazer sharks!!</strong>
+Just for the memes, idk thought they could be fun.</p>
+<p><img loading="lazy" src="/images/posts/seadefender/high-score-screen.gif" alt="high-score-screen.gif"  />
+</p>
+<p>And I added a high score screen.
+I was hoping this would really push the arcade theme of the game.</p>
+<p>Anyways, it came time to submit for nationals, and that&rsquo;s when I realized that we weren&rsquo;t going to nationals.
+Yeah it was disappointing.
+I could blame it on everything else.
+But ultimately it was my fault.
+I&rsquo;ve accepted it and moved on.
+We all fail, we aren&rsquo;t perfect, and we just gotta keep moving forward.
+Failure is part of the process, and that&rsquo;s how we learn and grow.
+Those that are most successful are those who have failed the most.
+It didn&rsquo;t turn out the way I wanted, but that&rsquo;s okay.
+Later I realized that wasn&rsquo;t the end for this project.</p>
+<h2 id="udemy-remake">Udemy Remake</h2>
+<p>So now it&rsquo;s summer and I need to get a job.
+My dad suggested that I should do a Udemy course.
+I did some research and found that these game development courses can potentially make quite a bit of money.
+I already had some experience doing <a href="https://www.youtube.com/plugworld">YouTube tutorials</a> and teaching game development with the <a href="https://godotengine.org/">Godot game engine</a>.
+So I think it could potentially work out pretty well.</p>
+<p>So I decided to make a Udemy course based on this game.
+I guess I haven&rsquo;t done enough remakes yet.
+As you might imagine, the code for this game doesn&rsquo;t look too good.
+Time to get to work, going through every line of code simplifying and cleaning everything up.
+<a href="https://docs.godotengine.org/en/stable/tutorials/best_practices/index.html">Godot&rsquo;s best practices</a> was a very helpful resource for this.</p>
+<p>The hard part about making this course is making it as simple as possible.
+This is a complex game, and I&rsquo;m trying to make a course for beginners.
+So I&rsquo;ll do my best, we&rsquo;ll see how this goes.
+Trying to achieve the balance between clean and simple code.
+More often than not the cleanest approach usually is the most complex to understand.</p>
+<p>Anyways, after remaking the game for the third time, it&rsquo;s now time to record the course.
+That&rsquo;s where I&rsquo;m at right now.
+In the next part, I&rsquo;m gonna talk about the process of recording and making the course.
+Anyways, that&rsquo;s where I&rsquo;m at right now, thanks!</p>
+]]></content:encoded></item><item><title>Recommended Browser Extensions</title><link>https://plug-world.com/posts/recommended-browser-extensions/</link><pubDate>Mon, 01 Aug 2022 11:04:08 -0600</pubDate><guid>https://plug-world.com/posts/recommended-browser-extensions/</guid><description>uBlock Origin An efficient blocker add-on, blocks ads and trackers. Enable some of the annoyances filters to get rid of cookie popups. Cookie Auto Delete Automatically deletes cookies from websites, whitelist websites you use to keep their cookies. Redirector Automatically redirects to user-defined urls on certain pages I use this for privacy frontends Reddit -&amp;gt; Libreddit Twitter -&amp;gt; Nitter Skip Redirect All together with Firefox and custom profile from ffprofilemaker.</description><content:encoded><![CDATA[<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>
+<ul>
+<li>An efficient blocker add-on, blocks ads and trackers.</li>
+<li>Enable some of the annoyances filters to get rid of cookie popups.</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/">Cookie Auto Delete</a>
+<ul>
+<li>Automatically deletes cookies from websites, whitelist websites you use to keep their cookies.</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/redirector/">Redirector</a>
+<ul>
+<li>Automatically redirects to user-defined urls on certain pages</li>
+<li>I use this for <strong>privacy frontends</strong>
+<ul>
+<li>Reddit -&gt; Libreddit</li>
+<li>Twitter -&gt; Nitter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/">Skip Redirect</a></li>
+</ul>
+<p>All together with <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> and custom profile from <a href="https://ffprofile.com/">ffprofilemaker</a>.</p>
+<p>On Android I use the <a href="https://github.com/GrapheneOS/Vanadium">Vanadium</a> with DNS adblocking.</p>
+<p><a href="https://github.com/arkenfox/user.js/wiki/4.1-Extensions">Arkenfox&rsquo;s guide to extentions in Firefox</a></p>
+]]></content:encoded></item><item><title>Back From Glacier and Canada 🇨🇦</title><link>https://plug-world.com/microblog/back-from-glacier-and-canada/</link><pubDate>Wed, 27 Jul 2022 16:05:59 -0600</pubDate><guid>https://plug-world.com/microblog/back-from-glacier-and-canada/</guid><description>Just got back home after a long trip to Glacier and Canada. Had lots of fun, went to the Sun Road, Banff, Lake Louise, and saw quite a few bears in Canada.
+Currently working on a family video for this trip. I&amp;rsquo;ll post it here, once it&amp;rsquo;s finished. I make family memory videos of every trip we go on. You can find them all here.</description><content:encoded><![CDATA[<p>Just got back home after a long trip to Glacier and Canada.
+Had lots of fun, went to the Sun Road, Banff, Lake Louise, and saw quite a few bears in Canada.</p>
+<p>Currently working on a family video for this trip.
+I&rsquo;ll post it here, once it&rsquo;s finished.
+I make family memory videos of every trip we go on.
+You can <a href="https://www.youtube.com/c/ParkerAnderson/videos">find them all here.</a></p>
+]]></content:encoded></item><item><title>Using a Blog Instead of Social Media</title><link>https://plug-world.com/posts/using-a-blog-instead-of-social-media/</link><pubDate>Tue, 12 Jul 2022 17:09:03 -0600</pubDate><guid>https://plug-world.com/posts/using-a-blog-instead-of-social-media/</guid><description>Crazy right!?
+Why do this? Here&amp;rsquo;s why&amp;hellip; Addiction Social media is naturally made to be addictive. Over the past 10 years, social media has been finetuned to work against you and to push for your attention. Social Media Impacts the Whole World Most people use social media, it impacts a very large aspect of the world. Most social media generally has an &amp;ldquo;algorithm&amp;rdquo; to promote content.</description><content:encoded><![CDATA[<p>Crazy right!?</p>
+<h2 id="why-do-this-heres-why">Why do this? Here&rsquo;s why&hellip;</h2>
+<ol>
+<li>Addiction
+<ul>
+<li>Social media is naturally made to be addictive.</li>
+<li>Over the past 10 years, social media has been finetuned to work against you and to push for your attention.</li>
+</ul>
+</li>
+<li>Social Media Impacts the Whole World
+<ul>
+<li>Most people use social media, it impacts a very large aspect of the world.</li>
+<li>Most social media generally has an &ldquo;algorithm&rdquo; to promote content. This algorithm is always being balanced and modified ever so slightly.
+<ul>
+<li>They modify it to make people think certain ways, or to promote certain types of content over others. Effectively giving them the ability to brainwash the world.</li>
+<li>Look at those Tiktok challenges. No other platform promoted these challenges as much as Tiktok. It convinced people to do stupid things that they wouldn&rsquo;t have done otherwise.
+<ul>
+<li>It even got to the point that schools had to shutdown.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Not Being in Control Over Content
+<ul>
+<li>How are you not in control? You get to choose who you follow. Yep you do, but I constantly get crap in my feed that I don&rsquo;t want to see.</li>
+<li>Things that I don&rsquo;t follow get forced in my face no matter what.</li>
+<li>I want to be in control of the things that I get to see on social media.</li>
+<li>In my opinion it would be best just to be connected with your friends and family. I don&rsquo;t care about the celebrities and all the other junk that gets thrown in my face.</li>
+</ul>
+</li>
+<li>Being a Hypocrite
+<ul>
+<li>I don&rsquo;t support where social media is headed, and how manipulative it&rsquo;s getting.</li>
+<li>Therefore, I will not use it. <em>Under normal circumstances</em></li>
+</ul>
+</li>
+</ol>
+<h2 id="why-i-kinda-use-social-media">Why I Kinda Use Social Media</h2>
+<p>A couple of months ago I deleted my Instagram account.
+I used it primary with connecting with friends.
+And since then I have started to regret it.</p>
+<p>Here&rsquo;s my philosophy that led to me deleting it.</p>
+<blockquote>
+<p>If you don&rsquo;t support it, don&rsquo;t use it.</p>
+</blockquote>
+<p>You know, basically don&rsquo;t be a hypocrite.</p>
+<p>Since then, I missed seeing what my friends are up to and connecting to them through that.
+So it&rsquo;s hard to support both, you know?
+I don&rsquo;t want to support Facebook by using Instagram, but I want to support my friends by seeing and messaging with them on the platform.</p>
+<p>So I decided to get back on the platform.
+But I have a specific way of going about things that screws over Facebook and Instagram 😂</p>
+<h2 id="the-solution">The Solution</h2>
+<p>I won&rsquo;t post on Instagram.
+I will instead be using my <a href="/microblog">microblog</a>.</p>
+<ul>
+<li>Posts on my microblog will be similar to how I would post on Instagram.</li>
+<li>I will keep my <a href="/posts">blog</a> seperate, because my posts there will be more technical and informational.</li>
+</ul>
+<p>I use the regular Instagram web client.
+I dabbled using <a href="https://instaloader.github.io/">Instaloader</a>.
+Which is basically just a Instagram command line scraper, but it almost led to me getting banned.
+So I guess I won&rsquo;t be going with that.</p>
+<p>Advantages using Instagram web instead of the app&hellip;</p>
+<ol>
+<li>No ads and less tracking.
+<ul>
+<li>Using <a href="https://ublockorigin.com/">uBlockOrigin</a> addon to block them along with the <a href="https://f-droid.org/en/packages/us.spotco.fennec_dos/">Mull browser</a>.</li>
+</ul>
+</li>
+<li>No promotion of accounts I don&rsquo;t follow.</li>
+<li>Tiktok style stories aren&rsquo;t in the feed.</li>
+</ol>
+<p>Basically I only see the posts of people I follow.</p>
+<p>Anyways, social media is messy and big tech is making it a terrible platform to be on.
+Social media isn&rsquo;t all bad, it&rsquo;s definitely being used for good.
+But the platforms are designed to work against you for your attention.
+So it&rsquo;s best to have alternative ways of reaching others, not just through social media.</p>
+<h2 id="get-a-website">Get a Website</h2>
+<p>If you are reading this and you don&rsquo;t have a website, I encourage you <strong>get a website!</strong></p>
+<p>Everyone uses the same 5 websites, it&rsquo;s important that you own your own land on the internet.
+Most people can agree owning a house is much better than having to pay rent in an appartment.
+<strong>Do this on the internet!</strong>
+Post what you learn on your website, make posts that you would normally only do on Instagram, and put them on your website.</p>
+<p>The information you learn is valuable, and your experiences and memories are unreplacable.
+With a website you have the freedom to display your information however you want and the freedom to own it.</p>
+<p>I have found that this has made me a better writer, and has helped keep my thoughts more clear and organized.
+It may seem like a lot of work, but you can get a lot out of doing this.</p>
+<p>You can use <a href="https://neocities.org/">Neocities</a>, <a href="https://bearblog.dev">BearBlog</a> or <a href="https://blogger.com">Blogger</a>, just start using something.</p>
+<p>I use <a href="https://gohugo.io/">Hugo</a> which is a bit more advanced for the average user, but still very simple once setup.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Social media addiction is really harmful.
+Please try to find what works best for you.
+I find with this solution I have been able to improve myself, while also maintaining connection with my friends and family.
+That&rsquo;s what matters most, do your best to be better, little by little everyday.
+You will find that you can do amazing things.</p>
+<p>Don&rsquo;t start tomorrow, start today.
+Thank you for taking the time to read to read this.
+Please <a href="/contact">contact me</a> if you have any questions, or if you just want to talk.
+Thanks! 😃</p>
+]]></content:encoded></item><item><title>Grub and OS Prober in Arch Linux</title><link>https://plug-world.com/posts/grub-and-os-prober-in-arch-linux/</link><pubDate>Tue, 05 Jul 2022 21:45:46 -0600</pubDate><guid>https://plug-world.com/posts/grub-and-os-prober-in-arch-linux/</guid><description>This guide is tailored to people that are dualbooting Linux and Windows. The exact same steps can accomplish adding another Linux OS to the bootloader.
+Prerequisites sudo pacman -S grub efibootmgr os-prober ntfs-3g Mounting Windows Drive sudo mount -t ntfs-3g /dev/sda2 /mnt Don&amp;rsquo;t just copy this command. Make sure you use the correct drive. You can find each drive by name when using lsblk. Usually you want to mount the smallest partition.</description><content:encoded><![CDATA[<p>This guide is tailored to people that are dualbooting Linux and Windows.
+The exact same steps can accomplish adding another Linux OS to the bootloader.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S grub efibootmgr os-prober ntfs-3g
+</code></pre></div><h2 id="mounting-windows-drive">Mounting Windows Drive</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo mount -t ntfs-3g /dev/sda2 /mnt
+</code></pre></div><p><strong>Don&rsquo;t just copy this command.</strong>
+<em>Make sure you use the correct drive.</em>
+You can find each drive by name when using <code>lsblk</code>.
+Usually you want to mount the smallest partition.
+That will contain the boot manager for that specific operating system.
+For Windows mine was the second partition, but that may change, so just check yours just in case.</p>
+<h2 id="enable-os-prober">Enable OS Prober</h2>
+<p>Edit <code>/etc/default/grub</code> and uncomment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GRUB_DISABLE_OS_PROBER<span style="color:#f92672">=</span>false
+</code></pre></div><p>This allows OS Prober to scan for other operating systems and add them to the bootloader.</p>
+<h2 id="making-grub-the-bootloader">Making Grub the bootloader</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div><p>Generate grubs config, OS Prober should do it&rsquo;s thing and add all detected operating systems to Grub.
+If it misses one, make sure you have it mounted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo grub-install --target<span style="color:#f92672">=</span>x86_64-efi --efi-directory<span style="color:#f92672">=</span>/boot/efi --bootloader-id<span style="color:#f92672">=</span>grub --recheck
+</code></pre></div><p>This makes Grub the bootloader.</p>
+]]></content:encoded></item><item><title>Fixing Bluetooth Xbox Controllers in Arch Linux</title><link>https://plug-world.com/posts/fixing-xbox-bluetooth-controllers-in-arch-linux/</link><pubDate>Sun, 03 Jul 2022 11:43:17 -0600</pubDate><guid>https://plug-world.com/posts/fixing-xbox-bluetooth-controllers-in-arch-linux/</guid><description>Just like many others, I had issues with my Xbox One X/S controllers in Arch Linux. Here&amp;rsquo;s my quick guide to get everything working.
+Setting up Bluetooth Since you are on Arch Linux there&amp;rsquo;s a good chance you may not have Bluetooth installed.
+sudo pacman -S bluez bluez-utils Bluez provides the Bluetooth protocol stack. Bluz-utils provides a command line utility to connect bluetooth devices.
+sudo systemctl enable bluetooth.service Automatically autostart bluetooth as a service when the system boots.</description><content:encoded><![CDATA[<p>Just like many others, I had issues with my Xbox One X/S controllers in Arch Linux.
+Here&rsquo;s my quick guide to get everything working.</p>
+<h2 id="setting-up-bluetooth">Setting up Bluetooth</h2>
+<p>Since you are on Arch Linux there&rsquo;s a good chance you may not have Bluetooth installed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S bluez bluez-utils
+</code></pre></div><p>Bluez provides the Bluetooth protocol stack.
+Bluz-utils provides a command line utility to connect bluetooth devices.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable bluetooth.service
+</code></pre></div><p>Automatically autostart bluetooth as a service when the system boots.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start bluetooth.service
+</code></pre></div><p>Startup the bluetooth service.</p>
+<h2 id="connecting-the-controller-via-bluetooth">Connecting the controller via Bluetooth</h2>
+<p>Run <code>bluetoothctl</code> in the command line to startup the bluetooth utility.</p>
+<p>Run <code>power on</code> to turn on the bluetooth controller.</p>
+<p>Run <code>scan on</code> to get a list of each of the devices and their mac addresses.
+Your Xbox controller should show up as &ldquo;Xbox Wireless Controller&rdquo; then copy the mac address.</p>
+<p>Run <code>pair yourControllerMacAddress</code>, this will connect your Bluetooth controller.
+If you run into pairing issues, proceed to the next section.</p>
+<h2 id="controller-bluetooth-fix">Controller Bluetooth fix</h2>
+<p>Is your controller having Bluetooth connection issues?
+The solution is to update the firmware in the controller.</p>
+<ol>
+<li>Jump over to Windows, don&rsquo;t worry this is temporary (you can use a VM too).</li>
+<li>Download the Xbox Accessories app from the Microsoft Store.</li>
+<li>Plug in the controller to the pc.</li>
+<li>Get them updates.</li>
+</ol>
+<p>Now that the controller is updated, you can switch back to your Arch Linux install.
+You can see that the controller can connect over Bluetooth.</p>
+<h2 id="fixing-controller-mappings">Fixing controller mappings</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S linux-headers
+</code></pre></div><p>Make sure you have linux-headers installed.
+They are required for the next step.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yay -S xpadneo-dkms-git
+</code></pre></div><p>Make sure you have the <a href="https://www.tecmint.com/install-yay-aur-helper-in-arch-linux-and-manjaro/">yay aur helper</a> installed.
+Then proceed to install xpadneo.
+It contains the drivers for the Xbox One wireless controllers.
+This fixes the strange behavior of the operating system misinterpreting some of the controls on the controller.
+For example, my controller had issues with the right joystick and a few face buttons were mixed up.
+After installing the drivers those issues were resolved.</p>
+]]></content:encoded></item><item><title>Jellyfin Docker Compose</title><link>https://plug-world.com/docker-compose-files/jellyfin/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/jellyfin/</guid><description>version: &amp;#34;2.1&amp;#34; services: jellyfin: image: lscr.io/linuxserver/jellyfin container_name: jellyfin group_add: - 107 environment: - DOCKER_MODS=linuxserver/mods:jellyfin-amd # for amd hardware acceleration - PUID=1000 - PGID=1000 - TZ=America/Denver volumes: - /path/to/jellyfin/config:/config - /path/to/movies:/data/movies - /path/to/music:/data/music - /path/to/tv:/data/tv devices: # for amd hardware acceleration - /dev/dri:/dev/dri - /dev/dri/renderD128:/dev/dri/renderD128 ports: - 8096:8096 - 8920:8920 - 7359:7359/udp - 1900:1900/udp restart: unless-stopped Reverse proxy:
+subfolder config subdomain config</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">jellyfin</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/jellyfin</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">jellyfin</span>
+		<span style="color:#f92672">group_add</span>:
+			- <span style="color:#ae81ff">107</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">DOCKER_MODS=linuxserver/mods:jellyfin-amd</span> <span style="color:#75715e"># for amd hardware acceleration</span>
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">TZ=America/Denver</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/jellyfin/config:/config</span>
+			- <span style="color:#ae81ff">/path/to/movies:/data/movies</span>
+			- <span style="color:#ae81ff">/path/to/music:/data/music</span>
+			- <span style="color:#ae81ff">/path/to/tv:/data/tv</span>
+		<span style="color:#f92672">devices</span>: <span style="color:#75715e"># for amd hardware acceleration</span>
+			- <span style="color:#ae81ff">/dev/dri:/dev/dri</span>
+			- <span style="color:#ae81ff">/dev/dri/renderD128:/dev/dri/renderD128</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">8096</span>:<span style="color:#ae81ff">8096</span>
+			- <span style="color:#ae81ff">8920</span>:<span style="color:#ae81ff">8920</span>
+			- <span style="color:#ae81ff">7359</span>:<span style="color:#ae81ff">7359</span><span style="color:#ae81ff">/udp</span>
+			- <span style="color:#ae81ff">1900</span>:<span style="color:#ae81ff">1900</span><span style="color:#ae81ff">/udp</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>Reverse proxy:</p>
+<ul>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/jellyfin.subfolder.conf.sample">subfolder config</a></li>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/jellyfin.subdomain.conf.sample">subdomain config</a></li>
+</ul>
+]]></content:encoded></item><item><title>Matrix Synapse Docker Compose</title><link>https://plug-world.com/docker-compose-files/synapse/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/synapse/</guid><description>version: &amp;#34;2.1&amp;#34; services: synapse: image: matrixdotorg/synapse:latest container_name: synapse environment: - VIRTUAL_HOST=matrix.example.com - VIRTUAL_PORT=8008 - LETSENCRYPT_HOST=matrix.example.com - SYNAPSE_SERVER_NAME=matrix.example.com - SYNAPSE_REPORT_STATS=yes volumes: - /path/to/synapse/data:/data ports: - 8008:8008 restart: unless-stopped postgresql: image: postgres:latest container_name: postgres hostname: postgresql environment: - POSTGRES_PASSWORD=securepassword - POSTGRES_USER=synapse - POSTGRES_DB=synapse - POSTGRES_INITDB_ARGS=--encoding=&amp;#39;UTF8&amp;#39; --lc-collate=&amp;#39;C&amp;#39; --lc-ctype=&amp;#39;C&amp;#39; volumes: - /path/to/postgres/data:/var/lib/postgresql/ ports: - 5432:5432 restart: unless-stopped To use the Postgres sql database make sure that you modify the homeserver.yaml file in your synapse&amp;rsquo;s data directory with the following&amp;hellip;</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">synapse</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">matrixdotorg/synapse:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">synapse</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">VIRTUAL_HOST=matrix.example.com</span>
+			- <span style="color:#ae81ff">VIRTUAL_PORT=8008</span>
+			- <span style="color:#ae81ff">LETSENCRYPT_HOST=matrix.example.com</span>
+			- <span style="color:#ae81ff">SYNAPSE_SERVER_NAME=matrix.example.com</span>
+			- <span style="color:#ae81ff">SYNAPSE_REPORT_STATS=yes</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/synapse/data:/data</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">8008</span>:<span style="color:#ae81ff">8008</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+	<span style="color:#f92672">postgresql</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">postgres</span>
+		<span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">postgresql</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">POSTGRES_PASSWORD=securepassword</span>
+			- <span style="color:#ae81ff">POSTGRES_USER=synapse</span>
+			- <span style="color:#ae81ff">POSTGRES_DB=synapse</span>
+			- <span style="color:#ae81ff">POSTGRES_INITDB_ARGS=--encoding=&#39;UTF8&#39; --lc-collate=&#39;C&#39; --lc-ctype=&#39;C&#39;	</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/postgres/data:/var/lib/postgresql/</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">5432</span>:<span style="color:#ae81ff">5432</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>To use the Postgres sql database make sure that you modify the homeserver.yaml file in your synapse&rsquo;s data directory with the following&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">database</span>:
+	<span style="color:#f92672">name</span>: <span style="color:#ae81ff">psycopg2</span>
+	<span style="color:#f92672">txn_limit</span>: <span style="color:#ae81ff">10000</span>
+	<span style="color:#f92672">args</span>:
+		<span style="color:#f92672">user</span>: <span style="color:#ae81ff">synapse</span>
+		<span style="color:#f92672">password</span>: <span style="color:#ae81ff">your-secure-postgres-password</span>
+		<span style="color:#f92672">host</span>: <span style="color:#ae81ff">postgresql</span>
+		<span style="color:#f92672">database</span>: <span style="color:#ae81ff">synapse</span>
+		<span style="color:#f92672">cp_min</span>: <span style="color:#ae81ff">5</span>
+		<span style="color:#f92672">cp_max</span>: <span style="color:#ae81ff">10</span>
+</code></pre></div><p>Here is the <a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/synapse.subdomain.conf.sample">reverse proxy subdomain config</a>.</p>
+<p>If you want federation than you will have to forward port 8448 from your router to your server. You also want to make sure that port 8448 is added to your swag / nginx docker-compose.</p>
+]]></content:encoded></item><item><title>Nextcloud Docker Compose</title><link>https://plug-world.com/docker-compose-files/nextcloud/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/nextcloud/</guid><description>version: &amp;#34;2.1&amp;#34; services: nextcloud: image: lscr.io/linuxserver/nextcloud:latest container_name: nextcloud environment: - PUID=1000 - PGID=1000 - TZ=America/Denver volumes: - /path/to/nextcloud/config:/config - /path/to/nextcloud/data:/data ports: - 443:443 depends_on: - nextcloud_db restart: unless-stopped nextcloud_db: image: linuxserver/mariadb:latest container_name: nextcloud_db environment: - PUID=1000 - PGID=1000 - MYSQL_ROOT_PASSWORD=supersecurepassword - TZ=America/Denver - MYSQL_DATABASE=nextcloud - MYSQL_USER=nextcloud - MYSQL_PASSWORD=myothersecurepassword volumes: - /path/to/nextcloud_db/config/:config restart: unless-stopped When first running Nextcloud make sure that you tell it to use the mysql database, and give it the &amp;ldquo;MYSQL_PASSWORD.</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">nextcloud</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/nextcloud:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">nextcloud</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">TZ=America/Denver</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/nextcloud/config:/config</span>
+			- <span style="color:#ae81ff">/path/to/nextcloud/data:/data</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">443</span>:<span style="color:#ae81ff">443</span>
+		<span style="color:#f92672">depends_on</span>:
+			- <span style="color:#ae81ff">nextcloud_db</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+	<span style="color:#f92672">nextcloud_db</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">linuxserver/mariadb:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">nextcloud_db</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">MYSQL_ROOT_PASSWORD=supersecurepassword</span>
+			- <span style="color:#ae81ff">TZ=America/Denver</span>
+			- <span style="color:#ae81ff">MYSQL_DATABASE=nextcloud</span>
+			- <span style="color:#ae81ff">MYSQL_USER=nextcloud</span>
+			- <span style="color:#ae81ff">MYSQL_PASSWORD=myothersecurepassword	</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/nextcloud_db/config/:config</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>When first running Nextcloud make sure that you tell it to use the <strong>mysql</strong> database, and give it the &ldquo;MYSQL_PASSWORD.&rdquo;</p>
+<p>In order to access other files on your server through Nextcloud you will need to mount the directories and then add them as external storage folders in Nextcloud.</p>
+<p>Reverse proxy:</p>
+<ul>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/nextcloud.subfolder.conf.sample">subfolder config</a></li>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/nextcloud.subdomain.conf.sample">subdomain config</a></li>
+</ul>
+]]></content:encoded></item><item><title>Photoview Docker Compose</title><link>https://plug-world.com/docker-compose-files/photoview/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/photoview/</guid><description>version: &amp;#34;2.1&amp;#34; services: photoview_db: image: mariadb:10.5 environment: - MYSQL_DATABASE=photoview - MYSQL_USER=photoview - MYSQL_PASSWORD=photoviewsecret - MYSQL_RANDOM_ROOT_PASSWORD=1 volumes: - /path/to/db:/var/lib/mysql restart: unless-stopped photoview: image: viktorstate/photoview:2 environment: - PHOTOVIEW_DATABASE_DRIVER=mysql - PHOTOVIEW_MYSQL_URL=photoview:photoviewsecret@tcp(photoview_db)/photoview - PHOTOVIEW_LISTEN_IP=photoview - PHOTOVIEW_LISTEN_PORT=80 - PHOTOVIEW_MEDIA_CACHE=/app/cache volumes: - /path/to/cache:/app/cache - /path/to/photos:/photos:ro ports: - 8000:80 depends_on: - photoview_db restart: unless-stopped When you first configure it make sure you set the photo path to /photos</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">photoview_db</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">mariadb:10.5 </span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">MYSQL_DATABASE=photoview</span>
+			- <span style="color:#ae81ff">MYSQL_USER=photoview</span>
+			- <span style="color:#ae81ff">MYSQL_PASSWORD=photoviewsecret</span>
+			- <span style="color:#ae81ff">MYSQL_RANDOM_ROOT_PASSWORD=1</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/db:/var/lib/mysql</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+	<span style="color:#f92672">photoview</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">viktorstate/photoview:2</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PHOTOVIEW_DATABASE_DRIVER=mysql</span>
+			- <span style="color:#ae81ff">PHOTOVIEW_MYSQL_URL=photoview:photoviewsecret@tcp(photoview_db)/photoview</span>
+			- <span style="color:#ae81ff">PHOTOVIEW_LISTEN_IP=photoview</span>
+			- <span style="color:#ae81ff">PHOTOVIEW_LISTEN_PORT=80</span>
+			- <span style="color:#ae81ff">PHOTOVIEW_MEDIA_CACHE=/app/cache</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/cache:/app/cache</span>
+			- <span style="color:#ae81ff">/path/to/photos:/photos:ro</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">8000</span>:<span style="color:#ae81ff">80</span>
+		<span style="color:#f92672">depends_on</span>:
+			- <span style="color:#ae81ff">photoview_db</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>When you first configure it make sure you set the photo path to <code>/photos</code></p>
+]]></content:encoded></item><item><title>Plex Docker Compose</title><link>https://plug-world.com/docker-compose-files/plex/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/plex/</guid><description>version: &amp;#34;2.1&amp;#34; services: plex: image: lscr.io/linuxserver/plex:latest container_name: plex network_mode: host environment: - PUID=1000 - PGID=1000 - VERSION=docker volumes: - /path/to/plex/config:/config - /path/to/movies:/movies - /path/to/music:/music - /path/to/tv:/tv restart: unless-stopped Reverse proxy:
+subfolder config subdomain config</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">plex</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/plex:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">plex </span>
+		<span style="color:#f92672">network_mode</span>: <span style="color:#ae81ff">host</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">VERSION=docker</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/plex/config:/config</span>
+			- <span style="color:#ae81ff">/path/to/movies:/movies</span>
+			- <span style="color:#ae81ff">/path/to/music:/music</span>
+			- <span style="color:#ae81ff">/path/to/tv:/tv</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>Reverse proxy:</p>
+<ul>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/plex.subfolder.conf.sample">subfolder config</a></li>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/plex.subdomain.conf.sample">subdomain config</a></li>
+</ul>
+]]></content:encoded></item><item><title>SearXNG Docker Compose</title><link>https://plug-world.com/docker-compose-files/searxng/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/searxng/</guid><description>version: &amp;#34;2.1&amp;#34; services: searxng: image: searxng/searxng:latest container_name: searxng environment: - SEARXNG_BASE_URL=https://search.example.com/ cap_drop: - ALL cap_add: - CHOWN - SETGID - SETUID - DAC_OVERRIDE volumes: - /path/to/searxng/config:/etc/searxng ports: - 8080:8080 restart: unless-stopped Reverse proxy subdomain config as of writing this, it hasn&amp;rsquo;t been merged yet.
+Make sure to change the upstream app from searx to searxng.</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">searxng</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">searxng/searxng:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">searxng</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">SEARXNG_BASE_URL=https://search.example.com/</span>
+		<span style="color:#f92672">cap_drop</span>:
+			- <span style="color:#ae81ff">ALL</span>
+		<span style="color:#f92672">cap_add</span>:
+			- <span style="color:#ae81ff">CHOWN</span>
+			- <span style="color:#ae81ff">SETGID</span>
+			- <span style="color:#ae81ff">SETUID</span>
+			- <span style="color:#ae81ff">DAC_OVERRIDE</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/searxng/config:/etc/searxng</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">8080</span>:<span style="color:#ae81ff">8080</span> 
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p><a href="https://github.com/linuxserver/reverse-proxy-confs/pull/448">Reverse proxy subdomain config</a> as of writing this, it hasn&rsquo;t been merged yet.</p>
+<p>Make sure to change the upstream app from searx to searxng.</p>
+]]></content:encoded></item><item><title>Swag Docker Compose</title><link>https://plug-world.com/docker-compose-files/swag/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/swag/</guid><description>version: &amp;#34;2.1&amp;#34; services: swag: image: lscr.io/linuxserver/swag container_name: swag cap_add: - NET_ADMIN environment: - PUID=1000 - PGID=1000 - TZ=America/Denver - URL=example.com - SUBDOMAINS=www - VALIDATION=http volumes: - /path/to/swag/config:/config ports: - 443:443 - 80:80 restart: unless-stopped</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">swag</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/swag</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">swag</span>
+		<span style="color:#f92672">cap_add</span>:
+			- <span style="color:#ae81ff">NET_ADMIN</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">TZ=America/Denver</span>
+			- <span style="color:#ae81ff">URL=example.com</span>
+			- <span style="color:#ae81ff">SUBDOMAINS=www</span>
+			- <span style="color:#ae81ff">VALIDATION=http</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/swag/config:/config</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">443</span>:<span style="color:#ae81ff">443</span>
+			- <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">80</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div>]]></content:encoded></item><item><title>Syncthing Docker Compose</title><link>https://plug-world.com/docker-compose-files/syncthing/</link><pubDate>Sun, 03 Jul 2022 17:18:20 +0000</pubDate><guid>https://plug-world.com/docker-compose-files/syncthing/</guid><description>version: &amp;#34;2.1&amp;#34; services: syncthing: image: lscr.io/linuxserver/syncthing:latest container_name: syncthing environment: - PUID=1000 - PGID=1000 - TZ=America/Denver volumes: - /path/to/syncthing/config:/config ports: - 8384:8384 - 22000:22000/tcp - 22000:22000/udp - 21027:21027/udp restart: unless-stopped Reverse proxy:
+subfolder config subdomain config</description><content:encoded><![CDATA[<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;2.1&#34;</span>
+<span style="color:#f92672">services</span>:
+	<span style="color:#f92672">syncthing</span>:
+		<span style="color:#f92672">image</span>: <span style="color:#ae81ff">lscr.io/linuxserver/syncthing:latest</span>
+		<span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">syncthing</span>
+		<span style="color:#f92672">environment</span>:
+			- <span style="color:#ae81ff">PUID=1000</span>
+			- <span style="color:#ae81ff">PGID=1000</span>
+			- <span style="color:#ae81ff">TZ=America/Denver</span>
+		<span style="color:#f92672">volumes</span>:
+			- <span style="color:#ae81ff">/path/to/syncthing/config:/config</span>
+		<span style="color:#f92672">ports</span>:
+			- <span style="color:#ae81ff">8384</span>:<span style="color:#ae81ff">8384</span>
+			- <span style="color:#ae81ff">22000</span>:<span style="color:#ae81ff">22000</span><span style="color:#ae81ff">/tcp</span>
+			- <span style="color:#ae81ff">22000</span>:<span style="color:#ae81ff">22000</span><span style="color:#ae81ff">/udp</span>
+			- <span style="color:#ae81ff">21027</span>:<span style="color:#ae81ff">21027</span><span style="color:#ae81ff">/udp</span>
+		<span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</code></pre></div><p>Reverse proxy:</p>
+<ul>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/syncthing.subfolder.conf.sample">subfolder config</a></li>
+<li><a href="https://github.com/linuxserver/reverse-proxy-confs/blob/master/syncthing.subdomain.conf.sample">subdomain config</a></li>
+</ul>
+]]></content:encoded></item><item><title>Brave Goggles Changes How I Search</title><link>https://plug-world.com/posts/brave-goggles-changes-how-i-search/</link><pubDate>Sat, 25 Jun 2022 11:59:47 -0600</pubDate><guid>https://plug-world.com/posts/brave-goggles-changes-how-i-search/</guid><description>Watch the video on YouTube
+So if you didn&amp;rsquo;t know Brave, the company behind the Brave Browser, created a search engine not too long ago. Brave Search is actually a really interesting project. Brave advertises itself as a private search engine. Now I&amp;rsquo;m not here to talk about privacy. Just talking about the features of the project. But it&amp;rsquo;s up to you to trust them. Their source code is public, but their servers aren&amp;rsquo;t.</description><content:encoded><![CDATA[<p><a href="https://youtu.be/HZvrgZK43qg">Watch the video on YouTube</a></p>
+<p>So if you didn&rsquo;t know Brave, the company behind the <a href="https://brave.com/">Brave Browser</a>, created a <a href="https://search.brave.com/">search engine</a> not too long ago.
+Brave Search is actually a really interesting project.
+Brave advertises itself as a private search engine.
+Now I&rsquo;m not here to talk about privacy.
+Just talking about the features of the project.
+But it&rsquo;s up to you to trust them.
+Their <a href="https://github.com/orgs/brave/repositories">source code</a> is public, but their servers aren&rsquo;t.</p>
+<p>Brave created their own indexer for the results in Brave Search.
+This is not the case with other search engines like <a href="https://duckduckgo.com/">DuckDuckGo</a> and <a href="https://www.qwant.com/">Qwant</a>.
+Both of which use Bing results.
+This alone ranks Brave Search above other search engines for me.
+Just because it&rsquo;s actually different from the others.</p>
+<p>So what are <a href="https://search.brave.com/help/goggles">Brave Goggles</a>?
+They are essentially a way of filtering search results.
+Or as Brave puts it, &ldquo;Goggles act as a custom re-ranking on top of the Brave search index.&rdquo;
+The internet is full of garbage.
+So many websites copying each other, all fighting to be at the top.
+Gotta make that ad revenue.
+But with this new tool allows you to sift through all the garbage on the internet with ease.</p>
+<p><img loading="lazy" src="/images/posts/brave-goggles-changes-how-i-search/following-goggles.webp" alt="Following Goggles"  />
+</p>
+<p>Now you have full control to manually rank your search results.
+No more relying on an algorithm to do it for you.
+Brave says it best, &ldquo;Goggles allows users to counter any intrinsic biases in the algorithm.&rdquo;
+You can try out <a href="https://search.brave.com/goggles">Brave Goggles here</a>.
+Take a look at the Brave Goggles <a href="https://github.com/brave/goggles-quickstart/">source code</a>.
+If you look at <a href="https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/tech_blogs.goggle">&ldquo;Tech Blogs&rdquo;</a> as an example, it shows every domain it is boosting and downranking.
+Really simple and easy syntax.
+All to make it easy for you to tailor your own results.</p>
+<p><img loading="lazy" src="/images/posts/brave-goggles-changes-how-i-search/goggles-syntax.webp" alt="Tech blogs Syntax"  />
+</p>
+<p>You can even find goggles that the community has made through the <a href="https://search.brave.com/goggles/discover">discovery page</a>.
+Whenever you make your custom goggles you will have the choice to make it public.</p>
+<p>I started following a few goggles.
+They have proven to be very helpful when searching for specific results.
+For example I would often look for programming solutions and have to filter with site:stackoverflow.com or site:github.com.
+Not anymore.
+Now I just use the <a href="https://search.brave.com/goggles/discover?goggles_id=https%3A%2F%2Fraw.githubusercontent.com%2FAdventistforever%2Fbrave-programming-goggle%2Fmain%2Fprogramming.goggle">&ldquo;Programming solutions&rdquo;</a> goggle and I get the results I need from Brave Search.</p>
+]]></content:encoded></item><item><title>Arch Linux Just Works</title><link>https://plug-world.com/posts/arch-linux-just-works/</link><pubDate>Mon, 20 Jun 2022 09:19:12 -0600</pubDate><guid>https://plug-world.com/posts/arch-linux-just-works/</guid><description>Please note this guide is outdated, I no longer recommend Arch Linux.
+Arch Linux works great on my main desktop, but with it on everything else I&amp;rsquo;m unhappy with it. This is because I use my main desktop enough that I can keep my computer up to date and maintained.
+Intro Arch is often not recommended to new Linux users. This is caused by the fact that you have to run a lot of commands to install and configure your system.</description><content:encoded><![CDATA[<p>Please note this guide is outdated, I no longer recommend Arch Linux.</p>
+<p>Arch Linux works great on my main desktop, but with it on everything else I&rsquo;m unhappy with it.
+This is because I use my main desktop enough that I can keep my computer up to date and maintained.</p>
+<hr>
+<h2 id="intro">Intro</h2>
+<p>Arch is often not recommended to new Linux users.
+This is caused by the fact that you have to run a lot of commands to install and configure your system.
+The terminal is scary.
+The terminal is made for hackers.
+That pushes new users away from it.</p>
+<p>Despite all of that, I would recommend Arch Linux to beginners.</p>
+<p>Arch has just recently made a <a href="https://linuxreviews.org/The_Latest_Arch_Linux_ISO_Has_A_Fresh_New_Guided_Installer">guided installer</a>.
+The installer makes this process extremely easy and less tedious.</p>
+<p>First and foremost, connect your device to the internet.</p>
+<p>Then you may need to initalize your pacman keys.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pacman-key --init
+</code></pre></div><p>Afterward, you can run through the guided installer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m archinstall guided
+</code></pre></div><p>Recently I tried to install Fedora on my laptop.
+I heard a lot of good things about it.
+Packages are up to date and stable.
+But it sucked.
+The package manager was sooo slow.
+Updates took forever.
+I had constant issues with the wifi on my laptop.
+It led to me manually having to request ip addresses from my router using <code>sudo dhclient -v</code>
+One problem would lead to the next.
+Constant issues and configuration.
+Then I gave up.
+I wasted a whole week.
+I spent many hours trying to get things to &ldquo;just work.&rdquo;</p>
+<h2 id="my-mistakes">My Mistakes</h2>
+<p>I didn&rsquo;t use the normal <a href="https://getfedora.org/">Fedora workstation</a> install.
+Instead, I used <a href="https://alt.fedoraproject.org/en/">Fedora Everything</a>.</p>
+<p>I tried the Fedora workstation install initially.
+But I hated it.
+I didn&rsquo;t like <a href="https://www.gnome.org/">Gnome</a>.
+The system ran slow, and wasn&rsquo;t as snappy as I was hoping.
+It had over 2000 packages installed by default.
+In comparison my Arch install on my desktop has 1805 packages.
+I have many packages I don&rsquo;t use, tons of apps installed, and steam games.
+And yet it is less bloated than a vanilla Fedora install.</p>
+<p>This led to me using Fedora Everything.
+It&rsquo;s just the essentials.
+It boots to the terminal just like Arch.
+Nothing additional installed.
+<a href="https://github.com/HelamanWarrior/Fedora-Installer">I created a script</a> to automatically install everything I needed.
+It had my window manager (<a href="https://github.com/baskerville/bspwm">BSPWM</a>), terminal (<a href="https://st.suckless.org/">st</a>), <a href="https://polybar.github.io/">polybar</a>, <a href="https://github.com/HelamanWarrior/dotfiles">dot files</a> and all of that fun stuff.</p>
+<p>According to my virtual machine the script worked great.
+It should be great to install quickly on multiple machines.
+Nope, it wasn&rsquo;t.
+It sucked.
+Constant issues with Fedora working with my laptop hardware.
+It was an endless rabbithole of maintainance and fixing things.
+I had an <a href="https://wiki.archlinux.org/title/NVIDIA_Optimus">Nvidia Optimus</a> based laptop.
+That was the biggest problem for my custom Fedora install.
+It led to many workarounds and dumb hacks.
+This sucked, because I wanted to run this install on many laptops.
+These workarounds wouldn&rsquo;t work on other devices with different hardware.
+This would lead to me constantly maintaining all of the devices using Fedora Everything.
+I then stopped using Fedora.</p>
+<h2 id="the-switch-to-arch">The Switch to Arch</h2>
+<p>Initially I didn&rsquo;t want to use Arch on the laptop.
+Mostly because most people on the internet says &ldquo;it&rsquo;s unstable.&rdquo;
+If I&rsquo;m doing a laptop install, it needs to &ldquo;just work.&rdquo;
+I&rsquo;m not gonna have the time to mess around trying to get things working.</p>
+<p>But I thought about it more.
+I reconsidered.
+I have ran my Arch install for almost a year on my desktop.
+Guess what?
+No problems!
+I probably had one or two things that broke.
+But at the end of the day it was my fault that they broke in the first place.</p>
+<h2 id="the-archening-begins">The Archening begins</h2>
+<p>Installing Arch was very straightforward.
+I downloaded the latest <a href="https://archlinux.org/download/">Arch ISO</a>.
+And I had it livebooted in no time.
+Running the Arch guided installer was very straightforward and I had all the customization I needed.
+It allowed you to install most desktop environments and some window managers.
+As well as installing your own packages if you so choose.
+It even gave me the option to install my Nvidia drivers.</p>
+<p>Instead of going my typical window manager route, I went with <a href="https://kde.org/plasma-desktop/">KDE Plasma</a>.
+I&rsquo;m so glad I did.
+Everything seems to work right out of the box.
+Which is exactly what I needed.
+When it booted into Plasma there was very few apps installed.
+Last time I installed Plasma I had a ton of KDE apps I didn&rsquo;t use.
+It bloated up the system, and trying to delete them was a pain in the butt.
+I&rsquo;m really glad to see that it&rsquo;s very minimal and I still have a lot of room to customize my install.
+It also seems to use up way less resources than Gnome.
+Plasma was super snappy and I&rsquo;m really impressed how well it ran.
+Can we talk about the number of packages.
+I know packages aren&rsquo;t everything, but holy cow!
+When I was done with installing all of my apps and Plasma I had 700 packages!
+By comparison, my Fedora Everything install had that many before I even started installing stuff.</p>
+<p>My fresh Plasma install had almost no problems.
+As always you get display issues on Nvidia Optimus laptops.
+But it was an extremely simple fix.
+<a href="https://wiki.archlinux.org/title/NVIDIA_Optimus#No_screens_found_on_a_laptop/NVIDIA_Optimus">You can fix it</a> with changing your display manager configuration or your xorg conf.
+You are also gonna have to switch from Wayland to Xorg in order for this to work.
+You gotta love Nvidia, making things harder for everyone.
+But after that fix, everything has been great!
+I&rsquo;ve been running it for over a week now.
+No problems!</p>
+<h2 id="arch-is-for-beginners">Arch is for Beginners</h2>
+<p>In my opinion I believe Arch is one of the best distros for beginners.
+Now let me clear this up.
+By beginners I mean anyone with some good computer experience that&rsquo;s new to Linux.
+The average Joe is always gonna have a harder time on Linux.
+Especially if they are running into problems just using Windows.</p>
+<p>You could say the terminal pushes away the beginners, your gonna have to touch the terminal in the installation.
+But if you&rsquo;re gonna use Linux you&rsquo;re eventually gonna have to use the terminal.
+The guided Arch installer opens the door to more people.
+If you haven&rsquo;t used Arch yet, I recommend you try it in a Virtual Machine and see how you like it.
+Just go through the guided installer and see what you like.</p>
+<p>Fedora could have been just fine.
+My main issue came from not using the official workstation release.
+Fedora workstation really wasn&rsquo;t my thing.
+Finding packages is quite a bit of work with Fedora.
+It&rsquo;s a smaller distro so many guides simply wouldn&rsquo;t tell you what the Fedora equivalent packages are.
+This leads to it taking more time hunting down packages.</p>
+<p>With Arch, even if the application I want isn&rsquo;t in the repo, I can just go to the <a href="https://aur.archlinux.org/">AUR (Arch User Repository)</a>.
+Almost any app that runs on linux will probably be in there.
+Rarely are you ever gonna have to install dependencies or compile things yourself.
+Which is even easier for beginners.</p>
+]]></content:encoded></item><item><title>Generating Slideshows Easily with Shotcut</title><link>https://plug-world.com/posts/generating-slideshows-easily-with-shotcut/</link><pubDate>Wed, 15 Jun 2022 14:24:37 -0600</pubDate><guid>https://plug-world.com/posts/generating-slideshows-easily-with-shotcut/</guid><description>Context Shotcut is an open source video editor.
+From their forum I found out you can create slide shows with it. In the past I tried to create an ffmpeg script to do this for me, but I was unsuccessful. This does exactly what I was hoping to achieve with those scripts.
+Tutorial Import all of your pictures into the playlist panel on the left hand side. Select all of the pictures that you want in the slideshow.</description><content:encoded><![CDATA[<h2 id="context">Context</h2>
+<p><a href="https://shotcut.org/">Shotcut</a> is an open source video editor.</p>
+<p>From their <a href="https://forum.shotcut.org/t/slideshow-generator/19162">forum</a> I found out you can create slide shows with it. In the past I tried to create an <a href="https://ffmpeg.org/">ffmpeg</a> script to do this for me, but I was unsuccessful. This does exactly what I was hoping to achieve with those scripts.</p>
+<h2 id="tutorial">Tutorial</h2>
+<ol>
+<li><strong>Import all</strong> of your pictures into the playlist panel on the left hand side.</li>
+<li><strong>Select all</strong> of the pictures that you want in the slideshow.</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/highlight-photos-playlist.webp" alt="Shotcut Picture Selection"  />
+</p>
+<ol start="3">
+<li>Open the <strong>playlist menu</strong></li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/slideshow-playlist.webp" alt="Playlist menu"  />
+</p>
+<ol start="4">
+<li>Click <strong>Add selected to Slideshow</strong></li>
+<li>Find what settings works best for your needs</li>
+</ol>
+<p><img loading="lazy" src="/images/posts/shotcut-slideshow-generator/slideshow-properties.webp" alt="Slideshow properties"  />
+</p>
+<h2 id="fixing-the-lag">Fixing the Lag</h2>
+<p>You may have noticed the editor lagging as you watch the slideshow in the timeline. This seems like a very common issue with these open source video editors, but I have found a few settings that may speed it up for you.</p>
+<p>Go to settings then&hellip;</p>
+<ol>
+<li>Disable Scrub Audio</li>
+<li>Disable Realtime (frame dropping)</li>
+<li>Set preview scaling to 360p</li>
+<li>Go to proxy
+<ul>
+<li>Enable Use Proxy</li>
+<li>Enable Use Hardware Encoder</li>
+<li>Click Configure Hardware Encoder and double check that your using the correct GPU or APU.</li>
+</ul>
+</li>
+<li>Change Interpolation to Nearest Neighbor</li>
+</ol>
+<p>You probably don&rsquo;t need to go as extreme as I have for the example above. Feel free to play around with each of those settings.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>And boom, you got a slideshow!</p>
+<p>It may not be perfect, but it gets the job done quickly with quite a bit of customization.</p>
+]]></content:encoded></item><item><title>The Steam Deck Is Huge for Indie Gamedevs</title><link>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</link><pubDate>Wed, 08 Jun 2022 15:40:00 -0600</pubDate><guid>https://plug-world.com/posts/the-steam-deck-is-huge-for-indie-gamedevs/</guid><description>The Steam Deck is gonna lead to the biggest shift in the pc gaming industry.
+A hitch hikers guide to the Steam Deck 🕹️ The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs Arch Linux as it&amp;rsquo;s kernel in it&amp;rsquo;s custom operating system called Steam OS 3.0.
+Steam OS Beginnings Steam OS has been around ever since the end of 2013.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-deck-closeup.webp" alt="Steam Deck"  />
+</p>
+<p>The <a href="https://www.steamdeck.com/en/">Steam Deck</a> is gonna lead to the biggest shift in the pc gaming industry.</p>
+<h2 id="a-hitch-hikers-guide-to-the-steam-deck-">A hitch hikers guide to the Steam Deck 🕹️</h2>
+<p>The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs <a href="https://archlinux.org/">Arch Linux</a> as it&rsquo;s kernel in it&rsquo;s custom operating system called Steam OS 3.0.</p>
+<h3 id="steam-os-beginnings">Steam OS Beginnings</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/big-picture.webp" alt="Steam OS"  />
+</p>
+<p><a href="https://en.wikipedia.org/wiki/SteamOS">Steam OS has been around ever since the end of 2013</a>. Gabe Newell had a very clear vision for Steam OS. At LinuxCon he stated <a href="https://arstechnica.com/gaming/2013/09/gabe-newell-linux-is-the-future-of-gaming-new-hardware-coming-soon/">&ldquo;Linux and open source are the future of gaming.&quot;</a> The idea of running Windows games on Linux is not a new idea to Valve. They have been working on their compatibility layer called <a href="https://github.com/ValveSoftware/Proton">Proton</a> for a long time. Proton is a fork of <a href="https://www.winehq.org/">Wine</a>, which is a tool to run Windows executables on Linux. Valve first used Steam OS on their <a href="https://en.wikipedia.org/wiki/Steam_Machine_(computer)">Steam Machines</a> in 2015. Basically Steam Machines were just to bring a console like experience to a personal computer. This led to the <a href="https://store.steampowered.com/app/353370/Steam_Controller/">Steam Controllers</a> and <a href="https://store.steampowered.com/bigpicture">Steam Big Picture</a>.</p>
+<h3 id="steam-machines-failed">Steam Machines Failed</h3>
+<p><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/steam-machine.webp" alt="Steam Machine"  />
+</p>
+<p>At the time, Steam OS was a very cool concept, but lacked in terms of hardware and game support. Which led to the <a href="https://steamcommunity.com/app/221410/discussions/0/1696043806550421224/">Steam Machines being discontinued in 2018</a>. Valve stated that they still have a vision for Steam OS and will continue to improve it, even after discontinuing the Steam Machines.</p>
+<h3 id="steam-deck-announcement">Steam Deck Announcement</h3>
+<p>Towards the end of 2021 the <a href="https://www.youtube.com/watch?v=AlWgZhMtlWo">Steam Deck was announced</a>. The Steam Deck was made possible by the software that Valve has continued to improve over the course of about 9 years. It was also only possible by the contributions and the dedication of the free and open source community. The Steam Deck introduced a new way to play PC games. Often it&rsquo;s compared to the Nintendo Switch in terms of form factor, but the two systems are dramatically different and created for very different audiences.</p>
+<h2 id="other-handheld-pcs">Other handheld PCs</h2>
+<p>The idea of a handheld computer has been around for a very long time. But the hardware never caught up to the current generation. Until now. If you have been paying any attention to the handheld computer space in the past 2 years, you would know that the market is beginning to become mainstream.</p>
+<p>I owned a <a href="https://www.gpd.hk/gdpwin2">GPD Win 2</a> before my Steam Deck. It doesn&rsquo;t really have a lot of processing power, but basically every 2D indie game would run perfectly on it. It was interesting to tinker with it, often you could boost performance and battery life by playing with the TDP and under volting the machine. This opens up the possibilities of playing a few AAA pc games.</p>
+<p>This year alone, two handhelds are gonna be competing with the Steam Deck at it&rsquo;s price point.</p>
+<table>
+<thead>
+<tr>
+<th><a href="https://liliputing.com/2022/05/aya-neo-air-with-an-oled-display-is-a-thinner-lighter-handheld-gaming-pc.html">Aya Neo Air</a> starts at $549</th>
+<th><a href="https://www.theverge.com/2022/5/28/23145658/ayn-loki-handheld-runs-windows-starts-299">Ayn Loki</a> starts at $299</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/aya-neo-air-handheld.webp" alt="Aya Neo Air"  />
+</td>
+<td><img loading="lazy" src="/images/posts/steam-deck-is-huge-for-gamedevs/ayn-loki-handheld.webp" alt="Ayn Loki"  />
+</td>
+</tr>
+</tbody>
+</table>
+<p>There&rsquo;s definitely an expanding market here. One that I believe game developers should design games with this usecase in mind.</p>
+<h2 id="indie-games-benefit-most-from-handheld-systems">Indie games benefit most from handheld systems</h2>
+<p>Whenever you have portable hardware, the games that are played the most are usually casual. I mean some people play Call of Duty Mobile on their phones, but most people play simple and addictive time killer games.</p>
+<p>Take the Nintendo Switch as an example. Basically all of the Nintendo Switch library is backed by indie games. Aside from the Nintendo AAA games, people mostly play indie games on the system. Nintendo knows this, they have been promoting indies for a while now using <a href="https://twitter.com/indieworldna">indie world</a>.</p>
+<p>In my experience playing on the Steam Deck, I would often lean towards the more casual indie games.</p>
+<ul>
+<li>They are much easier to jump straight into, especially if I just have a few minutes to spare.</li>
+<li>They use up very little battery. Some games can go up to 7 hours before the unit dies.</li>
+</ul>
+<p>Most of the time, I just found them more enjoyable. Now that&rsquo;s obviously just my opinion. Plenty of people are enjoying modern AAA games on their Steam Decks right now. But by the stats of the previous systems in a similar form factor, I can confidently say that the Steam Deck is gonna sell more indie game developers games that support the platform.</p>
+<h2 id="great-on-deck">Great on Deck</h2>
+<p>Since the Steam Deck is running Steam OS and is Linux based. Not all games work flawlessly on it. Proton does an amazing job getting most games running on the system. But there are a few that will continue to have issues until devs support it.</p>
+<p><a href="https://store.steampowered.com/greatondeck">Great on Deck</a> was created to help customers make sure they are buying games that run well on the system. As an indie game dev, the goal should be to get your game supported. Games that are supported overall get a lot more game sales compared to games that aren&rsquo;t supported on Steam Deck. I would start by integrating the <a href="https://partner.steamgames.com/doc/sdk/api">SteamWorks api</a> into your game. Adding achievements, cloud saves, and steam input can go a long way for your game.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Just some of my quick thoughts on the current handheld gaming market and how indie game developers can benefit from it. I would totally recommend if you are a current game developer to look into the Steam Deck and other gaming handhelds. It&rsquo;s an interesting market right now, and it&rsquo;s just starting to become more mainstream.</p>
+]]></content:encoded></item><item><title>Building a NAS</title><link>https://plug-world.com/posts/building-a-nas/</link><pubDate>Wed, 08 Jun 2022 11:11:01 -0600</pubDate><guid>https://plug-world.com/posts/building-a-nas/</guid><description>Computer 🖥️ Ryzen 2200G, 16gb of RAM, bronze PSU, 4 - 8TB Barracuda Compute Seagate HDD.
+The file system is configured for ZFS RAIDZ-1. RAIDZ-1 is a lot like RAID-5.
+Setting up ZFS 💾 This guide is geared towards ZFS RAIDZ-1. This requires at least 3 drives.
+For your ZFS installation you have two choices.
+Guide for installing OpenZFS This is an open source alternative to Oracle&amp;rsquo;s ZFS project.</description><content:encoded><![CDATA[<p><img loading="lazy" src="/images/posts/diy-nas/diy-nas-full-setup.webp" alt="Diy Nas"  />
+</p>
+<h2 id="computer-">Computer 🖥️</h2>
+<p><strong>Ryzen 2200G</strong>, <strong>16gb</strong> of RAM, bronze PSU, <strong>4 - 8TB</strong> <a href="https://www.amazon.com/Seagate-BarraCuda-Internal-Drive-3-5-Inch/dp/B07H289S7C">Barracuda Compute Seagate HDD</a>.</p>
+<p>The file system is configured for <strong>ZFS RAIDZ-1</strong>. RAIDZ-1 is a lot like RAID-5.</p>
+<h2 id="setting-up-zfs-">Setting up ZFS 💾</h2>
+<p>This guide is geared towards ZFS RAIDZ-1. This requires <strong>at least 3 drives.</strong></p>
+<p>For your ZFS installation you have two choices.</p>
+<ul>
+<li><a href="https://openzfs.github.io/openzfs-docs/Getting%20Started/Debian/index.html">Guide for installing OpenZFS</a>
+<ul>
+<li>This is an open source alternative to Oracle&rsquo;s ZFS project. Very similar to Oracle&rsquo;s ZFS.</li>
+</ul>
+</li>
+<li><a href="https://wiki.debian.org/ZFS">Guide for installing ZFS</a>
+<ul>
+<li>This is Oracle&rsquo;s proprietary ZFS. Extremely similar to OpenZFS.</li>
+</ul>
+</li>
+</ul>
+<p>According to <a href="https://www.jeffgeerling.com/blog/2021/htgwa-create-zfs-raidz1-zpool-on-raspberry-pi">Jeff Geerling</a> to prepare the drives to be formated for ZFS you have to do this&hellip; <strong>This will erase everything on the drives.</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo umount /dev/sda?; sudo wipefs --all --force /dev/sda?; sudo wipefs --all --force /dev/sda
+sudo umount /dev/sdb?; sudo wipefs --all --force /dev/sdb?; sudo wipefs --all --force /dev/sdb
+sudo umount /dev/sdc?; sudo wipefs --all --force /dev/sdc?; sudo wipefs --all --force /dev/sdc
+</code></pre></div><p>Run the above commands for each drive that you want in the pool. You can find these drives by using the command lsblk.</p>
+<p>Run the command below to create a pool. Make sure to include every drive you want in the pool.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zpool create zfspool raidz1 sda sdb sdc -f
+</code></pre></div><p>After some research I found that you should almost always turn on ZFS compression.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo zfs set compression<span style="color:#f92672">=</span>on zfspool
+</code></pre></div><p>Now your pool should be configured. You can review the status of the pool by using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zpool status
+</code></pre></div><p>If I would setup it up again, I would probably use OpenZFS which is an open source implementation of Oracle&rsquo;s propritary ZFS system. But at the time, I didn&rsquo;t know I was using Oracle&rsquo;s propritary ZFS system, so I ended up with that.</p>
+<h2 id="apps">Apps</h2>
+<h3 id="docker">Docker</h3>
+<p>After using docker for a while I quickly realized the limitations of the tool. Every time you want to make a change or update the container you have to recreate the application from the ground up. All of the configuration you do inside the application all gets removed and you start fresh every time. Oh, and if you want to actually update it, you have to manually remove the container and rerun your docker command.</p>
+<p>The solution to all of these is quite simple. <strong>Don&rsquo;t use DOCKER.</strong> <em>Instead use docker-compose.</em></p>
+<p><a href="https://docs.docker.com/compose/">Docker compose</a> essentially automates the whole process for the user. All you have to do is save a docker-compose.yml file which configures the application. At any time you can pull the latest updates and have your docker back up and running. <em>But wait, what about the application&rsquo;s config?</em> Yeah, by default it will be wiped every time. The solution is to mount the configuration of the file in a <strong>volume</strong>.</p>
+<p><strong>Volumes</strong> <em>are way of passing files from your local file system back into your application</em>. The app has no access to any files outside the container by default. The solution is to now mount the configuration of the application back into your file system outside your container. Then the application will write to that mounted directory it&rsquo;s configuration files and the files will no longer be dependent on the application. You can modify them outside of the application, you can remove the application and recreate it and if you still have the config files mounted then the application will continue to maintain persistence when you make changes to it.</p>
+<p><a href="https://www.linuxserver.io/">Linux Server</a> <strong>I can&rsquo;t recommend using their dockers enough</strong>. They essentially take a lot of self hosted applications that people use and make them easier. Configuration is often done with one config folder, just mount it once and boom you are done. Using and configuring their apps are a lot more intuitive than others. <em>But what about the updates?</em> Yeah I mean you can only assume if you use someone else&rsquo;s packages you are at the mercy of them maintaining it. But you don&rsquo;t have to worry about it with <strong>Linux Server</strong>. They have some sort of bot/script that seems to generate these packages whenever updates go through on the apps. Which means you get the latest applications, and don&rsquo;t have to worry about missing features or vulnerabilities.</p>
+<h3 id="apps-i-currently-use">Apps I currently use:</h3>
+<table>
+<thead>
+<tr>
+<th>Apps</th>
+<th>Docker-Compose examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-swag#linuxserver-swag">Swag / Nginx (Web Server / Reverse Proxy)</a></td>
+<td><a href="/docker-compose-files/swag">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-jellyfin">Jellyfin (Open Source Media Server)</a></td>
+<td><a href="/docker-compose-files/jellyfin">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-plex">Plex (Propietary Media Server)</a></td>
+<td><a href="/docker-compose-files/plex">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.linuxserver.io/images/docker-nextcloud">Nextcloud (Like Google Drive)</a></td>
+<td><a href="/docker-compose-files/nextcloud">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/syncthing/syncthing">Syncthing (File sync across devices)</a></td>
+<td><a href="/docker-compose-files/syncthing">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/searxng/searxng">SearXNG (Metadata search engine)</a></td>
+<td><a href="/docker-compose-files/searxng">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://github.com/matrix-org/synapse">Matrix Synapse (Encrypted Chat Server)</a></td>
+<td><a href="/docker-compose-files/synapse">Docker-Compose</a></td>
+</tr>
+<tr>
+<td><a href="https://photoview.github.io/">Photoview</a></td>
+<td><a href="/docker-compose-files/photoview">Docker-compose</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="swag">SWAG</h3>
+<p>This application is built ontop of <a href="https://nginx.org/en/">nginx</a>.
+Nginx is a <strong>web server</strong> and a <strong>reverse proxy</strong>. <a href="https://github.com/linuxserver/docker-swag">Swag</a> is just amazing. It just makes your life easier. It has <a href="https://github.com/linuxserver/reverse-proxy-confs">reverse proxy templates</a> for most applications that you would want to run. You simply just have to change the file name to enable them. Anyways, it&rsquo;s really nice so you can have you domain point to multiple apps easily. It also containers certbot which essentially is able to give your website HTTPS encryption all you have to do is configure your domain, add your email to the environment variable, and boom you got an HTTPS website. It comes with other stuff to like cloudflare integration, and many other useful things that just save you so much time.</p>
+<p>In order to enable reverse proxy on your apps, locate your swag config folder then go to nginx/proxy-confs. You will see a huge list of all the apps, locate the app you want to reverse proxy.</p>
+<p>When you reverse proxy, you will usually have two options&hellip;</p>
+<ul>
+<li><strong>subfolder</strong>
+<ul>
+<li>example.com/myapp</li>
+<li>requires no extra ssl certificates to sign</li>
+<li>no dns configuration required</li>
+</ul>
+</li>
+<li><strong>subdomain</strong>
+<ul>
+<li>myapp.example.com</li>
+<li>every subdomain needs a signed ssl certificate</li>
+<li>requires subdomain to be added to the &ldquo;SUBDOMAINS&rdquo; environment variable in docker compose</li>
+<li>requires cname record to to be added to dns</li>
+</ul>
+</li>
+</ul>
+<p>I perfer to reverse proxy subfolders, they are a lot less work than subdomains, <em>but certain apps will require a subdomain reverse proxy.</em></p>
+<p>To enable the reverse proxy for your app, just copy the myapp.subdomain/subfolder.conf.sample to myapp.subdomain/subfolder.conf. Essentially just remove the .sample portion of the file name, that will activate it to be used by the reverse proxy. <strong>Please note that if you don&rsquo;t rename your containers correctly this will not work.</strong> In the proxy configs it uses the container name to get the ip address of the container through the docker network. If you use the ip address of the container in the reverse proxy instead of the name you will have problems because the ip addresses get changed everytime you initialize your containers. So it&rsquo;s best to use the name in the reverse proxy.</p>
+<p>After configuring the reverse proxy you need to restart the swag service using&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose restart swag
+</code></pre></div><h3 id="docker-tips">Docker Tips</h3>
+<p>Once you have created your docker compose file with all your apps, make sure you keep it updated. Outdated apps can potentially have vulnerabilities that would allow attackers to exploit your server.</p>
+<p>To update your containers use this&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose pull
+</code></pre></div><p>Followed by&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker-compose up -d
+</code></pre></div><p>The above command recreates the updated containers. Whenever you change the docker-compose file you want to run the above command to recreate the new containers.</p>
+<p>Docker images never get deleted when you update your containers. Previous images stay on the disk, which can build up over time and consume a lot of storage space. In order to delete the old unused images use this command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo docker image prune
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Just getting started with self hosting applications is a difficult task. Especially if you don&rsquo;t have any prior Linux experience.</p>
+<p>It&rsquo;s dangerous to go alone, take this <a href="https://docs.linuxserver.io/">Linux Server docs</a>. Everything over there is very beginner friendly and extremely useful when getting started on your self hosting journey.</p>
+]]></content:encoded></item><item><title>Pismo California Trip</title><link>https://plug-world.com/microblog/pismo-california-trip/</link><pubDate>Thu, 02 Jun 2022 22:28:18 -0600</pubDate><guid>https://plug-world.com/microblog/pismo-california-trip/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/6xDMt2JNEi0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/6xDMt2JNEi0?autoplay=1'>
+      <img src='https://img.youtube.com/vi/6xDMt2JNEi0/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/6xDMt2JNEi0" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Setting Up a Bluray Plex Server - From Start to Finish</title><link>https://plug-world.com/posts/setting-up-a-bluray-plex-server/</link><pubDate>Wed, 27 Apr 2022 16:49:45 -0600</pubDate><guid>https://plug-world.com/posts/setting-up-a-bluray-plex-server/</guid><description>The Plexining 🎬 Ever since we got our NAS we had Plex on it. But we didn&amp;rsquo;t have much on it. Plex is just a media server that hosts all your files and media in one easy to access streamable way. Anyways, I figured it&amp;rsquo;s about time to start utilizing this NAS a lot more. I needed to migrate our entire library of movies from Vudu, Amazon, and Google Play Movies to the NAS.</description><content:encoded><![CDATA[<h2 id="the-plexining-">The Plexining 🎬</h2>
+<p>Ever since we got our NAS we had Plex on it. But we didn&rsquo;t have much on it. <a href="https://www.plex.tv/">Plex</a> is just a media server that hosts all your files and media in one easy to access streamable way. Anyways, I figured it&rsquo;s about time to start utilizing this NAS a lot more. I needed to migrate our entire library of movies from Vudu, Amazon, and Google Play Movies to the NAS. Since I don&rsquo;t wanna be a pirate I&rsquo;m gonna do things the hard way.</p>
+<p>I also use Jellyfin on my media server as a backup if my NAS can&rsquo;t reach Plex&rsquo;s servers. Which is kinda dumb to selfhost Plex and than still be dependent on their own servers to be online. But whatever, still own my own media so if Plex doesn&rsquo;t work I can easily move to the next platform.</p>
+<p>I decided to mainly use Plex because&hellip;</p>
+<ul>
+<li>My dad already owned Plex Pass. (Basically allows for transcoding and DVR functionality)</li>
+<li>The app works natively on our smart tv. But it&rsquo;s extremely slow and terrible, but better than nothing.</li>
+<li>It supports automatically deleting commericials on live tv.</li>
+<li>HDR to SDR tonemapping support actually works. (Jellyfin doesn&rsquo;t natively support it but you can use an external media player that does)</li>
+</ul>
+<h2 id="the-rippining-">The Rippining 📀</h2>
+<p>We owned like 3 movies on BluRay, and already had a drive that I can rip from. So it was time to get to work. The process suprisingly wasn&rsquo;t too difficult. MakeMKV does most of the heavylifting for you. All MakeMKV does is bypass the DRM on the disc and decrypt it leading you with an h.264 video that gets containerized into a mkv file. Most of the movies on BluRays range from 20gb to 100gb. If that&rsquo;s too much for you, you can always compress them down in smaller sizes using handbrake.</p>
+<p>My recommended <a href="https://handbrake.fr/">HandBrake</a> settings for compressing BluRays&hellip;</p>
+<ul>
+<li>Format: Matroska</li>
+<li>Encoder: H.265 10 bit</li>
+<li>FrameRate: Same as Video</li>
+<li>FrameRate: Constant</li>
+<li>Quality: 20</li>
+<li>Audio make sure to include 5.7 surround sound or 7.1 based on your setup.</li>
+<li>You can also compress the audio down to 640kbps if you so choose.</li>
+</ul>
+<p>The reason I use h265 is for the high amount of detail that remains once you compress. But it has a few major drawbacks.</p>
+<p>These drawbacks include&hellip;</p>
+<ul>
+<li>A lot of resources to compress video footage.</li>
+<li>The codec has tons of licensing issues, so playback may not be native on your device.</li>
+<li>Due to the licensing issues not all devices support h265</li>
+</ul>
+<p>If you are reading this article in the future, you may want to consider compressing videos in AV1. I hear that&rsquo;s gonna be the next big thing. AV1 at its core is essentially just like h265 whereas it perserves a lot of details at a highly compressed size. But the codec is open source and doesn&rsquo;t have any licensing issues. It&rsquo;s also quite a bit more efficent than h265, so you will be expirencing better quality at the same file size. The only issue is at the time of writing this article, nobody really supports it much. So as that changes it may be a good thing to look into if you are concerned about storage space.</p>
+<h2 id="makemkv-on-linux-small-guide">MakeMKV on Linux: Small Guide</h2>
+<p>I installed MakeMKV on Arch Linux, so this won&rsquo;t apply to Debian users (sorry).</p>
+<p>If you are on debian you can look <a href="https://forum.makemkv.com/forum/viewtopic.php?f=3&amp;t=224">here</a>. I had issues doing the official downloads and compilation on my end. But I&rsquo;m sure that was my fault in the first place.</p>
+<p>But I was able to get my own build of MakeMKV on the <a href="https://aur.archlinux.org/packages/makemkv/">AUR (Arch User Repository)</a> and that seemed to be working just fine for me. Also auto updates are way cool. You also want to make sure you get the <a href="https://aur.archlinux.org/packages/makemkv-libaacs/">aacs libraries</a> for Linux.</p>
+<p>Optical drives on Arch Linux is kind of a pain to get working. If you get the error that MakeMKV can&rsquo;t find any Optical Drives in Arch Linux, it&rsquo;s not MakeMKV&rsquo;s fault. I found the solution to this problem in this <a href="https://www.reddit.com/r/makemkv/comments/r3jijh/arch_linux_this_program_cant_find_any_usable/">Reddit post</a>. According to the post the solution is to: &ldquo;Create a file on /etc/modules-load.d/ with the content sg then reboot. Mine is named sg.conf but the name is totally arbitrary.&rdquo;</p>
+<p>And that should be everything, that&rsquo;s everything I needed to do to get this to work.</p>
+<h2 id="issues-ripping-new-movies-">Issues Ripping New Movies? ❌</h2>
+<p>MakeMKV is able to decrypt movies by using of Volume Unique Keys (VUKS) from a database. If you have a recent movie that won&rsquo;t rip, then on MakeMKV go download the latest keys from <a href="http://fvonline-db.bplaced.net/">FindVUK Online Database.</a> Then place the keydb.cfg file in the folder that MakeMKV is installed in. It should automatically recognize it and use the local database in combination with their own online database. If you are still having issues, there are tools to manually get the VUK key but it will require <a href="https://www.dvdfab.cn/">DVDfab</a> and another tool called <a href="https://forum.doom9.org/showthread.php?t=172472">FindVUK</a> to extract the VUK from memory on DVDfab.</p>
+<h2 id="drives-matter">Drives Matter</h2>
+<p>The Blu-Ray drive you use for ripping can make all of the difference. When ripping movies you need to get a perfect copy off of the drive, if there&rsquo;s any piece of data or information that can&rsquo;t be read on the drive it will be unable to rip. Certain Blu-Ray drives are much more affective when reading scratched disks. With my old Blu-Ray player I would have what seems to be a perfect copy of the movie, no scratches noticable, and yet it would run into read errors. They can also have faster read speeds which will speed up the process of ripping each disk.</p>
+<h2 id="libredrive-">Libredrive 🪛</h2>
+<p>Libedrive is very cool because, many blu-ray players &ldquo;don&rsquo;t support 4k (UHD).&rdquo; Yet they are fully capable of playing them back. There&rsquo;s just this little police in the firmware that tells it to not play back the 4k disk. With Libredrive we are effectively overwriting the firmware on the disk to force it to play back any sort of disk in the system.</p>
+<p>If you are planning on getting a Blu-Ray player I definitely recommend getting one that Libredrive supports. It only supports very specific drives, but you can find what drive to get on the <a href="https://forum.makemkv.com/forum/viewtopic.php?t=19634">MakeMKV forums</a></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Owning my media is important to me. Unfortunately with movies you can&rsquo;t really own your movies &ldquo;legally.&rdquo; The simple act of breaking the encryption on the disk is illegal. Yet creating personal backups of media is totally legal. So kind of in the gray area, but since I am buying copies of physical media from the official retailers I feel like it&rsquo;s ethical to do this. If you typically stream your media and don&rsquo;t watch very many Blu-Rays you are gonna see a huge jump in quality. The bitrate makes all of the difference, resolutions are overrated, you can be watching a highly compressed 4k stream on Netflix and a 1080p Blu-Ray will almost always look better than that compressed stream. To a typical person this isn&rsquo;t easy and they would opt for just watching all their movies on streaming services. And I can agree, it&rsquo;s not user friendly and your going to have to maintain your own server. But I enjoy it, so that&rsquo;s how I&rsquo;m gonna watch my media.</p>
+]]></content:encoded></item><item><title>Valley of Fire Trip</title><link>https://plug-world.com/microblog/valley-of-fire-trip/</link><pubDate>Fri, 24 Dec 2021 22:28:18 -0600</pubDate><guid>https://plug-world.com/microblog/valley-of-fire-trip/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/6l9KsPN2uuM" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/6l9KsPN2uuM?autoplay=1'>
+      <img src='https://img.youtube.com/vi/6l9KsPN2uuM/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/6l9KsPN2uuM" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Lava Hotsprings Trip</title><link>https://plug-world.com/microblog/lava-hotsprings-trip/</link><pubDate>Sun, 26 Sep 2021 22:28:18 -0600</pubDate><guid>https://plug-world.com/microblog/lava-hotsprings-trip/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/6G9vScDTnyQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/6G9vScDTnyQ?autoplay=1'>
+      <img src='https://img.youtube.com/vi/6G9vScDTnyQ/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/6G9vScDTnyQ" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Arizona Trip</title><link>https://plug-world.com/microblog/arizona-trip/</link><pubDate>Sun, 22 Aug 2021 22:28:18 -0600</pubDate><guid>https://plug-world.com/microblog/arizona-trip/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/V-d2gbO5u3k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/V-d2gbO5u3k?autoplay=1'>
+      <img src='https://img.youtube.com/vi/V-d2gbO5u3k/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/V-d2gbO5u3k" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title>Family Reunion 2021</title><link>https://plug-world.com/microblog/family-reunion-2021/</link><pubDate>Sat, 17 Jul 2021 22:28:18 -0600</pubDate><guid>https://plug-world.com/microblog/family-reunion-2021/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/Q4pbM94QMVc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
+
+<div style="width: 100%; max-width: 714px;">
+<div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden; border-radius: 12px">
+  <iframe 
+    style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+    loading="lazy";
+    srcdoc="<style>
+      * {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      }
+      body, html {
+        height: 100%;
+      }
+      img, svg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+        transition: all 250ms ease-in-out;
+      }
+      body:hover svg {
+        filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+        transform: scale(1.2);
+      }
+    </style>
+    <a href='https://www.youtube.com/embed/Q4pbM94QMVc?autoplay=1'>
+      <img src='https://img.youtube.com/vi/Q4pbM94QMVc/hqdefault.jpg'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+    </a>
+    "
+    src="https://www.youtube.com/embed/Q4pbM94QMVc" 
+    title=""
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+</div>
+
+
+]]></content:encoded></item><item><title/><link>https://plug-world.com/bereal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/bereal/</guid><description/><content:encoded><![CDATA[
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1667174961357.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1665691016450.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1664751468420.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1664591280726.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1663202623469.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1662947646237.jpg" />
+
+
+
+
+
+
+<img src="/images/bereal/bereal-1662394586236.jpg" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content:encoded></item><item><title>Contact</title><link>https://plug-world.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/contact/</guid><description>✉️ Email plug_world@proton.me | PGP key
+🐘 Mastodon @plug_world@mastodon.social
+👾 Discord PlugWorld#2506</description><content:encoded><![CDATA[<h2 id="-email">✉️ Email</h2>
+<p><a href="mailto:plug_world@proton.me">plug_world@proton.me</a> |
+<a href="/pgp-key/publickey.plug_world@proton.me-2fc84685c0c5092890f382ed542989db8bef05fe.asc">PGP key</a></p>
+<h2 id="-mastodon">🐘 Mastodon</h2>
+<p><a href="https://mastodon.social/@plug_world">@plug_world@mastodon.social</a></p>
+<h2 id="-discord">👾 Discord</h2>
+<p>PlugWorld#2506</p>
+]]></content:encoded></item><item><title>Games</title><link>https://plug-world.com/games/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/games/</guid><description>The rest of my games are on itch.io</description><content:encoded><![CDATA[
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;">
+<a href="/weaponeer"><img loading="lazy" src="/images/game-covers/weaponeer-cover.png"></img></a>
+<a href="/carls-crude-combat"><img loading="lazy" src="/images/game-covers/carls-crude-combat-cover.png"></img></a>
+<a href="/seadefender"><img loading="lazy" src="/images/game-covers/sea-defender-cover.png"></img></a>
+<a href="/gunnerguy"><img loading="lazy" src="/images/game-covers/gunner-guy-cover.png"></img></a>
+<a href="/condiment-slayer"><img loading="lazy" src="/images/game-covers/condiment-slayer-cover.png"></img></a>
+</div>
+
+<hr>
+<p style="text-align: center">The rest of my games are on <a href="https://plugworldg.itch.io/">itch.io</a></p>
+
+]]></content:encoded></item><item><title>Music</title><link>https://plug-world.com/music/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/music/</guid><description>Masterpieces:
+The Mighty Rio Grande Transatlanticism I Know How To Speak Queen Songs / human. Also really good:
+Quarter-Life Crisis I&amp;rsquo;m Ok. Alright (Frick It!) Family / Best Is Yet to Come Spirit Beautiful Anyway Help Me to Feel Again Kickin' da Leaves Hold On Rich Kids Take It All Back 2.0 Forever, Always Better Man All I Want Is You Only To Be With You Unplugged Blue Eyes Landslide Hesitate Teletype Kevin&amp;rsquo;s Car Implicit Demand for Proof Oh Ms Believer The Maze The Gold The Silence Opposite Sides Stay Alive A Lack of Color Passenger Seat</description><content:encoded><![CDATA[<p>Masterpieces:</p>
+<ul>
+<li><a href="https://youtu.be/OVScQyuuu6A">The Mighty Rio Grande</a></li>
+<li><a href="https://youtu.be/O07WK7-ZkHs">Transatlanticism</a></li>
+<li><a href="https://youtu.be/g0YbQuuz01k">I Know How To Speak</a></li>
+<li><a href="https://youtu.be/Ht5MnH_Xi3E">Queen Songs / human.</a></li>
+</ul>
+<p>Also really good:</p>
+<ul>
+<li><a href="https://youtu.be/fuzwYhKNIzg">Quarter-Life Crisis</a></li>
+<li><a href="">I&rsquo;m Ok.</a></li>
+<li><a href="">Alright (Frick It!)</a></li>
+<li><a href="https://youtu.be/FZIOEw_j-Ck">Family / Best Is Yet to Come</a></li>
+<li><a href="https://youtu.be/u5otQ0MIFdU">Spirit</a></li>
+<li><a href="">Beautiful Anyway</a></li>
+<li><a href="https://youtu.be/syNYTPjsPps">Help Me to Feel Again</a></li>
+<li><a href="https://youtu.be/z4pAHNiigkc">Kickin' da Leaves</a></li>
+<li><a href="https://youtu.be/Ox8-GlWmuNc">Hold On</a></li>
+<li><a href="">Rich Kids</a></li>
+<li><a href="">Take It All Back 2.0</a></li>
+<li><a href="">Forever, Always</a></li>
+<li><a href="">Better Man</a></li>
+<li><a href="">All I Want Is You</a></li>
+<li><a href="">Only To Be With You Unplugged</a></li>
+<li><a href="">Blue Eyes</a></li>
+<li><a href="">Landslide</a></li>
+<li><a href="">Hesitate</a></li>
+<li><a href="">Teletype</a></li>
+<li><a href="">Kevin&rsquo;s Car</a></li>
+<li><a href="">Implicit Demand for Proof</a></li>
+<li><a href="">Oh Ms Believer</a></li>
+<li><a href="">The Maze</a></li>
+<li><a href="">The Gold</a></li>
+<li><a href="">The Silence</a></li>
+<li><a href="">Opposite Sides</a></li>
+<li><a href="">Stay Alive</a></li>
+<li><a href="">A Lack of Color</a></li>
+<li><a href="">Passenger Seat</a></li>
+</ul>
+]]></content:encoded></item><item><title>SeaQuest Udemy Course</title><link>https://plug-world.com/seaquest-udemy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/seaquest-udemy/</guid><description>OpenGameArt Link
+Project setup Downloading &amp;amp; importing assets Window resolution, scaling, aspect ratio, etc. Difference between 2D and viewport scaling Input mapping Player movement Difference between physics process and process</description><content:encoded><![CDATA[<p><a href="https://opengameart.org/content/seadefender-assets">OpenGameArt Link</a></p>
+<ul>
+<li>Project setup
+<ul>
+<li>Downloading &amp; importing assets</li>
+<li>Window resolution, scaling, aspect ratio, etc.
+<ul>
+<li>Difference between 2D and viewport scaling</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Input mapping</li>
+<li>Player movement
+<ul>
+<li>Difference between physics process and process</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded></item><item><title>Videos</title><link>https://plug-world.com/videos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://plug-world.com/videos/</guid><description>Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag. Your browser does not support the video tag.</description><content:encoded><![CDATA[<video autoplay loop muted playsinline>
+	<source src="coca-cola.mp4" type="video/mp4">
+	<source src="coca-cola.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="elevator.mp4" type="video/mp4">
+	<source src="elevator.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="retro-remake.mp4" type="video/mp4">
+	<source src="retro-remake.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="loki-intro.mp4" type="video/mp4">
+	<source src="loki-intro.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="intro-1.mp4" type="video/mp4">
+	<source src="intro-1.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="pixar-intro.mp4" type="video/mp4">
+	<source src="pixar-intro.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="lightsabers.mp4" type="video/mp4">
+	<source src="lightsabers.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="spaceship-game.mp4" type="video/mp4">
+	<source src="spaceship-game.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="3d-multiplayer.mp4" type="video/mp4">
+	<source src="3d-multiplayer.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="top-down-multiplayer-shooter.mp4" type="video/mp4">
+	<source src="top-down-multiplayer-shooter.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="procedural-generated-platformer.mp4" type="video/mp4">
+	<source src="procedural-generated-platformer.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="weaponeer.mp4" type="video/mp4">
+	<source src="weaponeer.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="gunner-guy.mp4" type="video/mp4">
+	<source src="gunner-guy.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="pack-tv-2.mp4" type="video/mp4">
+	<source src="pack-tv-2.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="pack-tv-5.mp4" type="video/mp4">
+	<source src="pack-tv-5.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="pack-tv-3.mp4" type="video/mp4">
+	<source src="pack-tv-3.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="pack-tv-4.mp4" type="video/mp4">
+	<source src="pack-tv-4.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+<video autoplay loop muted playsinline>
+	<source src="sportz.mp4" type="video/mp4">
+	<source src="sportz.webm" type="video/webm">
+	Your browser does not support the video tag.
+</video>
+]]></content:encoded></item></channel></rss>
