@@ -10,8 +10,6 @@ Please note this guide is outdated, I no longer recommend Arch Linux.
 Arch Linux works great on my main desktop, but with it on everything else I'm unhappy with it.
 This is because I use my main desktop enough that I can keep my computer up to date and maintained.
 
-
-
 ---
 
 ## Intro

@@ -33,6 +33,7 @@ This allows OS Prober to scan for other operating systems and add them to the bo
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
 Generate grubs config, OS Prober should do it's thing and add all detected operating systems to Grub.
 If it misses one, make sure you have it mounted.
 

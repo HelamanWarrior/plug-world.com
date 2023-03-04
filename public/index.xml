@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PlugWorld</title><link>https://plug-world.com/</link><description>Recent content on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sun, 12 Feb 2023 11:29:06 -0700</lastBuildDate><atom:link href="https://plug-world.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Insta360 Studio on Linux</title><link>https://plug-world.com/posts/insta360-studio-on-linux/</link><pubDate>Sun, 12 Feb 2023 11:29:06 -0700</pubDate><guid>https://plug-world.com/posts/insta360-studio-on-linux/</guid><description>Download Insta360 Studio :P Run through the Insta360 Studio installer in Wine. Install Proton GE you can either do this through Lutris or a manual install. Proton GE is required for the videos to properly load inside the app. In Lutris if you press the package button next to Wine you can select &amp;ldquo;lutris-GE-Proton&amp;rdquo; to be installed. In Lutris click the + button to add a new game.</description><content:encoded><![CDATA[<ol>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PlugWorld</title><link>https://plug-world.com/</link><description>Recent content on PlugWorld</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 22 Feb 2023 21:58:56 -0700</lastBuildDate><atom:link href="https://plug-world.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Use Boring Technology</title><link>https://plug-world.com/thoughts-and-quotes/use-boring-technology/</link><pubDate>Wed, 22 Feb 2023 21:58:56 -0700</pubDate><guid>https://plug-world.com/thoughts-and-quotes/use-boring-technology/</guid><description>I stumbled upon this article a while back, Choose Boring Technology. And I&amp;rsquo;ve been indirectly thinking about it ever since.
+The words &amp;ldquo;use boring technology&amp;rdquo; just stuck with me. Every now and then I would think back to this article. Vaguely remembering the contents, but just that phrase. A phrase that isn&amp;rsquo;t present in the original article. An idea that&amp;rsquo;s been molded and developed in the back of my head overtime.</description><content:encoded><![CDATA[<p>I stumbled upon this article a while back, <a href="https://mcfunley.com/choose-boring-technology">Choose Boring Technology</a>.
+And I&rsquo;ve been indirectly thinking about it ever since.</p>
+<p>The words &ldquo;use boring technology&rdquo; just stuck with me.
+Every now and then I would think back to this article.
+Vaguely remembering the contents, but just that phrase.
+A phrase that isn&rsquo;t present in the original article.
+An idea that&rsquo;s been molded and developed in the back of my head overtime.
+Whenever I would come across new technology and implement it some way, I tend to come back to this idea.
+An idea that seemed to say &ldquo;I told you so,&rdquo; everytime I hit a roadblock with new cutting-edge technology.</p>
+<p>Over time I&rsquo;ve noticed a correlation between the ideas of &ldquo;use boring technology&rdquo; and &ldquo;keep it simple stupid.&rdquo;
+With the emergence and adoption of new technologies complexity is magnified and results in exhausive maintenance.</p>
+<p>I&rsquo;m not here to say that the way that the way you use technology is bad.
+I personally believe that the way you choose to use technology and what you find works is best for you.
+Too often I see people trying to push others away from using a specific application or technology in favor for another.
+&ldquo;Why use x when you can use y?&rdquo;
+It&rsquo;s understandable if they are simply trying to help them find something better.
+But if a user is more happy and comfortable using something like Apple Notes instead of Notion, why should you try to force them?
+Some people perfer the minimalism and lack of features that a software provides.
+While others perfer the flexilibility and feature rich software and may explore those options.
+Sometimes people are just comfortable with that technology and they are perfectly satisfied with what they can do with it.</p>
+<p>One day I noticed one of my teachers organizing all their work in physical folders with papers all layed out on a table.
+I was intrigued.
+Everything nowdays is online, and most people have migrated to that workflow.
+Seeing a fully physical workflow was a refresher to me.
+As online workflows are very much the same, and offer emulated replicas of the physical counterparts.
+She made a comment about how she looked really messy and that she&rsquo;s aware that she can do this all on the computer.
+I replied saying that it&rsquo;s totally okay if that works best for you.
+Why take the time migrating the workflow to the computer if you are perfectly content with the current physical workflow?
+Sure someone may come across and say&hellip;</p>
+<blockquote>
+<p>Just scan and OCR all your documents that way you can index them digitally and search through them quickly.</p>
+</blockquote>
+<p>But sometimes it isn&rsquo;t worth the extra effort.
+Even if on paper, it looks like a better option.
+If the current workflow works just fine right now, why would I need to go through the extra effort to fix it?</p>
+<p>It reminds me when I had an issue with a Samsung TV and motion smoothing.
+Motion smoothing interpolates the motion and gives movies smoother movement.
+As a result of this technology several artifacts on the picture are made, and the pacing of the movement is often lost.
+With this knowledge I explicitly disabled all motion smoothing settings on the TV.
+I was very happy with the result as the TV wasn&rsquo;t post processing the image anymore.
+But I later found that playing any 4k file, I would run into the issue of the TV continuing to motion smooth, despite the settings that explicitly disable it.
+I planned on watching Puss in Boots: The Last Wish as a family.
+That film contains several animated elements that are at low framerates which would be ruined through motion smoothing.
+I had the 4k file loaded and I spent a large amount of my time researching this 4k motion smoothing issue.
+After wasting even more time trying to get the TV to boot into service mode, I decided I needed to find another solution.
+I then proceeded to download a 1080p version of the movie&ndash;<em>don&rsquo;t worry we bought and own the movie</em>&ndash;to ensure that motion smoothing isn&rsquo;t applied.
+And it was as simple as that; the movie looked great and motion smoothing wasn&rsquo;t present.</p>
+<p>So why?
+Why did I waste my time?
+I was so fixated on playing back a 4K file and having this motion smoothing setting disabled, I wasted so much of my time.
+And the same phrase came to me, &ldquo;use boring technology.&rdquo;
+Instead of trying to go in the complex service mode settings of the TV, I could&rsquo;ve played a 1080p version of the movie.
+But that&rsquo;s boring, and that&rsquo;s the point.
+So often I am fixated on small technical details in the underlying technology that don&rsquo;t matter.
+I build these emotional reactions to these technical details, that if I didn&rsquo;t know were there I would miss.
+It&rsquo;s time to change.
+I need to stop caring so much for the more technically superior solution and just use the easiest route.
+More often than not the easiest route is the best, and not initially following that route leads to regret.</p>
+<p>There&rsquo;s a million other ways this phrase applies to everything I do.
+I cannot express into words the many ways I have seen this in my life.
+But I can express it&rsquo;s importance and significance.
+I hope that the future me or you finds this helpful.
+Continue to &ldquo;use boring technology.&rdquo;</p>
+]]></content:encoded></item><item><title>Insta360 Studio on Linux</title><link>https://plug-world.com/posts/insta360-studio-on-linux/</link><pubDate>Sun, 12 Feb 2023 11:29:06 -0700</pubDate><guid>https://plug-world.com/posts/insta360-studio-on-linux/</guid><description>Download Insta360 Studio :P Run through the Insta360 Studio installer in Wine. Install Proton GE you can either do this through Lutris or a manual install. Proton GE is required for the videos to properly load inside the app. In Lutris if you press the package button next to Wine you can select &amp;ldquo;lutris-GE-Proton&amp;rdquo; to be installed. In Lutris click the + button to add a new game.</description><content:encoded><![CDATA[<ol>
 <li>Download <a href="https://www.insta360.com/download">Insta360 Studio</a> :P</li>
 <li>Run through the Insta360 Studio installer in <a href="https://www.winehq.org/">Wine</a>.</li>
 <li>Install <a href="https://github.com/GloriousEggroll/proton-ge-custom">Proton GE</a> you can either do this through <a href="https://lutris.net/">Lutris</a> or a <a href="https://github.com/GloriousEggroll/proton-ge-custom#installation">manual install</a>.
@@ -116,76 +180,6 @@ Don&rsquo;t worry even as a guest your save data persists.</p>
 </div>
 
 
-]]></content:encoded></item><item><title>Linux Distros that are Actually for Beginners</title><link>https://plug-world.com/posts/linux-mint-the-dependable-and-user-friendly-distro/</link><pubDate>Wed, 28 Dec 2022 16:15:32 -0700</pubDate><guid>https://plug-world.com/posts/linux-mint-the-dependable-and-user-friendly-distro/</guid><description>If you want a just works distro it&amp;rsquo;s going to be based on Ubuntu. Ubuntu has superior driver, application, and online support. Ubuntu is the best supported distribution and will lead to the least amount of technical issues.
-1. Linux Mint or Pop_!OS 2. Kubuntu or Ubuntu or Xubuntu I recommend these distros for beginners.
-All distros except for Linux Mint require additional configuration.
-On those distros run the script snap-to-flatpak.</description><content:encoded><![CDATA[<p>If you want a just works distro it&rsquo;s going to be based on <strong>Ubuntu</strong>.
-Ubuntu has superior driver, application, and online support.
-Ubuntu is the best supported distribution and will lead to the least amount of technical issues.</p>
-<h2 id="1-linux-minthttpslinuxmintcom-or-pop_oshttpspopsystem76com">1. <a href="https://linuxmint.com/">Linux Mint</a> or <a href="https://pop.system76.com/">Pop_!OS</a></h2>
-<h3 id="2-kubuntuhttpskubuntuorg-or-ubuntuhttpsubuntucom-or-xubuntuhttpsxubuntuorg">2. <a href="https://kubuntu.org/"><em>Kubuntu</em></a> or <a href="https://ubuntu.com/"><em>Ubuntu</em></a> or <a href="https://xubuntu.org/"><em>Xubuntu</em></a></h3>
-<p>I recommend these distros for beginners.</p>
-<p>All distros except for <em>Linux Mint</em> require <strong>additional configuration.</strong></p>
-<p>On those distros run the script <a href="https://github.com/MasterGeekMX/snap-to-flatpak">snap-to-flatpak</a>.</p>
-<h2 id="my-journey-to-linux-mint">My Journey to Linux Mint</h2>
-<p><a href="/posts/arch-linux-just-works">I used to recommend Arch</a>, because I was extremely happy with the base install.
-But after daily driving it on my laptops I&rsquo;ve grown very unhappy with it.
-I have daily driven Arch on my desktop and it has worked great.
-But it heavily depends on your usage.</p>
-<ul>
-<li>Arch keys break if you don&rsquo;t update packages for a while.</li>
-<li>Older Nvidia GPUs are unsupported and require switching the kernel.</li>
-<li>Arch inherently takes much more time to setup and configure.</li>
-</ul>
-<p>I gotta say I do love my Arch desktop with my window manager and all my desktop configuration.
-But all of this requires so much time and energy.</p>
-<p>I simply want things to just work on my laptop.
-Usually when I&rsquo;m working off of a laptop I need to get something done, and I don&rsquo;t have time to mess around trying to get my drivers and desktop configured and working.</p>
-<p>I didn&rsquo;t consider <a href="https://ubuntu.com/">Ubuntu</a> as a viable option for a long time.
-This is because of the whole <a href="https://snapcraft.io/">Snap package system</a> that was forced on Ubuntu distributions.
-Snaps are so much slower than native packages and are completely proprietary.
-Whenever you go to install a package, if a Snap version is available it will force you to download it.
-Ubuntu is essentially shooting themselves in the foot forcing their cloud packaging system on everyone.</p>
-<p>This is why I avoided Ubuntu like the plague.
-But I realized almost every distro is based on Ubuntu.
-I had two options, <a href="https://archlinux.org/">Arch</a> or <a href="https://www.debian.org/">Debian</a>.
-Yes, there are more options, but I&rsquo;m trying to keep it simple.</p>
-<p>I didn&rsquo;t experiment with Debian too much, but I believe I could&rsquo;ve made it work.</p>
-<p>After I realized the power of <a href="https://flatpak.org/">Flatpak package system</a> and how Ubuntu is better at power management than Debian, I decided to give Ubuntu another chance.
-Flatpaks are an open source universal packaging system.
-They are very fast and are up to date.</p>
-<h2 id="what-makes-linux-mint-great">What Makes Linux Mint Great</h2>
-<h3 id="packages">Packages</h3>
-<p>Snaps are disabled by default, and Flatpaks are enabled.</p>
-<p><a href="https://linuxmint.com/">Linux Mint</a> is based on LTS releases of Ubuntu which makes it very stable.
-It also means that you&rsquo;ll get five years of support out of your system.
-The only downside is that your packages tend to be out of date.
-You won&rsquo;t have new versions of your applications and they can be pretty far behind.</p>
-<p>To fix this, we have Flatpaks!
-Install your application as a Flatpak and you will have the recent version.
-Gone are the days of having outdated apps.
-Flatpaks run isolated from the system, so you can continue to have a stable experience even with updated untested applications.</p>
-<h3 id="apps">Apps</h3>
-<p>Everything has an app.
-Driver manager, software sources, firewall, software manager, printer manager, software updater, snapshot backups, etc.
-I get it.
-Most desktop environments already have GUI apps for a lot of the same things.
-But Linux Mint goes above and beyond.
-Basically everything that a normal user would want to do can be performed through these apps.
-No need for a terminal.</p>
-<p>I personally love the terminal.
-It gives me so much freedom, power, and automation that you don&rsquo;t get with these GUI tools.
-But sometimes, I honestly can care less.
-Sometimes I need things to just work.
-I don&rsquo;t want to have to look up a ton of commands to configure install drivers and get my printers to work.
-I would much rather use a GUI app that does that for me.
-Work needs to get done, I don&rsquo;t have an hour to spare debugging commands in my terminal.</p>
-<p>This is why apps are great, not just for the beginners, but even for people that know their way around the terminal.</p>
-<h3 id="defaults">Defaults</h3>
-<p>Defaults matter.
-Most people won&rsquo;t change their settings or configure their system.
-I certainly don&rsquo;t, but most of the time I&rsquo;m not happy with the defaults.
-So I inevitably waste time configuring the same settings on every system.</p>
 ]]></content:encoded></item><item><title>English Documentary</title><link>https://plug-world.com/microblog/english-documentary/</link><pubDate>Mon, 19 Dec 2022 20:27:15 -0700</pubDate><guid>https://plug-world.com/microblog/english-documentary/</guid><description> * { padding: 0; margin: 0; overflow: hidden; } body, html { height: 100%; } img, svg { position: absolute; width: 100%; top: 0; bottom: 0; margin: auto; } svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%)); transition: all 250ms ease-in-out; } body:hover svg { filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%)); transform: scale(1.2); } " src="https://www.youtube.com/embed/QXFNIH6Ws6g" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen</description><content:encoded><![CDATA[
 
 <div style="width: 100%; max-width: 714px;">
