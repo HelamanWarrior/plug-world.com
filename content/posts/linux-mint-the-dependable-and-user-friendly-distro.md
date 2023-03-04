@@ -1,6 +1,7 @@
 ---
 title: "Linux Distros that are Actually for Beginners"
 date: 2022-12-28T16:15:32-07:00
+draft: true
 ---
 
 If you want a just works distro it's going to be based on **Ubuntu**.

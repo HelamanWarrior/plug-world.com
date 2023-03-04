@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "c38bcc98bc70a10d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f829832c41013ba7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fa85237a2c11f21c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "bone-brawl/_index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1d79f7a699448ac0",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c945bc602709cc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4976d092964c77c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5232f878630240cc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2c910ca6a0a0cd14",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8bdbe242346484f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "0ec6962a751d49c6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "860133ca801a5f84",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "bone-brawl/_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a0a030be6f082ad2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "bone-brawl/_index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "72428405682e1544",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0559cf77ed95fd44",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "bone-brawl/_index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4976d092964c77c1",
+  "lastOpenFiles": [
+    "bone-brawl/art.md",
+    "bone-brawl/_index.md",
+    "_index.md",
+    "bereal.md",
+    "contact.md",
+    "posts/grub-and-os-prober-in-arch-linux.md",
+    "images/posts/seadefender/high-score-screen.gif.md",
+    "posts/seadefender.md",
+    "images/posts/seadefender",
+    "images/posts",
+    "images",
+    "posts/css-template.md",
+    "posts/fixing-xbox-bluetooth-controllers-in-arch-linux.md",
+    "posts/improving-my-directory-workflow.md",
+    "posts/linux-mint-the-dependable-and-user-friendly-distro.md",
+    "posts/insta360-studio-on-linux.md",
+    "posts/using-a-blog-instead-of-social-media.md",
+    "posts/balancing-time.md",
+    "posts/arch-linux-just-works.md",
+    "games.md",
+    "seaquest-udemy.md",
+    "music.md"
+  ]
+}
