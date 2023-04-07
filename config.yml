@@ -6,7 +6,7 @@ enableRobotsTXT: true
 paginate: 20 
 
 params:
-  env: production
+  env: production 
   description: I make video games, tutorials, videos, and visual effects.  
 
   defaultTheme: auto
@@ -64,11 +64,6 @@ menu:
       name: Contact
       url: /contact/
       weight: 4
-
-privacy:
-  youtube:
-    disabled: false
-    privacyEnhanced: true
 
 outputs:
   home:
