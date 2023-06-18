@@ -19,7 +19,7 @@ params:
   ShowPostNavLinks: false
   hideSummary: true
   ShowReadingTime: false
-  Comments: false
+  Comments: true
   disableSpecial1stPost: true
   hideFooter: true
 
