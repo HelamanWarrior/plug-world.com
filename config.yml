@@ -29,7 +29,7 @@ params:
     enabled: true
     title: "PlugWorld"
     subtitle: "Doin things on computers."
-    imageUrl: "/images/profile/profile-pic.webp"
+    imageUrl: "/images/profile/profile-pic.jpg"
 
   socialIcons:
     - name: rss
