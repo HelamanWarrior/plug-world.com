@@ -1,6 +1,7 @@
 ---
 title: "Building a NAS"
 date: 2022-06-08T11:11:01-06:00
+url: /posts/building-a-nas
 tags: ['tech', 'tutorial', 'docker', 'linux']
 ---
 ![Diy Nas](/images/posts/diy-nas/diy-nas-full-setup.webp)

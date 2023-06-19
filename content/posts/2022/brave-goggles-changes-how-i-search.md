@@ -1,6 +1,7 @@
 ---
 title: "Brave Goggles Changes How I Search"
 date: 2022-06-25T11:59:47-06:00
+url: /posts/brave-goggles-changes-how-i-search
 tags: ['tutorial', 'youtube']
 ---
 [Watch the video on YouTube](https://youtu.be/HZvrgZK43qg)

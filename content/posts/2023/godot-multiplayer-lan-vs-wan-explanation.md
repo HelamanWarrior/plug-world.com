@@ -1,6 +1,7 @@
 ---
 title: "Godot Multiplayer LAN vs WAN Explanation"
 date: 2023-06-19T11:21:25-06:00
+url: /posts/godot-multiplayer-lan-vs-wan-explanation
 ---
 
 > hi, I recently followed the godot multiplayer top down tutorial and everything worked perfectly until I uploaded the game to itch and tried to play with a friend. Does the game not support connection between places or did I mess something up?

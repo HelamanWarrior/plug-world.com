@@ -1,6 +1,7 @@
 ---
 title: "Using a Blog Instead of Social Media"
 date: 2022-07-12T17:09:03-06:00
+url: /posts/using-a-blog-instead-of-social-media
 ---
 Crazy right!?
 

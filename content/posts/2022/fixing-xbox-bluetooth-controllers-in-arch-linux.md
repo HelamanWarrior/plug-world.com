@@ -1,6 +1,7 @@
 ---
 title: "Fixing Bluetooth Xbox Controllers in Arch Linux"
 date: 2022-07-03T11:43:17-06:00
+url: /posts/fixing-xbox-bluetooth-controllers-in-arch-linux
 tags: ['tutorial', 'linux']
 ---
 

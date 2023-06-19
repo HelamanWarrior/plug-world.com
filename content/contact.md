@@ -5,7 +5,7 @@ comments: false
 
 {{< rawhtml >}}
 <div style="display: flex; justify-content: flex-start; flex-wrap: wrap; height=200px">
-<img src="/images/profile/profile-pic.webp" height=200px style="margin: 35px 45px 0px 0px" />
+<img src="/images/profile/profile-pic.jpg" height=200px style="margin: 35px 45px 0px 0px" />
  <div width=auto style="line-height: normal;">
   <h1>Parker Anderson</h1>
   <ul>

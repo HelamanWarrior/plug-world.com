@@ -1,6 +1,7 @@
 ---
 title: "Ubuntu ACPI Errors Prevent Boot Fix"
 date: 2022-12-06T15:26:18-07:00
+url: /posts/acpi-errors-prevent-boot
 ---
 
 After installing Kubuntu on my laptop I ran into a ton of ACPI errors upon boot.

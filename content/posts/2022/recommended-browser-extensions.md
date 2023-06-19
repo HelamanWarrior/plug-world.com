@@ -1,6 +1,7 @@
 ---
 title: "Recommended Browser Extensions"
 date: 2022-08-01T11:04:08-06:00
+draft: true
 tags: ['privacy']
 ---
 

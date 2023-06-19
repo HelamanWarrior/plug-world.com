@@ -1,6 +1,7 @@
 ---
 title: "SeaDefender's Unexpected Development"
 date: 2022-08-13T17:27:51-06:00
+url: /posts/seadefender
 tags: [ "gamedev" ]
 hackernews: 33048550
 ---

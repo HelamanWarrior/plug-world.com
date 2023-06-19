@@ -1,6 +1,7 @@
 ---
 title: "Minecraft Splitscreen Co-op on Steam Deck"
 date: 2023-01-08T18:13:19-07:00
+url: /posts/minecraft-splitscreen-co-op-on-steam-deck
 ---
 
 ![splitscreen-screenshot](/images/posts/minecraft-splitscreen-steam-deck/minecraft-split-screen-steam-deck.webp)

@@ -1,6 +1,7 @@
 ---
 title: "Samsung Q9fn motion smoothing 4k HDR content"
 date: 2023-02-18T18:02:34-06:00
+url: /posts/samsung-q9fn-motion-smooths-4k-hdr-content
 ---
 
 Samsung Q9FN motion smooths 4k/HDR content despite being disabled in settings.

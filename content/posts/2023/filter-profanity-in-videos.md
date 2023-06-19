@@ -1,6 +1,7 @@
 ---
 title: "Filter Profanity in Videos"
 date: 2023-03-10T11:09:18-07:00
+url: /posts/filter-profanity-in-videos
 ---
 
 By using a shell script from my github repository [swears-begone](https://github.com/HelamanWarrior/swears-begone) you can filter swearing from your videos.

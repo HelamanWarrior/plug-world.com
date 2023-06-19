@@ -1,6 +1,7 @@
 ---
 title: "The Steam Deck Is Huge for Indie Gamedevs"
 date: 2022-06-08T15:40:00-06:00
+url: /posts/the-steam-deck-is-huge-for-indie-gamedevs
 tags: ['tech', 'gamedev', 'linux']
 ---
 ![Steam Deck](/images/posts/steam-deck-is-huge-for-gamedevs/steam-deck-closeup.webp)

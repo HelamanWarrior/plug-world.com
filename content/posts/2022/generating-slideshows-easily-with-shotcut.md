@@ -2,6 +2,7 @@
 title: "Generating Slideshows Easily with Shotcut"
 date: 2022-06-15T14:24:37-06:00
 tags: ['tutorial', 'youtube']
+url: /posts/generating-slideshows-easily-with-shotcut
 youtube: jf2OVow17X8
 ---
 

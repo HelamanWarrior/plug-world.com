@@ -1,6 +1,7 @@
 ---
 title: "Improving My Directory Workflow"
 date: 2022-10-07T17:58:45-06:00
+url: /posts/improving-my-directory-workflow
 hackernews: 33128657
 ---
 

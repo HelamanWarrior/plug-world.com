@@ -1,6 +1,7 @@
 ---
 title: Notes on Apple Vision Pro
 date: 2023-06-07
+url: /posts/notes-on-apple-vision-pro
 ---
 
 ![headset](/images/posts/apple-vision-pro/headset.jpg)

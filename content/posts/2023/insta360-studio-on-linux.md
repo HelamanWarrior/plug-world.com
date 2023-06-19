@@ -1,6 +1,7 @@
 ---
 title: "Insta360 Studio on Linux"
 date: 2023-02-12T11:29:06-07:00
+url: /posts/insta360-studio-on-linux
 ---
 
 1. Download [Insta360 Studio](https://www.insta360.com/download) :P

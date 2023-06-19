@@ -1,6 +1,7 @@
 ---
 title: "Setting Up a Bluray Plex Server - From Start to Finish"
 date: 2022-04-27T16:49:45-06:00
+url: /posts/setting-up-a-bluray-plex-server
 tags: ['tech', 'tutorial']
 ---
 ## The Plexining 🎬 

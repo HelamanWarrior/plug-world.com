@@ -1,6 +1,7 @@
 ---
 title: "Grub and OS Prober in Arch Linux"
 date: 2022-07-05T21:45:46-06:00
+url: /posts/grub-and-os-prober-in-arch-linux
 tags: ['tutorial', 'linux']
 ---
 This guide is tailored to people that are dualbooting Linux and Windows.

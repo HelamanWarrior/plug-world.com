@@ -1,6 +1,7 @@
 ---
 title: "Arch Linux Just Works"
 date: 2022-06-20T09:19:12-06:00
+url: /posts/arch-linux-just-works
 tags: ['tutorial', 'youtube', 'linux']
 youtube: ZGcrjX-xlfk
 ---
