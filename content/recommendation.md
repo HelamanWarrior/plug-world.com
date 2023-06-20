@@ -1,6 +1,7 @@
 ---
 title: Recommendations
 url: recommendations
+comments: false
 ---
 
 ![fred-smith-recommendation](/images/recommendations/fred-smith-recommendation.webp)
