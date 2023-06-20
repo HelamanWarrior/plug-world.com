@@ -4,7 +4,7 @@ date: 2023-06-19T14:20:02-06:00
 url: /posts/the-federated-app-problem/
 ---
 Federated applications have a few problems.
-And I really wish it went the case, I love the idea and philosophy of these applications.
+And I really wish it weren't the case, I love the idea and philosophy of these applications.
 But I can't see them being mass adopted.
 
 # Learning curve
