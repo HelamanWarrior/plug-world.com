@@ -24,9 +24,9 @@
     font-size: 13px;
     line-height: 36px;
     background: var(--code-bg);
-    border: 0.15rem solid;
     border-radius: 0.4rem;
     padding: 0 16px;
+    z-index: 1;
 }
 
 .pagination .next {
