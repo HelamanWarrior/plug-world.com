@@ -6,6 +6,10 @@ url: /posts/raspberry-pi-home-server-setup-notes
 
 Cause I'm too lazy to lookup all the commands again...
 
+Quick update: I actually started using Ansible to configure the Pi.
+You can find [my code repo here](https://github.com/HelamanWarrior/pi-server-playbook) if you are interested.
+Code's not the best, still learning but it's been fun.
+
 # Docker Section
 
 Apps are fun. Let's begin with those.
