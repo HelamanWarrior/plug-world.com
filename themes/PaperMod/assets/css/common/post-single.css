@@ -243,6 +243,7 @@
 
 .post-content img {
     margin: 1rem auto;
+    max-width: 720px;
 }
 
 .post-content img[src*="#center"] {
@@ -256,6 +257,7 @@
     #border-color: var(--border-color);
     margin: 1rem auto;
     max-width: 100%;
+    max-height: 512px;
 }
 
 .post-content figure.align-center {

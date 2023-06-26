@@ -5,5 +5,3 @@ instagram: CseQGIjgSS_
 ---
 
 {{< video src="/videos/senior-week/senior-week" unmute=yes >}}
-
----

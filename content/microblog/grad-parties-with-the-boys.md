@@ -6,4 +6,3 @@ instagram: CtZU-C-gN3c
 
 {{< video src="/videos/grad-party/graduation-party-video" unmute=yes >}}
 
----
