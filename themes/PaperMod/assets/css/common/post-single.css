@@ -243,7 +243,8 @@
 
 .post-content img {
     margin: 1rem auto;
-    max-width: 720px;
+    max-width: 45rem;
+    max-height: 37.5rem;
 }
 
 .post-content img[src*="#center"] {
@@ -465,3 +466,9 @@ h1>a>svg {
     display: inline;
 }
 
+@media (max-width: 39.063rem) {
+    .post-content img {
+	width: auto;
+	max-width: 100%;
+    }
+}

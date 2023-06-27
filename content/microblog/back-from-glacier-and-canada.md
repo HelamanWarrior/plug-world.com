@@ -1,7 +1,7 @@
 ---
 title: "Back From Glacier and Canada 🇨🇦"
 date: 2022-07-27T16:05:59-06:00
-aliases: [/microblog]
+draft: true
 ---
 Just got back home after a long trip to Glacier and Canada.
 Had lots of fun, went to the Sun Road, Banff, Lake Louise, and saw quite a few bears in Canada.

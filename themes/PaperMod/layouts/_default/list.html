@@ -84,6 +84,10 @@
 {{- end }}
 {{- end }}
 
+{{ if $gallery }}
+</div>
+{{ end }}
+
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination">
@@ -96,10 +100,6 @@
   </nav>
 </footer>
 {{- end }}
-
-{{ if $gallery }}
-</div>
-{{ end }}
 
 <div style="display:block;margin: -50px 0;width:200vw;height:300px;margin-left:50%-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%); background: url('/images/footers/trees.png') bottom left fixed repeat-x; filter: opacity(0.2);">
 </div>
