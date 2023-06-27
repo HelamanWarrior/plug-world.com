@@ -118,3 +118,9 @@ pre:hover .copy-code {
 	flex-basis: 48%;
     }
 }
+
+@media (max-width: 427px) {
+    .gallery-item {
+	flex-basis: 47%;
+    }
+}
