@@ -1,7 +1,7 @@
 ---
 title: "Grad Parties with the Boys"
 date: 2023-06-12
-instagram: CtZU-C-gN3c
+instacover: grad-parties.jpg
 ---
 
 {{< video src="/videos/grad-party/graduation-party-video" unmute=yes >}}

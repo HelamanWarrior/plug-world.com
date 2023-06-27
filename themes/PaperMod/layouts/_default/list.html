@@ -50,9 +50,14 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
+{{- $gallery := (.Param "gallery") }}
+{{- if $gallery }}
+<div class="gallery">
+{{- end }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}
+{{- $cover := print "/images/microblog/covers/" (.Param "instacover") }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
@@ -61,6 +66,7 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
+{{- if not $gallery }}
 <article class="{{ $class }}">
   <header class="entry-header">
       <h2>{{- .Title }}</h2>
@@ -70,8 +76,13 @@
   </footer>
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
+{{- else if (.Param "instacover") }}
+<a class="gallery-item" href="{{ .Permalink }}">
+	<div class="gallery-item-info"></div>
+	<img src="{{- $cover }}" />
+</a>
 {{- end }}
-
+{{- end }}
 
 {{- if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
@@ -85,6 +96,10 @@
   </nav>
 </footer>
 {{- end }}
+
+{{ if $gallery }}
+</div>
+{{ end }}
 
 <div style="display:block;margin: -50px 0;width:200vw;height:300px;margin-left:50%-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%); background: url('/images/footers/trees.png') bottom left fixed repeat-x; filter: opacity(0.2);">
 </div>
