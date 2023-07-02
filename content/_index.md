@@ -1,6 +1,3 @@
 ---
 ---
 
-{{< floatingimg src="/images/stickers/highway-sticker.png" x="-200px" y="200px" width="300px" >}}
-{{< floatingimg src="/images/stickers/happy-camper-sticker.png" x="800px" y="400px" width="300px" >}}
-{{< floatingimg src="/images/stickers/gameboy-sticker.png" x="750px" y="700px" width="300px" >}}
