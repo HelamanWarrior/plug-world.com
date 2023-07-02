@@ -1,0 +1,8 @@
+<div style="text-align: center; transform: rotate(5deg)">
+  {{ $files := readDir "/static/images/bereal" }}
+  {{ $lastFileIndex := sub (len $files) 1 }}
+  {{ $firstFile := index $files $lastFileIndex }}
+  {{ $firstFilePath := path.Join "/images/bereal" $firstFile.Name }}
+  <h2>Latest BeReal</h2>
+  <img src="{{ $firstFilePath }}" style="margin: auto;max-width: 15rem;" />
+</div>

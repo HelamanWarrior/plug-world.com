@@ -20,11 +20,11 @@
          padding-top: 4rem;
 	 padding-bottom: 4rem;
        }
+       .site-details img {
+	 padding-right: 2rem;
+       }
        .site-details p {
 	 color: #7F7F7F;
-       }
-       .site-details div {
-	 padding-left: 1.5rem;
        }
        .rss-details {
          background-color: #E0E5F5;
@@ -67,7 +67,7 @@
      <img id="profile-pic" src="/images/profile/profile-pic.jpg" />
      <div>
      	<h1>plug-world.com</h1>
-	<p>Designing video games, making videos, all the things. Computers go brrr</p>
+	<p>Doin things on computers.</p>
      	<a href="https://plug-world.com">Visit Website → </a>
      </div>
    </div>

@@ -1,11 +1,40 @@
+<style>
+  main {
+    max-width: 70rem !important;
+    text-align: center;
+  }
+  #bereal-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    width: 100%;
+  }
+  figure {
+    display: inline-block;
+    padding: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px;
+  }
+  figure img {
+    max-width: 20rem !important;
+  }
+</style>
+
+<div id="bereal-container">
 {{ $files := readDir "/static/images/bereal" }}
 {{ $filesReversed := partial "reverse-slice.html" $files }}
 
 {{ range $filesReversed }}
 {{ $image_type_arr := split .Name "." }}
 {{ $image_ext := index $image_type_arr 1 }}
+{{ $image_date := substr (index (split (index (split (index $image_type_arr 0) "bereal-") 1) "-1200") 0) 0 10 }}
 {{ if eq $image_ext "jpg" }}
-<img src="/images/bereal/{{ .Name }}" />
+<figure>
+<img class="bereal-thumbnail" src="/images/bereal/{{ .Name }}" />
+<figcaption>{{ time.Format "Monday, Jan 2, 2006" $image_date }}</figcaption>
+</figure>
 {{ end }}
 
 {{ end }}
+</div>
