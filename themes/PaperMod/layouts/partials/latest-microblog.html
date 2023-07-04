@@ -1,0 +1,8 @@
+{{ $pages := union .RegularPages .Sections }}
+<div style="text-align: center; transform: rotate(-5deg)">
+  <a href="/bereal">
+    <h2>Latest Microblog</h2>
+    <img src="" style="margin:auto;max-width:15rem;" />
+  </a>
+  <p>{{ $pages }}</p>
+</div>

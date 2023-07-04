@@ -64,4 +64,6 @@
 
 .subtitle a {
     text-decoration: underline;
+    color: #1d78bd;
+    font-weight: 600 !important;
 }
