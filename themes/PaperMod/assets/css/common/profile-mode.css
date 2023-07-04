@@ -16,6 +16,14 @@
     padding: 12px 0;
 }
 
+.profile-grid {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .main img {
     border-radius: 0.5rem;
 }
@@ -48,6 +56,12 @@
     transform: scale(0.96);
 }
 
-.profile span {
+.subtitle {
     color: var(--secondary);
+    max-width: 25rem;
+    text-align: left;
+}
+
+.subtitle a {
+    text-decoration: underline;
 }

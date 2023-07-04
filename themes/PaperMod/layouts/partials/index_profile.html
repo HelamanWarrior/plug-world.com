@@ -1,3 +1,4 @@
+<div class="profile-grid">
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
@@ -28,7 +29,11 @@
         {{- end }}
         {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
+	<div class="subtitle">
+	  <span>Heyo, Parker Anderson here, welcome to my website!</span>
+	  <span>I do a lotta things, from making <a href="/games">video games</a>, writing <a href="/posts">blog posts</a> and making <a href="/videos">videos</a>, to home server stuff, to <a href="/microblog">family videos</a>.</span>
+	  <span>Feel free to have a look around.</span>
+	</div>
         {{- partial "social_icons.html" site.Params.socialIcons -}}
 
         {{- with .buttons }}
@@ -52,4 +57,15 @@
         {{- end }}
     </div>
     {{- end}}
+</div>
+{{- partial "latest-bereal.html" }}
+<div>
+    <h2>Currently working on</h2>
+    <ul class="subtitle">
+	    <li>Godot 4 Udemy course <a href="/posts/seadefender/">[read more here]</a></li>
+	    <li>Having a good summer ☀️</li>
+	    <li>Improving personal website</li>
+	    <li>Preparing for my <a href="https://mission.plug-world.com">mission 🇨🇦</a></li>
+    </ul>
+</div>
 </div>
