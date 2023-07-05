@@ -2,6 +2,20 @@
 title = "Videos"
 comments = false
 +++
+<style>
+main {
+  max-width: 95rem !important;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+video {
+  margin: 0.25rem 0.25rem !important;
+}
+</style>
+<div class="video-container">
 <video autoplay loop muted playsinline>
 	<source src="coca-cola.mp4" type="video/mp4">
 	<source src="coca-cola.webm" type="video/webm">
@@ -92,3 +106,4 @@ comments = false
 	<source src="sportz.webm" type="video/webm">
 	Your browser does not support the video tag.
 </video>
+</div>

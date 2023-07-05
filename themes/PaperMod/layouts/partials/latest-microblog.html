@@ -1,8 +1,10 @@
-{{ $pages := union .RegularPages .Sections }}
-<div style="text-align: center; transform: rotate(-5deg)">
-  <a href="/bereal">
+{{ $microblog_posts := where site.RegularPages "Section" "microblog" | first 1 }}
+
+{{ range $microblog_posts }}
+<div style="text-align: center; transform: rotate(-2deg)">
+  <a href="{{ .Permalink }}">
     <h2>Latest Microblog</h2>
-    <img src="" style="margin:auto;max-width:15rem;" />
+    <img src="/images/microblog/covers/{{ .Params.instacover }}" style="margin:auto;max-width:15rem;" />
   </a>
-  <p>{{ $pages }}</p>
 </div>
+{{ end }}
