@@ -2,7 +2,6 @@
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
-<h2 class="profile">Recent Posts</h2>
 {{- end -}}
 
 {{- if not .IsHome | and .Title }}
@@ -37,12 +36,8 @@
 </div>
 {{- end }}
 
+{{- if not .IsHome }}
 {{- $pages := union .RegularPages .Sections }}
-
-{{- if .IsHome }}
-{{- $pages = first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-{{- end }}
-
 {{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
@@ -99,6 +94,7 @@
     {{- end }}
   </nav>
 </footer>
+{{- end }}
 {{- end }}
 
 <div style="display:block;margin: -50px 0;width:200vw;height:300px;margin-left:50%-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%); background: url('/images/footers/trees.png') bottom left fixed repeat-x; filter: opacity(0.2);">

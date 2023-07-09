@@ -85,7 +85,7 @@ pre:hover .copy-code {
 
 .gallery-item {
     position: relative;
-    flex-basis: 33%;
+    flex-basis: 32.95%;
     cursor: pointer;
 }
 

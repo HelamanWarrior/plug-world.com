@@ -23,8 +23,12 @@ h6 {
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,Tahoma,Geneva,sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-size: 1.2rem;
+    line-height: 1.6;
     word-break: break-word;
     background-color: var(--theme);
 }

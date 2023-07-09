@@ -10,7 +10,13 @@
      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,shrink-to-fit=no" />
      <style>
        body {
-	 max-width: 50rem;
+	 font-family: "Helvetica Neue",Helvetica,Arial,Tahoma,Geneva,sans-serif;
+	 text-rendering: optimizeLegibility;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 font-size: 18px;
+
+	 max-width: 45rem;
 	 padding: 1rem;
 	 margin: auto;
        }
@@ -35,6 +41,15 @@
 	 padding: 1rem;
 	 margin-top: 1rem;
        }
+       h1 {
+         margin-top: 0.5rem;
+	 margin-bottom: 0.5rem;
+       }
+       a {
+         color: #1d78bd;
+	 text-decoration: underline;
+	 font-weight: 600;
+       }
        .post-card {
          padding-bottom: 2rem;	
 	 border-top: 1px solid rgba(0,0,0,.04);
@@ -49,6 +64,7 @@
        }
        #profile-pic {
 	 width: 9rem;
+	 height: 9rem;
        }
      </style>
    </head>
@@ -68,7 +84,7 @@
      <div>
      	<h1>plug-world.com</h1>
 	<p>Doin things on computers.</p>
-     	<a href="https://plug-world.com">Visit Website → </a>
+	<a href="/">Visit Website ↗️ </a>
      </div>
    </div>
    <xsl:for-each select="/rss/channel/item">

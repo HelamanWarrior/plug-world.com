@@ -1,10 +1,25 @@
 ---
-title: "Setting Up a Bluray Plex Server - From Start to Finish"
+title: "Setting Up a Bluray Plex Server"
 date: 2022-04-27T16:49:45-06:00
 url: /posts/setting-up-a-bluray-plex-server
-tags: ['tech', 'tutorial']
 ---
-## The Plexining 🎬 
+
+Update: This isn't really a guide. 
+I kinda just wrote this for myself.
+
+Here's a quick rundown that this post covers...
+
+- [HandBrake encoding settings](#the-rippining)
+- [Fixing MakeMKV on Linux](#makemkv-on-linux-small-guide)
+- [Fixing new releases not ripping](#issues-ripping-new-movies)
+- [Ripping 4k movies](#libredrive)
+
+*If you are looking for a step by step guide, please look elsewhere.*
+This was just me throwing down my thoughts.
+
+---
+
+## The Plexining
 Ever since we got our NAS we had Plex on it. But we didn't have much on it. [Plex](https://www.plex.tv/) is just a media server that hosts all your files and media in one easy to access streamable way. Anyways, I figured it's about time to start utilizing this NAS a lot more. I needed to migrate our entire library of movies from Vudu, Amazon, and Google Play Movies to the NAS. Since I don't wanna be a pirate I'm gonna do things the hard way.
 
 I also use Jellyfin on my media server as a backup if my NAS can't reach Plex's servers. Which is kinda dumb to selfhost Plex and than still be dependent on their own servers to be online. But whatever, still own my own media so if Plex doesn't work I can easily move to the next platform.
@@ -15,7 +30,7 @@ I decided to mainly use Plex because...
 - It supports automatically deleting commericials on live tv.
 - HDR to SDR tonemapping support actually works. (Jellyfin doesn't natively support it but you can use an external media player that does)
 
-## The Rippining 📀
+## The Rippining
 We owned like 3 movies on BluRay, and already had a drive that I can rip from. So it was time to get to work. The process suprisingly wasn't too difficult. MakeMKV does most of the heavylifting for you. All MakeMKV does is bypass the DRM on the disc and decrypt it leading you with an h.264 video that gets containerized into a mkv file. Most of the movies on BluRays range from 20gb to 100gb. If that's too much for you, you can always compress them down in smaller sizes using handbrake.
 
 My recommended [HandBrake](https://handbrake.fr/) settings for compressing BluRays...
@@ -47,13 +62,13 @@ Optical drives on Arch Linux is kind of a pain to get working. If you get the er
 
 And that should be everything, that's everything I needed to do to get this to work.
 
-## Issues Ripping New Movies? ❌
+## Issues Ripping New Movies?
 MakeMKV is able to decrypt movies by using of Volume Unique Keys (VUKS) from a database. If you have a recent movie that won't rip, then on MakeMKV go download the latest keys from [FindVUK Online Database.](http://fvonline-db.bplaced.net/) Then place the keydb.cfg file in the folder that MakeMKV is installed in. It should automatically recognize it and use the local database in combination with their own online database. If you are still having issues, there are tools to manually get the VUK key but it will require [DVDfab](https://www.dvdfab.cn/) and another tool called [FindVUK](https://forum.doom9.org/showthread.php?t=172472) to extract the VUK from memory on DVDfab.
 
 ## Drives Matter
 The Blu-Ray drive you use for ripping can make all of the difference. When ripping movies you need to get a perfect copy off of the drive, if there's any piece of data or information that can't be read on the drive it will be unable to rip. Certain Blu-Ray drives are much more affective when reading scratched disks. With my old Blu-Ray player I would have what seems to be a perfect copy of the movie, no scratches noticable, and yet it would run into read errors. They can also have faster read speeds which will speed up the process of ripping each disk.
 
-## Libredrive 🪛
+## Libredrive
 Libedrive is very cool because, many blu-ray players "don't support 4k (UHD)." Yet they are fully capable of playing them back. There's just this little police in the firmware that tells it to not play back the 4k disk. With Libredrive we are effectively overwriting the firmware on the disk to force it to play back any sort of disk in the system.
 
 If you are planning on getting a Blu-Ray player I definitely recommend getting one that Libredrive supports. It only supports very specific drives, but you can find what drive to get on the [MakeMKV forums](https://forum.makemkv.com/forum/viewtopic.php?t=19634)

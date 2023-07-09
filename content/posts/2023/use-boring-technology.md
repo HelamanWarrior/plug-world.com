@@ -1,6 +1,7 @@
 ---
 title: "Use Boring Technology"
 date: 2023-02-22T21:58:56-07:00
+url: /posts/use-boring-technology
 ---
 
 I stumbled upon this article a while back, [Choose Boring Technology](https://mcfunley.com/choose-boring-technology).
