@@ -19,6 +19,7 @@
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .post-meta .i18n_list li {
@@ -464,6 +465,31 @@ h6:hover .anchor {
 
 h1>a>svg {
     display: inline;
+}
+
+.button-container {
+    text-align: center;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.big-button {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary);
+
+    padding: 20px 40px;
+    display: inline-block;
+
+    border: var(--secondary) 0.2rem solid;
+    margin: 1rem 0;
+    box-shadow: 6px 6px 0 0 var(--secondary);
+    transition: all .1s ease;
+}
+
+.big-button:hover {
+    box-shadow: 0 0 0 0 var(--theme);
+    color: var(--theme);
+    background-color: var(--secondary);
 }
 
 @media (max-width: 39.063rem) {

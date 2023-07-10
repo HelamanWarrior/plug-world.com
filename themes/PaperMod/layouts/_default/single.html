@@ -47,6 +47,15 @@
 {{- end }}
 </em>
 
+{{- if .Params.location -}}
+{{- $location_array := split .Params.location "," }}
+{{- $lat := (index $location_array 0) | lang.FormatNumber 4 }}
+{{- $long := (index $location_array 1) | lang.FormatNumber 4 }}
+<div class="button-container">
+<a class="big-button" href="https://maps.google.com/maps?z=15&t=m&q=loc:{{- $lat }}+{{- $long }}">Get directions</a>
+</div>
+{{- end }}
+
   <footer class="post-footer">
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
