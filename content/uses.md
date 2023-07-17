@@ -11,6 +11,7 @@ So this is all the things I use.
 - Linux Mint (both desktop & laptops)
 - Debian (for homeserver)
 
+- Firefox w/ custom [prefs.js](/firefox/prefs.js)
 - Hugo SSG (built this site)
 - SearXNG search engine
 - Linkding (bookmark manager)
@@ -22,7 +23,7 @@ So this is all the things I use.
 
 ## Hardware
 
-- Google Pixel 6 Pro /w Graphene OS
+- Google Pixel 6 Pro w/ Graphene OS
 - Lenovo IdeaPad 5 14ITL05 (intel i5-1135G7)
   - Love the thin portable form factor. 
   - It's smooth and has good performance.
