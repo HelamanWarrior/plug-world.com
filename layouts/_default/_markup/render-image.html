@@ -1,0 +1,34 @@
+{{ $src := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
+{{ $raw_src := .Destination | safeURL }}
+
+{{ if and $src (not (strings.Contains $raw_src "/images/")) }}
+<figure>
+  {{ $data := newScratch }}
+
+  {{ if gt $src.Width 1100 }}
+    {{ $data.Set "webp" ($src.Resize "684x webp q90") }}
+    {{ $data.Set "fallback" ($src.Resize "684x q90") }}
+  {{ else if gt $src.Height 700 }}
+    {{ $data.Set "webp" ($src.Resize "x500 webp q90") }}
+    {{ $data.Set "fallback" ($src.Resize "x500 q90") }}
+  {{ else }}
+    {{ $data.Set "webp" ($src.Resize (printf "%dx%d webp q90" $src.Width $src.Height)) }}
+    {{ $data.Set "fallback" ($src.Resize (printf "%dx%d q90" $src.Width $src.Height)) }}
+  {{ end }}
+
+  {{ $webp := $data.Get "webp" }}
+  {{ $fallback := $data.Get "fallback" }}
+
+  <a href="{{ $src }}">
+    <picture>
+      <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+      <img src="{{ $fallback.RelPermalink }}" alt="{{ .Text }}" loading="lazy" decoding="async" />
+    </picture>
+  </a>
+  {{ with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
+{{ else }}
+<p class="md__image">
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} />
+</p>
+{{end}}

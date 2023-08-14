@@ -17,7 +17,6 @@ curl -s https://www.last.fm/player/station/user/$user/recommended \
 ```
 
 This script allows you to listen to a user's Last FM recommendations via mpv.
-It's more private than using YouTube directly, which is way nice.
 
 Just set the `user` variable to your username.
 
