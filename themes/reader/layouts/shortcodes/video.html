@@ -1,0 +1,17 @@
+{{ $src := (.Get "src") }}
+{{ $type := (.Get "type") }}
+{{ $unmute := (.Get "unmute") }}
+{{ $noloop := (.Get "noloop") }}
+
+<video autoplay loop {{ if not $unmute }}muted{{ end }} playsinline controls>
+{{ if fileExists (add (add "/static" $src) "-av1.mp4") }}
+<source src={{$src}}-av1.mp4 type='video/mp4;codecs="av01.0.05M.08,opus"'>
+{{ end }}
+{{ if fileExists (add (add "/static" $src) "-vp9.webm") }}
+<source src={{$src}}-vp9.webm type='video/webm;codecs="vp9,opus"'>
+{{ end }}
+{{ if fileExists (add (add "/static" $src) "-h264.mp4") }}
+<source src={{$src}}-h264.mp4 type="video/mp4">
+{{ end }}
+Your browser does not support the video tag.
+</video>

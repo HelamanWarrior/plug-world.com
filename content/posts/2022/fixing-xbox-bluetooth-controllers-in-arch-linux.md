@@ -5,9 +5,6 @@ url: /posts/fixing-xbox-bluetooth-controllers-in-arch-linux
 tags: ['tutorial', 'linux']
 ---
 
-Just like many others, I had issues with my Xbox One X/S controllers in Arch Linux.
-Here's my quick guide to get everything working.
-
 ## Setting up Bluetooth
 Since you are on Arch Linux there's a good chance you may not have Bluetooth installed.
 
@@ -19,16 +16,10 @@ Bluez provides the Bluetooth protocol stack.
 Bluz-utils provides a command line utility to connect bluetooth devices.
 
 ```bash
-sudo systemctl enable bluetooth.service
+sudo systemctl enable --now bluetooth.service
 ```
 
-Automatically autostart bluetooth as a service when the system boots.
-
-```bash
-sudo systemctl start bluetooth.service
-```
-
-Startup the bluetooth service.
+Start the bluetooth service and enable it.
 
 ## Connecting the controller via Bluetooth
 
@@ -42,7 +33,7 @@ Your Xbox controller should show up as "Xbox Wireless Controller" then copy the 
 Run ``pair yourControllerMacAddress``, this will connect your Bluetooth controller.
 If you run into pairing issues, proceed to the next section.
 
-## Controller Bluetooth fix
+## Controller firmware fix
 Is your controller having Bluetooth connection issues?
 The solution is to update the firmware in the controller.
 1. Jump over to Windows, don't worry this is temporary (you can use a VM too).

@@ -1,0 +1,99 @@
++++
+title = "Home"
++++
+
+<style>
+#profile-pic {
+  border-radius: 50%;
+  text-align: center;
+}
+.profile-grid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.profile-grid p {
+  margin: 0;
+}
+.portal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+#blog-portal {
+  background-image: url("/images/icons/blog-portal.gif");
+  width: 260px;
+  height: 130px;
+}
+#blog-portal:hover {
+  background-image: url("/images/icons/blog-portal-hover.gif");
+}
+#microblog-portal {
+  background-image: url("/images/icons/microblog-portal.gif");
+  width: 136px;
+  height: 166px;
+}
+#microblog-portal:hover {
+  background-image: url("/images/icons/microblog-portal-hover.gif");
+}
+#games-portal {
+  background-image: url("/images/icons/games-portal.gif");
+  width: 293px;
+  height: 143px;
+}
+#games-portal:hover {
+  background-image: url("/images/icons/games-portal-hover.gif");
+}
+#contact-portal {
+  background-image: url("/images/icons/contact-portal.gif");
+  width: 163px;
+  height: 154px;
+}
+#contact-portal:hover {
+  background-image: url("/images/icons/contact-portal-hover.gif");
+}
+
+@media screen and (max-width: 450px) {
+  .profile-grid {
+    display: block;
+  }
+  #profile-pic {
+    margin-left: 25vw;
+  }
+}
+</style>
+
+<div class="profile-grid">
+<img id="profile-pic" src="/images/profile/profile-pic.jpg" alt="profile image" width="150" height="150">
+
+<p>Heyo, Parker Anderson here, welcome to my website!
+I do a lotta things, from making <a href="/games">video games</a>, <a href="/videos">videos</a>, writing <a href="/posts">blog posts</a>, to home server stuff, and going for <a href="/microblog">adventures</a>.
+Feel free to have a look around.</p>
+</div>
+
+<h1>The portals</h1>
+<p>They say these instantly transport you free of cost. Travel is much faster now.</p>
+<div class="portal-container">
+  <a href="/posts"><div id="blog-portal"></div></a>
+  <a href="/microblog"><div id="microblog-portal"></div></a>
+  <a href="/games"><div id="games-portal"></div></a>
+  <a href="/contact"><div id="contact-portal"></div></a>
+</div>
+
+<h1>Currently working on</h1>
+<ul>
+  <li><a href="https://courses.plug-world.com/seadefender/">Godot 4 Udemy course</a></li>
+  <li>Preparing for my <a href="https://mission.plug-world.com/">mission 🇨🇦</a></li>
+</ul>
+
+<h1>My favorite posts</h1>
+<ul>
+  <li><a href="/posts/seadefender/">SeaDefender's Unexpected Development</a></li>
+  <li><a href="/posts/the-federated-app-problem/">The Federated App Problem</a></li>
+  <li><a href="/posts/use-boring-technology/">Use Boring Technology</a></li>
+  <li><a href="/posts/the-steam-deck-is-huge-for-indie-gamedevs/">Steam Deck is Huge for Indie Gamedevs</a></li>
+</ul>
+

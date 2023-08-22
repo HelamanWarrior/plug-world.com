@@ -1,6 +1,9 @@
 baseURL: "https://plug-world.com/"
+languageCode: "en-US"
 title: PlugWorld
-theme: PaperMod 
+theme: reader 
+canonifyURLs: true
+pygmentsUseClasses: false
 
 enableRobotsTXT: true
 paginate: 20 
@@ -64,6 +67,22 @@ menu:
       name: Contact
       url: /contact/
       weight: 4
+
+markup:
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ''
+    hl_inline: false
+    lineAnchors: ''
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    noHl: false
+    style: 'perldoc'
+    tabWidth: 4
 
 outputs:
   home:

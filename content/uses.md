@@ -10,14 +10,12 @@ So this is all the things I use.
 
 - Linux Mint (both desktop & laptops)
 - Debian (for homeserver)
-
 - Firefox w/ custom [prefs.js](/firefox/prefs.js)
 - Hugo SSG (built this site)
 - SearXNG search engine
 - Linkding (bookmark manager)
 - Davinci Resolve Studio 
   - yes, I bought Studio for the better Linux support
-- FastMail
 - SyncThing (backups, syncing common files between devices)
 - Godot game engine
 
@@ -41,4 +39,3 @@ So this is all the things I use.
 - Redbox
   - Rentals are cheapest you can get
   - $5 to purchase movie, heck yeah man!
-  - Actually has good content unlike most streaming services

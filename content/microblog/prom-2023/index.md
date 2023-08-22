@@ -8,6 +8,6 @@ instacover: prom.jpg
 ![shoes](/images/microblog/prom-2023/shoes.webp)
 ![group-pic](/images/microblog/prom-2023/group-pic.webp)
 ![close-up](/images/microblog/prom-2023/close-up.webp)
-![carson](/images/microblog/prom-2023/carson.jpeg)
+![carson](/images/microblog/prom-2023/carson.webp)
 
 Prom was amazing with you Sarah!! Loved going to Fremont and Morgan's prom with you 😁

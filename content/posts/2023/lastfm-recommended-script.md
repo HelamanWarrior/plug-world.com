@@ -19,7 +19,5 @@ curl -s https://www.last.fm/player/station/user/$user/recommended \
 This script allows you to listen to a user's Last FM recommendations via mpv.
 
 Just set the `user` variable to your username.
-
 Use `<` and `>` to go backward/forward in the playlist.
-
 Enjoy your music 🎵

@@ -1,0 +1,312 @@
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url("/images/footers/trees-export-2.png") repeat-x center bottom;
+  
+  background-color: #f8f7eb;
+  cursor: url("images/icons/cursor-select.png"), auto;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.618;
+  color: #4a4a4a;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: 38em;
+  margin-right: clamp(15px, 10vw, 218px);
+  padding: 2rem 6rem;
+  margin-bottom: 30rem;
+  border: 2px solid #a9b094;
+  border-top: 0;
+  box-shadow: 4px 4px #a9b094;
+}
+
+header {
+  width: 218px;
+  box-sizing: border-box;
+}
+
+.main-menu {
+  list-style-type: none;
+  overflow: hidden;
+  float: right;
+}
+
+.main-menu li {
+  float: left;
+}
+
+.main-menu li a {
+  display: block;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+}
+
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+small, sub, sup {
+  font-size: 75%;
+}
+
+hr {
+  border-color: #a9b094;
+}
+
+a {
+  font-weight: 600;
+  color: #00915e;
+}
+a:hover {
+  color: #84a59d;
+}
+
+ul {
+  line-height: 1.4;
+  padding-left: 1.4em;
+  margin-top: 0px;
+}
+
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  border-left: 5px solid #00915e;
+  margin-bottom: 2.5rem;
+  background-color: #eed;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+picture img, .md__image img, video {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  margin: 1em 0;
+}
+
+video {
+  margin: 1em auto;
+}
+
+/* Pre and Code */
+pre {
+  background-color: rgba(143,159,169,.15);
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.8em;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+code, kbd, samp {
+  font-size: 0.8em;
+  padding: 0 0.5em;
+  background-color: rgba(143,159,169,.15);
+}
+
+pre > code {
+  display: block;
+  font-size: 1em;
+  padding: 10px;
+  background-color: transparent;
+}
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  table-layout: fixed;
+  max-width: 684px;
+  border-collapse: collapse;
+}
+
+tr, td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a;
+}
+input:focus, textarea:focus {
+  border: 1px solid #1d7484;
+}
+
+textarea {
+  width: 100%;
+}
+
+.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #1d7484;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #1d7484;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.button:focus:enabled, .button:hover:enabled, button:focus:enabled, button:hover:enabled, input[type=submit]:focus:enabled, input[type=submit]:hover:enabled, input[type=reset]:focus:enabled, input[type=reset]:hover:enabled, input[type=button]:focus:enabled, input[type=button]:hover:enabled, input[type=file]::file-selector-button:focus:enabled, input[type=file]::file-selector-button:hover:enabled {
+  background-color: #982c61;
+  border-color: #982c61;
+  color: #f9f9f9;
+  outline: 0;
+}
+
+textarea, select, input {
+  color: #4a4a4a;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+textarea:focus, select:focus, input:focus {
+  border: 1px solid #1d7484;
+  outline: 0;
+}
+
+input[type=checkbox]:focus {
+  outline: 1px dotted #1d7484;
+}
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+figure {
+  margin: 0px 0px;
+  padding: 0;
+}
+
+::selection {
+  background: #afbfc9;
+}
+
+::-moz-selection {
+  background: #afbfc9;
+}
+
+.post-snippet {
+  margin: 1.1em 0;
+}
+
+.post-snippet a {
+  text-decoration-thickness: 0.3rem;
+}
+
+.title {
+  margin: 0 0;
+}
+
+#page-title {
+  text-align: center;
+  font-weight: normal;
+}
+
+.meta {
+  color: #6f6f6f;
+  text-align: center;
+}
+
+.post-date, .meta {
+  font-style: italic;
+}
+
+#site-layout-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1036px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #site-layout-container {
+    display: block; 
+  }
+  #sign-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #sign-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  main {
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+  }
+}

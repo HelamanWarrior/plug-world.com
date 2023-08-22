@@ -4,8 +4,11 @@ date: 2023-08-14T12:57:36-06:00
 url: /posts/davinci-resolve-export-best-quality/
 ---
 
-![](export-video-settings.png)
-![](highest-quality.png)
+These are the best settings I found to achieve the highest quality exports.
+Please let me know if I missed something, or if you have any suggestions.
+
+![export-video-settings](export-video-settings.png)
+![highest-quality](highest-quality.png)
 
 Yes, there's a reason to my madness.
 
@@ -19,7 +22,7 @@ Which looks way better than exporting straight to h264/h265 in Resolve.
 
 Here's my [Handbrake](https://handbrake.fr/) settings.
 
-![](handbrake-video.png)
+![handbrake-video-settings](handbrake-video.png)
 
 Now I'm no video encoding expert.
 These are not the most efficent settings.
@@ -28,7 +31,7 @@ They also work great for video archival, and give me enough data to work with so
 
 I also recommend perserving the audio quality.
 
-![](handbrake-audio-settings.png)
+![handbrake-audio-settings](handbrake-audio-settings.png)
 
 This assumes that your source audio is lossless. 
 Now when you recompress your files you don't sacrifice audio quality.

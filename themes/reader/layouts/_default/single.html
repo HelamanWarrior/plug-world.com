@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+<h1 id="page-title">{{ .Title }}</h1>
+
+{{ if .Date }}
+<p class="meta">{{ .Date.Format "January 2, 2006" }}</p>
+{{ end }}
+
+{{ .Content }}
+
+{{ partial "footer.html" . }}

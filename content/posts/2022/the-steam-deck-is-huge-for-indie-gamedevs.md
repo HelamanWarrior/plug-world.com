@@ -8,7 +8,7 @@ tags: ['tech', 'gamedev', 'linux']
 
 The [Steam Deck](https://www.steamdeck.com/en/) is gonna lead to the biggest shift in the pc gaming industry.
 
-## A hitch hikers guide to the Steam Deck 🕹️
+## A hitch hikers guide to the Steam Deck
 The Steam Deck is a handheld x86 based computer. It runs a custom AMD APU running Zen 2 and RDNA 2. The Steam Deck runs [Arch Linux](https://archlinux.org/) as it's kernel in it's custom operating system called Steam OS 3.0.
 
 ### Steam OS Beginnings
@@ -28,12 +28,6 @@ Towards the end of 2021 the [Steam Deck was announced](https://www.youtube.com/w
 The idea of a handheld computer has been around for a very long time. But the hardware never caught up to the current generation. Until now. If you have been paying any attention to the handheld computer space in the past 2 years, you would know that the market is beginning to become mainstream.
 
 I owned a [GPD Win 2](https://www.gpd.hk/gdpwin2) before my Steam Deck. It doesn't really have a lot of processing power, but basically every 2D indie game would run perfectly on it. It was interesting to tinker with it, often you could boost performance and battery life by playing with the TDP and under volting the machine. This opens up the possibilities of playing a few AAA pc games.
-
-This year alone, two handhelds are gonna be competing with the Steam Deck at it's price point.  
-
-[Aya Neo Air](https://liliputing.com/2022/05/aya-neo-air-with-an-oled-display-is-a-thinner-lighter-handheld-gaming-pc.html) starts at $549 | [Ayn Loki](https://www.theverge.com/2022/5/28/23145658/ayn-loki-handheld-runs-windows-starts-299) starts at $299
---|--
-![Aya Neo Air](/images/posts/steam-deck-is-huge-for-gamedevs/aya-neo-air-handheld.webp) | ![Ayn Loki](/images/posts/steam-deck-is-huge-for-gamedevs/ayn-loki-handheld.webp)
 
 There's definitely an expanding market here. One that I believe game developers should design games with this usecase in mind.
 
