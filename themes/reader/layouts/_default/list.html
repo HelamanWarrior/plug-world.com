@@ -1,6 +1,9 @@
 {{ partial "header.html" . }}
 
+<div style="display: flex; justify-content: flex-start; gap: 1rem; align-items: center;">
 <h1>{{ .Title }}</h1>
+<a href="index.xml"><div class="rss-icon"></div></a>
+</div>
 
 {{ .Content }}
 

@@ -289,6 +289,17 @@ figure {
   flex-wrap: wrap;
 }
 
+.rss-icon {
+  background-image: url("/images/icons/rss-feed-portal.gif");
+  image-rendering: pixelated;
+  width: 65px;
+  height: 63px;
+}
+
+.rss-icon:hover {
+  background-image: url("/images/icons/rss-feed-portal-hover.gif");
+}
+
 @media screen and (max-width: 1036px) {
   main {
     margin-left: auto;
