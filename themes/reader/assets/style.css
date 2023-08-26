@@ -29,7 +29,6 @@ main {
   border-top: 0;
   box-shadow: 4px 4px #a9b094;
   background-color: #f8f7eb;
-
 }
 
 header {
@@ -324,6 +323,11 @@ figure {
     border: none;
     box-shadow: none;
     padding: 15px;
+    padding-bottom: 280px;
+    margin-bottom: 0px;
     background-color: transparent;
+  }
+  #site-layout-container {
+    min-height: 100vh;
   }
 }
